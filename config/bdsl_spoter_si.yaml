@@ -1,0 +1,58 @@
+Experiment_name: bdsl_spoter_si
+
+# BdSL-SPOTER (Azad & Rahman, ISVC 2025; paper architecture: 4-layer CLS encoder, d_model 108, 9 heads, FFN 512, dropout 0.15)
+# Signer-independent Protocol A: train {1,4,5,6,8,9,11,12}, eval = val signer U15 (selection only).
+# Shared recipe (Track A, as run for the 8-arch table): 27-kpt pose, T=120, mirror OFF,
+# SGD+nesterov, wd 1e-4, warm-up 5, step [60,80], 100 epochs, batch 16, 3 seeds.
+# base_lr is the only tuned knob: selected on val U15 at seed 0 from
+# {0.1, 0.05, 0.01} + SPOTER's native 0.001 (scripts/hpc/slurm_spoter.sbatch writes it here).
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/bdsl_si/train_data.npy
+  label_path: data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  window_size: 120
+  random_shift: True
+  normalization: True
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: data/bdsl_si/val_data.npy
+  label_path: data/bdsl_si/val_label.pkl
+  random_mirror: False
+  normalization: True
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+model: model.spoter.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  in_channels: 3
+  variant: bdsl_spoter
+  d_model: 108
+  num_heads: 9
+  num_layers: 4
+  dim_feedforward: 512
+  dropout: 0.15
+
+weight_decay: 0.0001
+base_lr: 0.001   # selected on val U15 @ seed 0 from {0.1,0.05,0.01,0.001}
+step: [60, 80]
+device: [0]
+batch_size: 16
+test_batch_size: 16
+num_epoch: 100
+nesterov: True
+warm_up_epoch: 5
+optimizer: SGD
+wandb: False
+num_worker: 2
+save_interval: 5

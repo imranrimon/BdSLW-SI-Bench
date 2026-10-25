@@ -1,0 +1,23 @@
+## (A) PER-INSTANCE clip-level paired bootstrap (Protocol-A TEST, seed ensemble)
+n = 1365 clips, 10000 resamples. CAVEAT: clips within 2 TEST signers -> per-instance, not signer-generalization.
+
+Ranking (ensemble Top-1):
+  Adaptive GNN     80.59  (2 seeds)
+  SLGTFormer       79.85  (3 seeds)
+  Attention GNN    79.34  (3 seeds)
+  GNN+Transf(clip5) 78.17  (3 seeds)
+  ST-GCN           76.41  (3 seeds)
+  GNN+LSTM         76.04  (3 seeds)
+  BlockGCN         71.36  (3 seeds)
+  Pose LSTM        64.18  (3 seeds)
+
+Adjacent-rank pairs (Holm-corrected across the 7 adjacent tests):
+  Adaptive GNN     > SLGTFormer       D=+0.73 CI[-1.03,+2.49] p=0.2228 p_holm=0.6684 n.s.
+  SLGTFormer       > Attention GNN    D=+0.51 CI[-1.47,+2.49] p=0.3152 p_holm=0.6684 n.s.
+  Attention GNN    > GNN+Transf(clip5) D=+1.17 CI[-1.03,+3.30] p=0.1501 p_holm=0.6004 n.s.
+  GNN+Transf(clip5) > ST-GCN           D=+1.76 CI[-0.37,+3.88] p=0.0533 p_holm=0.2665 n.s.
+  ST-GCN           > GNN+LSTM         D=+0.37 CI[-1.76,+2.49] p=0.3726 p_holm=0.6684 n.s.
+  GNN+LSTM         > BlockGCN         D=+4.69 CI[+2.34,+7.03] p=0.0002 p_holm=0.0012 **
+  BlockGCN         > Pose LSTM        D=+7.18 CI[+4.84,+9.67] p=0.0000 p_holm=0.0000 ***
+
+Claimed pair Adaptive GNN > ST-GCN: D=+4.18 CI[+2.12,+6.23] p=0.0000

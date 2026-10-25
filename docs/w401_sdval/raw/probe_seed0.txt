@@ -1,0 +1,12 @@
+PROBE bdsl_ctr_gcn_w401_sdval_seed0 ckpt=work_dir/bdsl_ctr_gcn_w401_sdval_seed0/bdsl_ctr_gcn_w401_sdval_seed0_model-best.pt
+[bdsl_ctr_gcn_w401_sdval_s0|cc8k] [class-conditioned] SIGNER decodability: balanced acc = 72.93 +/- 0.46  | chance 6.67  | leakage = +66.27 pp  | L_norm = 0.710  (n=8000, S=15)
+[bdsl_ctr_gcn_w401_sdval_s0|wcall] WITHIN-CLASS signer decodability (paper L_norm^cond): L_norm^cond = 0.993  | per-class mean 0.993 +/- 0.010  | classes used 400 (skipped 1, too few signers/clips)  | n=39315
+PROBE bdsl_st_gcn_w401_sdval_seed0 ckpt=work_dir/bdsl_st_gcn_w401_sdval_seed0/bdsl_st_gcn_w401_sdval_seed0_model-best.pt
+[bdsl_st_gcn_w401_sdval_s0|cc8k] [class-conditioned] SIGNER decodability: balanced acc = 68.04 +/- 1.38  | chance 6.67  | leakage = +61.37 pp  | L_norm = 0.658  (n=8000, S=15)
+[bdsl_st_gcn_w401_sdval_s0|wcall] WITHIN-CLASS signer decodability (paper L_norm^cond): L_norm^cond = 0.988  | per-class mean 0.988 +/- 0.014  | classes used 400 (skipped 1, too few signers/clips)  | n=39315
+PROBE bdsl_block_gcn_w401_sdval_seed0 ckpt=work_dir/bdsl_block_gcn_w401_sdval_seed0/bdsl_block_gcn_w401_sdval_seed0_model-best.pt
+[bdsl_block_gcn_w401_sdval_s0|cc8k] [class-conditioned] SIGNER decodability: balanced acc = 38.09 +/- 0.88  | chance 6.67  | leakage = +31.42 pp  | L_norm = 0.337  (n=8000, S=15)
+[bdsl_block_gcn_w401_sdval_s0|wcall] WITHIN-CLASS signer decodability (paper L_norm^cond): L_norm^cond = 0.927  | per-class mean 0.927 +/- 0.042  | classes used 400 (skipped 1, too few signers/clips)  | n=39315
+PROBE bdsl_block_gcn_w401_lr01_sdval_seed0 ckpt=work_dir/bdsl_block_gcn_w401_lr01_sdval_seed0/bdsl_block_gcn_w401_lr01_sdval_seed0_model-best.pt
+[bdsl_block_gcn_w401_lr01_sdval_s0|cc8k] [class-conditioned] SIGNER decodability: balanced acc = 66.42 +/- 1.51  | chance 6.67  | leakage = +59.75 pp  | L_norm = 0.640  (n=8000, S=15)
+[bdsl_block_gcn_w401_lr01_sdval_s0|wcall] WITHIN-CLASS signer decodability (paper L_norm^cond): L_norm^cond = 0.989  | per-class mean 0.989 +/- 0.013  | classes used 400 (skipped 1, too few signers/clips)  | n=39315

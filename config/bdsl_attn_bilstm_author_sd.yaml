@@ -1,0 +1,58 @@
+Experiment_name: bdsl_attn_bilstm_author_sd
+
+# Attention-based Bi-LSTM baseline of the BdSLW60 dataset paper (Rubaiyeat et al.,
+# MTAP 2025; arXiv 2402.08635), re-run on our 27-keypoint footing. Model ported from
+# the authors' Keras code (model/attn_bilstm.py); input = their Relative-Quantization
+# (RQ) encoding (preprocessing/make_rq_bundle.py, min-max fit on train only).
+# Recipe: AUTHOR (separate labelled row) - Adam lr 3e-5 (AdamW wd 0), batch 64, 200 ep,
+# no decay/warm-up, as in the authors' notebook; best-val checkpoint instead of their
+# early stopping on train loss.
+# Feeder: shared temporal crop (random_choose, window 120), mirror OFF; normalization
+# and random_shift OFF because RQ already makes coordinates parent-relative and
+# quantized (absolute-translation augmentations are undefined on RQ codes).
+# grad_clip_norm unset (0.0), matching the headline Protocol-A / LOSO runs.
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_sd_rq/train_data.npy
+  label_path: ./data/bdsl_sd_rq/train_label.pkl
+  debug: False
+  random_choose: True
+  random_shift: False
+  random_move: False
+  window_size: 120
+  normalization: False
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: ./data/bdsl_sd_rq/val_data.npy
+  label_path: ./data/bdsl_sd_rq/val_label.pkl
+  window_size: 120
+  random_choose: False
+  normalization: False
+  random_mirror: False
+
+model: model.attn_bilstm.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  in_channels: 3
+  window_size: 120
+
+optimizer: AdamW
+weight_decay: 0.0
+base_lr: 0.00003
+step: []
+warm_up_epoch: 0
+batch_size: 64
+test_batch_size: 64
+num_epoch: 200
+
+device: [0]
+save_interval: 5
+wandb: False
+num_worker: 2

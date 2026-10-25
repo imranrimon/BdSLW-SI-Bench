@@ -1,0 +1,78 @@
+Experiment_name: bdsl_adaptive_gnn_si_bp
+
+# ============================================================================
+# TRACK B (best-practice recipe) — Adaptive GNN (CTR-GCN-style backbone).
+# ----------------------------------------------------------------------------
+# Track A (shared recipe, see docs/RECIPE_CONTROL.md) trains every arch with an
+# identical pipeline (SGD+nesterov, wd 1e-4, warmup 5, step [60,80], 100 ep,
+# batch 32, grad-clip 5.0). Track B instead trains each arch with its OWN
+# published/author-recommended recipe to show the method's ceiling. This
+# controlled-vs-best-practice pairing answers reviewer #2: a single shared
+# recipe can under-serve archs whose intended regime differs, so a
+# controlled-recipe number should not automatically be called SOTA.
+#
+# Recipe source: CTR-GCN (Chen et al., ICCV 2021) official NTU config
+#   (github.com/Uason-Chen/CTR-GCN, config/nturgbd-cross-subject/default.yaml):
+#     SGD + nesterov, base_lr 0.1, weight_decay 4e-4, step [35,55],
+#     num_epoch 65, warm_up_epoch 5, batch_size 64.
+#   The repo's adaptive_gnn is the CTR-GCN-style backbone (MS-TCN + stabilized
+#   adaptive graph), so the CTR-GCN NTU recipe is the apt best-practice recipe.
+#
+# DEVIATIONS from the author recipe (documented, dataset-mandated):
+#   - random_mirror stays OFF. CTR-GCN's NTU recipe mirrors, but on BdSLW60
+#     hand-dominance is class-informative; mirroring corrupts labels (see
+#     README gotchas / feeders.feeder flip_index). This is a dataset
+#     property, not a recipe choice, and is held constant across A and B.
+#   - LR schedule expressed as step-decay+warmup (the only scheduler main.py
+#     implements). This matches CTR-GCN's canonical NTU config, which is
+#     itself step-decay [35,55]; no cosine approximation needed.
+# ============================================================================
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_si/train_data.npy
+  label_path: ./data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  random_shift: True
+  random_move: False
+  window_size: 120
+  normalization: True
+  random_mirror: False       # off: BdSL hand-dominance is class-informative
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: ./data/bdsl_si/val_data.npy
+  label_path: ./data/bdsl_si/val_label.pkl
+  window_size: 120
+  random_choose: False
+  normalization: True
+
+model: model.adaptive_gnn.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+
+# optim — CTR-GCN best-practice
+optimizer: SGD
+weight_decay: 0.0004
+base_lr: 0.1
+step: [35, 55]
+
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 65
+nesterov: True
+warm_up_epoch: 5
+
+wandb: False
+num_worker: 0
+save_interval: 5

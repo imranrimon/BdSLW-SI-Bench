@@ -1,0 +1,117 @@
+tools/signernorm_report.py:35: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(p, map_location="cpu")
+--- tab_signernorm_s1_rows
+Shared feeder (paper) & 68.82$\pm$0.56 & -- & -- & 67.04 & 77.96$\pm$2.02 & 61.2 & 71.4 \\
+ctr: shoulder-midpoint centring & 72.55$\pm$1.72 & $+3.73$ & $[+1.0,+6.6]$ & 71.10 & 82.04$\pm$1.30 & 57.8 & 77.5 \\
++a: + shoulder-width scale & 72.02$\pm$1.65 & $+3.20$ & $[+0.4,+6.0]$ & 70.06 & 81.37$\pm$0.54 & 56.0 & 77.4 \\
++a+b: + hand-local channels & 76.68$\pm$1.30 & $+7.86$ & $[+5.3,+10.5]$ & 75.23 & 85.65$\pm$0.54 & 63.8 & 81.0 \\
++a+b+c: + mirror (\textbf{adopted}) & 80.63$\pm$1.10 & $+11.81$ & $[+9.4,+14.4]$ & 79.54 & 85.50$\pm$0.82 & 79.0 & 81.2 \\
++a+b+c+d: + bone retargeting & 81.37$\pm$1.51 & $+12.55$ & $[+9.7,+15.4]$ & 79.67 & 85.34$\pm$0.76 & 83.4 & 80.7 \\
++a+b + oracle handedness$^\dagger$ & 80.07$\pm$1.35 & $+11.25$ & $[+8.5,+13.9]$ & 78.09 & 86.06$\pm$1.37 & 77.1 & 81.1 \\
+--- tab_signernorm_s2_rows
+Adaptive GNN & 77.05$\pm$0.92 & 85.84$\pm$0.59 & $+8.79$ & $[+6.54,+11.09]$ & 84.97 & 99.12$\pm$0.06 & $+22.05$ & $+13.28$ & 0.352$\to$0.283 \\
+SLGTFormer & 78.54$\pm$1.15 & 85.33$\pm$1.03 & $+6.79$ & $[+4.20,+9.50]$ & 84.18 & 99.03$\pm$0.15 & $+20.10$ & $+13.70$ & -- \\
+Attention GNN & 73.92$\pm$0.39 & 84.47$\pm$0.30 & $+10.55$ & $[+8.40,+12.75]$ & 83.14 & 98.49$\pm$0.24 & $+24.03$ & $+14.02$ & -- \\
+GNN+Transformer$^\ddagger$ & 75.56$\pm$1.26 & 82.96$\pm$1.90 & $+7.40$ & $[+4.22,+10.84]$ & 81.37 & 98.05$\pm$0.50 & $+23.44$ & $+15.09$ & -- \\
+GNN+Bi-LSTM & 70.60$\pm$3.24 & 80.98$\pm$0.54 & $+10.38$ & $[+5.84,+14.26]$ & 79.13 & 98.12$\pm$0.22 & $+26.64$ & $+17.14$ & -- \\
+ST-GCN & 74.82$\pm$0.55 & 80.68$\pm$1.50 & $+5.86$ & $[+3.10,+8.62]$ & 79.25 & 98.34$\pm$0.31 & $+23.69$ & $+17.66$ & -- \\
+BlockGCN & 68.82$\pm$0.56 & 80.63$\pm$1.10 & $+11.81$ & $[+9.35,+14.41]$ & 79.54 & 98.44$\pm$0.27 & $+29.16$ & $+17.81$ & 0.258$\to$0.204 \\
+Pose-LSTM & 60.98$\pm$1.56 & 80.27$\pm$0.87 & $+19.29$ & $[+16.26,+22.42]$ & 78.24 & 96.88$\pm$0.19 & $+33.22$ & $+16.61$ & -- \\
+--- tab_signernorm_loso_rows
+Shared feeder (paper) & 74.37$\pm$16.07 & 42.6--91.3 & -- & -- \\
++a+b+c & 82.47$\pm$13.02 & 50.8--94.3 & $+8.10$ $[+4.29,+12.62]$ & 10/11 \\
+{
+ "ctr-base": {
+  "delta": 3.730000000000004,
+  "ci": [
+   0.9761904761904736,
+   6.568986568986568
+  ],
+  "p": 0.0074,
+  "ens_delta": 5.054945054945051
+ },
+ "a-ctr": {
+  "delta": -0.5300000000000011,
+  "ci": [
+   -3.6141636141636235,
+   2.637362637362628
+  ],
+  "p": 0.7306,
+  "ens_delta": -1.611721611721606
+ },
+ "ab-a": {
+  "delta": 4.660000000000011,
+  "ci": [
+   1.7094017094017033,
+   7.619047619047614
+  ],
+  "p": 0.0022,
+  "ens_delta": 3.223443223443226
+ },
+ "abc-ab": {
+  "delta": 3.9499999999999886,
+  "ci": [
+   1.440170940170936,
+   6.520146520146519
+  ],
+  "p": 0.0018,
+  "ens_delta": 5.128205128205124
+ },
+ "abcd-abc": {
+  "delta": 0.7400000000000091,
+  "ci": [
+   -1.758241758241763,
+   3.1990231990231988
+  ],
+  "p": 0.5578,
+  "ens_delta": 0.0
+ },
+ "abc-oracle": {
+  "delta": 0.5600000000000023,
+  "ci": [
+   -1.8809523809523845,
+   3.1013431013431014
+  ],
+  "p": 0.682,
+  "ens_delta": 0.6593406593406712
+ }
+}
+{
+ "delta_range": [
+  5.860000000000014,
+  19.29
+ ],
+ "p2_test_range": [
+  60.98,
+  78.54
+ ],
+ "sn_test_range": [
+  80.27,
+  85.84
+ ],
+ "p2_smg_range": [
+  20.099999999999994,
+  33.220000000000006
+ ],
+ "sn_smg_range": [
+  13.280000000000001,
+  17.810000000000002
+ ],
+ "smg_shrink_range": [
+  6.030000000000015,
+  16.610000000000007
+ ],
+ "mixed_change": {
+  "adaptive_gnn": 0.020000000000010232,
+  "gnn_transformer": -0.9500000000000028,
+  "st_gcn_vanilla": -0.1700000000000017,
+  "gnn": 0.539999999999992,
+  "slgtformer": 0.39000000000000057,
+  "gnn_lstm": 0.8800000000000097,
+  "block_gcn": 0.45999999999999375,
+  "pose_lstm": 2.6799999999999926
+ }
+}
+make_tables rc=0
+report rc=0
+=== tables done Fri Oct 23 06:50:14 EDT 2026 ===

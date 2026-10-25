@@ -1,0 +1,17 @@
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test01.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test01.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test01.yaml --seed 2 --exp bdsl_block_gcn_si_lr01_loso_test01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test02.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test02_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test02.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test02_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test02.yaml --seed 2 --exp bdsl_block_gcn_si_lr01_loso_test02_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test04.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test04_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test04.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test04_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test04.yaml --seed 2 --exp bdsl_block_gcn_si_lr01_loso_test04_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test05.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test05_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test05.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test05_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test05.yaml --seed 2 --exp bdsl_block_gcn_si_lr01_loso_test05_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test06.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test06_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test06.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test06_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test06.yaml --seed 2 --exp bdsl_block_gcn_si_lr01_loso_test06_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test08.yaml --seed 0 --exp bdsl_block_gcn_si_lr01_loso_test08_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/loso/bdsl_block_gcn_si_lr01_loso_test08.yaml --seed 1 --exp bdsl_block_gcn_si_lr01_loso_test08_seed1

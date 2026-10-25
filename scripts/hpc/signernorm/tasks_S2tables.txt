@@ -1,0 +1,1 @@
+bash scripts/hpc/signernorm/analysis_tables.sh

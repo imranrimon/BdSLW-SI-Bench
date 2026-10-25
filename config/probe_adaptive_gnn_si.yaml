@@ -1,0 +1,13 @@
+# Backbone spec for tools/decodability_probe.py (L_norm signer-leakage probe).
+# Adaptive GNN (CTR-GCN-style) on BdSLW60-SI -- the second headline model, for
+# the L_norm-vs-SMG metric-validation (#1). Mirrors config/bdsl_adaptive_gnn_si.yaml
+# model_args. Not a main.py config.
+backbone: model.adaptive_gnn.Model
+backbone_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3

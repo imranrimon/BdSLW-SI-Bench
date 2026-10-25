@@ -1,0 +1,1 @@
+{"exp": "bdsl_adaptive_gnn_si_seed2", "ckpt": "work_dir/bdsl_adaptive_gnn_si_seed2/bdsl_adaptive_gnn_si_seed2_model-89.pt", "test_top1": 79.34065934065934}

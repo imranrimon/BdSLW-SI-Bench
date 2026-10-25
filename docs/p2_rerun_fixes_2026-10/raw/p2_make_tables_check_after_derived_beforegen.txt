@@ -1,0 +1,41 @@
+
+=== paper_p2_overleaf/main.tex
+  [ok] tab_arch_a_pose (input, 8 rows)
+  [ok] tab_arch_a_rgb (input, 2 rows)
+  [ok] tab_arch_a_foundation (input, 2 rows)
+  [ok] tab_arch_a_prior_rerun (input, 6 rows)
+  [ok] tab_arch_a_prior_reported (input, 3 rows)
+  [ok] tab_arch_b_w401 (input, 4 rows)
+  [ok] tab_smg8_rows (input, 8 rows)
+  [ok] tab_eff_rows (input, 8 rows)
+  [ok] tab_suite_rows (input, 8 rows)
+  [ok] tab_bone_rows (input, 2 rows)
+  [ok] tab_losoboot_rows (input, 5 rows)
+  [ok] tab_losovar_rows (input, 4 rows)
+  [ok] tab_losofolds_rows (input, 2 rows)
+  [ok] tab_sig_a_rows (input, 7 rows)
+  [ok] tab_sig_b_rows (input, 7 rows)
+
+=== paper_p2_ieee/main.tex
+  [ok] tab_arch_a_pose (input, 8 rows)
+  [ok] tab_arch_a_rgb (input, 2 rows)
+  [ok] tab_arch_a_foundation (input, 2 rows)
+  [ok] tab_arch_a_prior_rerun (input, 6 rows)
+  [ok] tab_arch_a_prior_reported (input, 3 rows)
+  [ok] tab_arch_b_w401 (input, 4 rows)
+  [ok] tab_smg8_rows (input, 8 rows)
+  [ok] tab_eff_rows (input, 8 rows)
+  [ok] tab_suite_rows (input, 8 rows)
+  [ok] tab_bone_rows (input, 2 rows)
+  [ok] tab_losoboot_rows (input, 5 rows)
+  [ok] tab_losovar_rows (input, 4 rows)
+  [ok] tab_losofolds_rows (input, 2 rows)
+  [ok] tab_sig_a_rows (input, 7 rows)
+  [ok] tab_sig_b_rows (input, 7 rows)
+
+=== Pending recipes (not active; select via POSE[...]['recipe'] or --use-recipe)
+  slgtformer.mixed_noclip.mixed: 98.64$\pm$0.09  [results_final.csv: bdsl_slgtformer_sd_noclip_test_seed{0,1,2} (latest row each)]
+  slgtformer.bestck.test: 78.54$\pm$1.15  [results_final.csv: bdsl_slgtformer_si_bestck_seed{0,1,2}_test (latest row each)]
+  slgtformer.bestck.suite: 77.18  [p2_metric_suite.metrics_for('bdsl_slgtformer_si_bestck') single.macrof1]
+
+PASS: 0 unexplained mismatch(es); pinned cells that differ from the data: 0 data-newer, 0 rounding

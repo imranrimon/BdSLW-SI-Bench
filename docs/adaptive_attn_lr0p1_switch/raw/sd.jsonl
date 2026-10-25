@@ -1,0 +1,6 @@
+{"arch": "adaptive_gnn", "seed": 0, "sd_test": 99.12216532553036, "sd_val_best": 99.54198473282443}
+{"arch": "adaptive_gnn", "seed": 1, "sd_test": 99.12216532553036, "sd_val_best": 99.08396946564886}
+{"arch": "adaptive_gnn", "seed": 2, "sd_test": 99.04901243599122, "sd_val_best": 99.23664122137404}
+{"arch": "gnn", "seed": 0, "sd_test": 98.31748354059985, "sd_val_best": 98.47328244274809}
+{"arch": "gnn", "seed": 1, "sd_test": 98.0248719824433, "sd_val_best": 98.01526717557252}
+{"arch": "gnn", "seed": 2, "sd_test": 97.51280175566934, "sd_val_best": 98.01526717557252}

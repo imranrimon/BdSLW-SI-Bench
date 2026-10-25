@@ -1,0 +1,56 @@
+Experiment_name: bdsl_dino_temporal_sd
+
+# Signer-DEPENDENT (random) split, DINOv2 hand/face-crop features. SD counterpart
+# of bdsl_dino_temporal_si — the DINOv2 arm of the feature-isolation SI-vs-SD gap.
+# Features remapped from data/bdsl_si_dino by generate_random_split_npy.py (no
+# re-extraction). V=3 regions (L hand, R hand, face), D=384 (DINOv2-small CLS).
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_sd_dino/train_data.npy
+  label_path: ./data/bdsl_sd_dino/train_label.pkl
+  debug: False
+  random_choose: True
+  random_shift: True
+  random_move: False
+  window_size: 120
+  normalization: False
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: ./data/bdsl_sd_dino/val_data.npy
+  label_path: ./data/bdsl_sd_dino/val_label.pkl
+  window_size: 120
+  random_choose: False
+  normalization: False
+
+model: model.flat_temporal.Model
+model_args:
+  num_class: 60
+  num_point: 3
+  num_person: 1
+  in_channels: 384
+  d_model: 256
+  num_heads: 8
+  num_layers: 6
+  dim_feedforward: 1024
+  dropout: 0.1
+  max_frames: 300
+
+weight_decay: 0.0001
+base_lr: 0.001
+step: [60, 80]
+optimizer: AdamW
+
+device: [0]
+batch_size: 32
+test_batch_size: 32
+num_epoch: 100
+nesterov: True
+warm_up_epoch: 5
+
+wandb: False
+num_worker: 0

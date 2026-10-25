@@ -1,0 +1,4 @@
+python -u tools/run_resumable_seed.py --config config/p2_rerun_fixes/bdsl_slgtformer_si_seed2.yaml --seed 2 --exp bdsl_slgtformer_si_seed2 --test-config config/bdsl_slgtformer_si_test.yaml --test-exp bdsl_slgtformer_si_seed2_test
+python -u tools/run_resumable_seed.py --config config/p2_rerun_fixes/bdsl_slgtformer_si_clip1_seed1.yaml --seed 1 --exp bdsl_slgtformer_si_clip1_seed1
+{ [ -f work_dir/bdsl_slgtformer_si_bestck_seed2_test/eval_results/best_acc.pkl ] && [ work_dir/bdsl_slgtformer_si_bestck_seed2_test/eval_results/best_acc.pkl -nt work_dir/bdsl_slgtformer_si_seed2/bdsl_slgtformer_si_seed2_model-best.pt ]; } || python -u main.py --config config/bdsl_slgtformer_si_test.yaml --phase test --weights work_dir/bdsl_slgtformer_si_seed2/bdsl_slgtformer_si_seed2_model-best.pt -Experiment_name bdsl_slgtformer_si_bestck_seed2_test --seed 2
+true

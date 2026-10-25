@@ -1,0 +1,1 @@
+python -u tools/run_resumable_seed.py --config config/bdsl_slgtformer_si.yaml --seed 1 --exp bdsl_slgtformer_si_bestck_seed1 --test-config config/bdsl_slgtformer_si_test.yaml --test-exp bdsl_slgtformer_si_bestck_seed1_test

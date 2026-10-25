@@ -1,0 +1,65 @@
+# Hand-maintained values for the P2 results tables (tools/p2_make_tables.py).
+#
+# ONLY values with no machine-readable result file belong here. Every entry
+# cites where it came from. Values are stored exactly as rendered in LaTeX
+# (strings), so the generator never re-rounds them.
+#
+# Edit here, then run `python tools/p2_make_tables.py` (and `--check`).
+
+# ---------------------------------------------------------------------------
+# Model cost (Params in M, GFLOPs per clip), as printed in Table 7 (tab:arch)
+# and the efficiency table (sec:eff).
+# Pose rows: tools/benchmark_metrics.py `efficiency()` (thop profile() raw/1e9,
+# one clip, T=120, V=27, 60 classes). Re-checked 2026-10-09 in
+# docs/baselines_rerun/table7_panel_b_w401.md ("Sanity check": Adaptive
+# 5.21/5.29, BlockGCN 1.40/1.19, ST-GCN 3.09/3.45). The remaining pose values
+# (GNN+Transformer, Attention GNN, SLGTFormer, GNN+Bi-LSTM, Pose-LSTM) have no
+# saved output file; they are the values the paper has carried since the
+# efficiency table was added (tools/benchmark_metrics.py reproduces them).
+# ---------------------------------------------------------------------------
+cost:
+  adaptive_gnn:    {params: "5.2",  gflops: "5.3"}
+  gnn_transformer: {params: "1.8",  gflops: "0.7"}
+  st_gcn_vanilla:  {params: "3.1",  gflops: "3.5"}
+  gnn:             {params: "4.3",  gflops: "4.1"}
+  slgtformer:      {params: "51.0", gflops: "56.7"}
+  gnn_lstm:        {params: "2.9",  gflops: "0.9"}
+  block_gcn:       {params: "1.4",  gflops: "1.2"}
+  pose_lstm:       {params: "2.3",  gflops: "0.3"}
+  # RGB / foundation: docs/baselines_rerun/item4to6_rgb_foundation.md
+  # ("Params / GFLOPs" table) and docs/P2_FINAL_NUMBERS.md C7 (VideoMAE thop
+  # 101.8 GFLOPs; params ~87 M per the VideoMAE paper, thop undercounts).
+  videomae:        {params: "${\\approx}87$", gflops: "101.8"}
+  s3d:             {params: "8.0",  gflops: "36.3"}            # 7.97 M
+  unisign:         {params: "587.7", gflops: "9.9"}
+  shubert:         {params: "87.4$^\\P$", gflops: "3.3$^\\P$"}  # excl. frozen DINOv2 crop encoders
+  # Attention Bi-LSTM + RQ (model/attn_bilstm.py). No saved efficiency output
+  # was located (docs/baselines_rerun/item1_* lists none); value as typed in
+  # P2. Re-measure with tools/benchmark_metrics.py if the model changes.
+  attn_bilstm_author: {params: "2.1", gflops: "0.02"}
+  svm_original:    {params: "--", gflops: "--"}
+  svm_flipped:     {params: "--", gflops: "--"}
+  # BdSLW401 pose rows (401-way classifier): docs/baselines_rerun/
+  # table7_panel_b_w401.md (CTR 5.30/5.29, ST 3.18/3.45, BlockGCN 1.49/1.19).
+  w401_st_gcn:     {params: "3.2", gflops: "3.5"}
+  w401_ctr_gcn:    {params: "5.3", gflops: "5.3"}
+  w401_block_gcn:  {params: "1.5", gflops: "1.2"}
+
+# ---------------------------------------------------------------------------
+# Prior results "as reported" under their own protocols (Table 7). These are
+# literature numbers, not our runs. Cells: method, input, params, gflops,
+# test, f1, mixed, smg, loso (exact LaTeX).
+# ---------------------------------------------------------------------------
+prior_reported:
+  # BdSLW60 dataset paper (bdslw60): Bi-LSTM 75.1 / SVM 67.6 on U4/U8; see
+  # footnote a and docs/baselines_rerun/item1_bdslw60_baselines.md.
+  - ["BdSLW60 baselines, Bi-LSTM / SVM~\\cite{bdslw60}", "--", "--", "--", "75.1 / 67.6$^a$", "--", "--", "--", "--"]
+  # Video transformer VideoMAE on BdSLW60 (bdsl_videomae_plos), U4/U8 held out.
+  - ["Video transformer, VideoMAE~\\cite{bdsl_videomae_plos}", "RGB video", "--", "--", "96.9$^b$", "--", "--", "--", "--"]
+  # BdSL-SPOTER paper (bdslspoter): 5-fold CV validation accuracy.
+  - ["BdSL-SPOTER~\\cite{bdslspoter}", "pose", "--", "--", "97.92$^c$", "--", "--", "--", "--"]
+
+# BdSLW401 VideoMAE on the same S04/S08 split, cited from the dataset paper
+# (bdsl_videomae_plos); not re-run (docs/w401_sdval/README.md, last bullet).
+w401_reported:
+  - ["VideoMAE, as reported~\\cite{bdsl_videomae_plos}", "RGB video, same split", "--", "--", "81.04", "--", "--", "--", "--"]

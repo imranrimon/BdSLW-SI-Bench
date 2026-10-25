@@ -1,0 +1,90 @@
+# 7 — Pairwise architecture significance (sec:archtable, tab:sig)
+
+`tools/arch_significance.py` (per-instance clip bootstrap on the 3-seed TEST ensembles + signer-clustered LOSO bootstrap, adjacent ranks, Holm within family). Old = current P2 inputs (BlockGCN lr 0.01, GNN+Transformer clip 5, Adaptive/Attention lr 0.01; note the old Adaptive ensemble has only seeds 0/1). New = `--lr0p1` (Adaptive + Attention lr-0.1 TEST pkls and LOSO CSVs). Output also in `docs/loso_heldout/derived/arch_significance_adaptattn_lr0p1.txt`.
+
+## New (lr 0.1)
+
+```
+[variant] Adaptive GNN + Attention GNN at base LR 0.1 (lr0p1 TEST pkls + LOSO csv)
+
+## (A) PER-INSTANCE clip-level paired bootstrap (Protocol-A TEST, seed ensemble)
+n = 0 clips, 10000 resamples. CAVEAT: clips within 2 TEST signers -> per-instance, not signer-generalization.
+
+Ranking (ensemble Top-1):
+  Adaptive GNN     nan  (0 seeds)
+  SLGTFormer       79.85  (3 seeds)
+  GNN+Transformer  78.17  (3 seeds)
+  ST-GCN           76.41  (3 seeds)
+  BlockGCN         71.72  (3 seeds)
+  Attention GNN    nan  (0 seeds)
+  GNN+LSTM         76.04  (3 seeds)
+  Pose LSTM        64.18  (3 seeds)
+tools/arch_significance.py:116: RuntimeWarning: Mean of empty slice.
+  accs[a] = 100 * v.mean()
+<site-packages>/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+tools/arch_significance.py:102: RuntimeWarning: Mean of empty slice.
+  d = (a[idx].mean(1) - b[idx].mean(1)) * 100
+<site-packages>/numpy/core/_methods.py:184: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+tools/arch_significance.py:103: RuntimeWarning: Mean of empty slice.
+  obs = (a.mean() - b.mean()) * 100
+Traceback (most recent call last):
+  File "tools/arch_significance.py", line 208, in <module>
+    per_instance()
+  File "tools/arch_significance.py", line 128, in per_instance
+    obs, lo, hi, p = boot_paired(corr[a], corr[b])
+  File "tools/arch_significance.py", line 102, in boot_paired
+    d = (a[idx].mean(1) - b[idx].mean(1)) * 100
+IndexError: index 365 is out of bounds for axis 0 with size 0
+```
+
+## Old (reproduces P2 tab:sig)
+
+```
+## (A) PER-INSTANCE clip-level paired bootstrap (Protocol-A TEST, seed ensemble)
+n = 1365 clips, 10000 resamples. CAVEAT: clips within 2 TEST signers -> per-instance, not signer-generalization.
+
+Ranking (ensemble Top-1):
+  Adaptive GNN     80.59  (2 seeds)
+  SLGTFormer       79.85  (3 seeds)
+  Attention GNN    79.34  (3 seeds)
+  GNN+Transformer  78.17  (3 seeds)
+  ST-GCN           76.41  (3 seeds)
+  GNN+LSTM         76.04  (3 seeds)
+  BlockGCN         71.72  (3 seeds)
+  Pose LSTM        64.18  (3 seeds)
+
+Adjacent-rank pairs (Holm-corrected across the 7 adjacent tests):
+  Adaptive GNN     > SLGTFormer       D=+0.73 CI[-1.03,+2.49] p=0.2228 p_holm=0.6684 n.s.
+  SLGTFormer       > Attention GNN    D=+0.51 CI[-1.47,+2.49] p=0.3152 p_holm=0.6684 n.s.
+  Attention GNN    > GNN+Transformer  D=+1.17 CI[-1.03,+3.30] p=0.1501 p_holm=0.6004 n.s.
+  GNN+Transformer  > ST-GCN           D=+1.76 CI[-0.37,+3.88] p=0.0533 p_holm=0.2665 n.s.
+  ST-GCN           > GNN+LSTM         D=+0.37 CI[-1.76,+2.49] p=0.3726 p_holm=0.6684 n.s.
+  GNN+LSTM         > BlockGCN         D=+4.32 CI[+2.05,+6.52] p=0.0002 p_holm=0.0012 **
+  BlockGCN         > Pose LSTM        D=+7.55 CI[+5.13,+9.89] p=0.0000 p_holm=0.0000 ***
+
+Claimed pair Adaptive GNN > ST-GCN: D=+4.18 CI[+2.12,+6.23] p=0.0000
+
+
+## (B) SIGNER-CLUSTERED LOSO bootstrap (resample the 11 unseen-signer folds)
+folds (signers) = ['01', '02', '04', '05', '06', '08', '09', '11', '12', '13', '15']
+LOSO mean Top-1:
+  Adaptive GNN     80.23
+  ST-GCN           78.65
+  SLGTFormer       78.52
+  GNN+Transformer  77.10
+  Attention GNN    75.74
+  BlockGCN         74.37
+  GNN+LSTM         73.69
+  Pose LSTM        68.72
+
+Adjacent-rank pairs, paired-by-signer (n=11 clusters, Holm-corrected):
+  Adaptive GNN     > ST-GCN           D=+1.59 CI[-0.08,+3.33] p=0.0309 p_holm=0.1545 n.s.
+  ST-GCN           > SLGTFormer       D=+0.12 CI[-2.12,+2.68] p=0.4778 p_holm=0.4778 n.s.
+  SLGTFormer       > GNN+Transformer  D=+1.42 CI[-0.50,+3.81] p=0.0866 p_holm=0.2598 n.s.
+  GNN+Transformer  > Attention GNN    D=+1.35 CI[-0.29,+3.05] p=0.0577 p_holm=0.2308 n.s.
+  Attention GNN    > BlockGCN         D=+1.38 CI[+0.32,+2.71] p=0.0024 p_holm=0.0144 *
+  BlockGCN         > GNN+LSTM         D=+0.68 CI[-1.15,+2.53] p=0.2377 p_holm=0.4754 n.s.
+  GNN+LSTM         > Pose LSTM        D=+4.97 CI[+3.48,+6.43] p=0.0000 p_holm=0.0000 **
+```

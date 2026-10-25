@@ -1,0 +1,1 @@
+python -u tools/p2_mjfix_score.py --sections bone

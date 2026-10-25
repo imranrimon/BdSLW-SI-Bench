@@ -1,0 +1,2 @@
+bash scripts/hpc/signernorm/analysis_stage2.sh
+python -u tools/signernorm_probe.py --out docs/signernorm_2026-10/raw/probe_v2_signernorm.jsonl --runs bdsl_adaptive_gnn_si_seed0@bdsl_adaptive_gnn_si_seed0_model-59.pt bdsl_adaptive_gnn_si_seed1@bdsl_adaptive_gnn_si_seed1_model-59.pt bdsl_adaptive_gnn_si_seed2@bdsl_adaptive_gnn_si_seed2_model-89.pt bdsl_adaptive_gnn_si_sn_abc_seed0 bdsl_adaptive_gnn_si_sn_abc_seed1 bdsl_adaptive_gnn_si_sn_abc_seed2

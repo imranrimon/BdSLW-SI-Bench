@@ -1,0 +1,67 @@
+Experiment_name: aslcitizen_mixed
+
+# ASL Citizen — participant-MIXED (random) split, for the Signer-Mixing Gap (SMG).
+# SAME clips as data/aslcitizen_si, re-split randomly (class-stratified, seed 42) so a
+# participant's videos land in both train and test. Built by:
+#   python preprocessing/generate_aslcitizen_mixed_split.py \
+#       --si-dir data/aslcitizen_si --out-dir data/aslcitizen_mixed --seed 42
+# SMG = participant-disjoint Top-1  -  participant-mixed Top-1  (identity shortcut).
+
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/aslcitizen_mixed/train_data.npy
+  label_path: data/aslcitizen_mixed/train_label.pkl
+  debug: False
+  random_choose: True
+  window_size: 120
+  random_shift: True
+  normalization: True
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: data/aslcitizen_mixed/val_data.npy      # val for selection; test held out for --phase test
+  label_path: data/aslcitizen_mixed/val_label.pkl
+  random_mirror: False
+  normalization: True
+  is_vector: False
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+# model
+model: model.block_gcn.Model
+model_args:
+  num_class: 2731
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8
+
+# optim
+weight_decay: 0.0001
+base_lr: 0.1
+step: [60, 80]
+
+# training
+device: [0]
+keep_rate: 0.9
+only_train_epoch: 1
+batch_size: 64
+test_batch_size: 64
+num_epoch: 100
+nesterov: True
+warm_up_epoch: 5
+optimizer: SGD
+
+wandb: False
+num_worker: 8
+save_interval: 10

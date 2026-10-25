@@ -1,0 +1,70 @@
+Experiment_name: bdsl_st_gcn_vanilla_si_bp
+
+# ============================================================================
+# TRACK B (best-practice recipe) — ST-GCN (classical vanilla skeleton GCN).
+# See docs/RECIPE_CONTROL.md and bdsl_adaptive_gnn_si_bp.yaml header for the
+# Track-A vs Track-B rationale.
+#
+# Recipe source: ST-GCN (Yan et al., AAAI 2018) + its widely used mmskeleton
+#   reference config: SGD + nesterov momentum 0.9, base_lr 0.1,
+#   weight_decay 1e-4, step-decay x0.1 at [40,60] ending at epoch 80,
+#   batch_size 64. ST-GCN's original recipe divides LR by 10 at the 40th and
+#   60th epoch over 80 epochs — expressed here directly as step [40,60],
+#   num_epoch 80. No warmup in the original ST-GCN recipe (warm_up_epoch 0).
+#
+# DEVIATIONS (documented, dataset-mandated):
+#   - random_mirror OFF (BdSL hand-dominance is class-informative; held
+#     constant across Track A and B).
+#   - Some later ST-GCN re-implementations swap step decay for cosine
+#     annealing; main.py implements only step-decay+warmup and the ORIGINAL
+#     ST-GCN paper is step-decay, so step [40,60] is the faithful choice.
+# ============================================================================
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_si/train_data.npy
+  label_path: ./data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  random_shift: True
+  random_move: False
+  window_size: 120
+  normalization: True
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: ./data/bdsl_si/val_data.npy
+  label_path: ./data/bdsl_si/val_label.pkl
+  window_size: 120
+  random_choose: False
+  normalization: True
+
+model: model.st_gcn_vanilla.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+
+# optim — ST-GCN best-practice
+optimizer: SGD
+weight_decay: 0.0001
+base_lr: 0.1
+step: [40, 60]
+
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 80
+nesterov: True
+warm_up_epoch: 0
+
+wandb: False
+num_worker: 0
+save_interval: 5

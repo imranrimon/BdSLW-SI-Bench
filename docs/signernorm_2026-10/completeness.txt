@@ -1,0 +1,219 @@
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed0_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed0_model-best.pt  parent=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed1_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed1_model-best.pt  parent=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed2_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed2_model-best.pt  parent=bdsl_adaptive_gnn_sd_lr0p1_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_adaptive_gnn_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_sn_abc_seed0_model-best.pt  parent=bdsl_adaptive_gnn_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_adaptive_gnn_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_sn_abc_seed1_model-best.pt  parent=bdsl_adaptive_gnn_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_adaptive_gnn_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_adaptive_gnn_sd_sn_abc_seed2_model-best.pt  parent=bdsl_adaptive_gnn_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed0_test: TEST_OK  weights=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed0_model-best.pt  parent=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed1_test: TEST_OK  weights=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed1_model-best.pt  parent=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed2_test: TEST_OK  weights=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed2_model-best.pt  parent=bdsl_adaptive_gnn_si_lr0p1_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_adaptive_gnn_si_sn_abc_seed0_model-best.pt  parent=bdsl_adaptive_gnn_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_adaptive_gnn_si_sn_abc_seed1_model-best.pt  parent=bdsl_adaptive_gnn_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_adaptive_gnn_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_adaptive_gnn_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_adaptive_gnn_si_sn_abc_seed2_model-best.pt  parent=bdsl_adaptive_gnn_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_block_gcn_sd_sn_abc_seed0_model-best.pt  parent=bdsl_block_gcn_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_block_gcn_sd_sn_abc_seed1_model-best.pt  parent=bdsl_block_gcn_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_block_gcn_sd_sn_abc_seed2_model-best.pt  parent=bdsl_block_gcn_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_a_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_a_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_a_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_a_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_a_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_a_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_a_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_a_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_a_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_a_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_a_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_a_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_oraclehand_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ab_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ab_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ab_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ab_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test01_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test02_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test04_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test05_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test06_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test08_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test09_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test11_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test12_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test13_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_loso_test15_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abc_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abc_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abcd_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abcd_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abcd_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abcd_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abcd_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abcd_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abcd_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abcd_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_abcd_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_abcd_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_abcd_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_abcd_seed2 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ctr_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ctr_seed0_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ctr_seed0_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ctr_seed0 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ctr_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ctr_seed1_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ctr_seed1_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ctr_seed1 [COMPLETE 100/100]
+bdsl_block_gcn_si_lr01_sn_ctr_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_block_gcn_si_lr01_sn_ctr_seed2_test: TEST_OK  weights=bdsl_block_gcn_si_lr01_sn_ctr_seed2_model-best.pt  parent=bdsl_block_gcn_si_lr01_sn_ctr_seed2 [COMPLETE 100/100]
+bdsl_gnn_lstm_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_lstm_sd_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_lstm_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_lstm_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_lstm_sd_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_lstm_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_lstm_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_lstm_sd_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_lstm_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_lstm_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_lstm_si_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_lstm_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_lstm_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_lstm_si_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_lstm_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_lstm_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_lstm_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_lstm_si_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_lstm_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_sd_lr0p1_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_gnn_sd_lr0p1_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_sd_lr0p1_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_sd_lr0p1_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_sd_lr0p1_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_gnn_sd_lr0p1_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_sd_lr0p1_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_sd_lr0p1_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_sd_lr0p1_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [4, 9, 14, 19, 24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99]  best.pt y
+bdsl_gnn_sd_lr0p1_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_sd_lr0p1_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_sd_lr0p1_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_sd_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_sd_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_sd_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_si_lr0p1_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_lr0p1_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_si_lr0p1_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_si_lr0p1_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_si_lr0p1_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_lr0p1_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_si_lr0p1_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_si_lr0p1_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_si_lr0p1_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_lr0p1_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_si_lr0p1_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_si_lr0p1_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_si_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_si_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_si_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_transformer_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_transformer_sd_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_transformer_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_transformer_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_transformer_sd_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_transformer_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_transformer_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_transformer_sd_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_transformer_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_gnn_transformer_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_gnn_transformer_si_sn_abc_seed0_model-best.pt  parent=bdsl_gnn_transformer_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_gnn_transformer_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_gnn_transformer_si_sn_abc_seed1_model-best.pt  parent=bdsl_gnn_transformer_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_gnn_transformer_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_gnn_transformer_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_gnn_transformer_si_sn_abc_seed2_model-best.pt  parent=bdsl_gnn_transformer_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_pose_lstm_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_pose_lstm_sd_sn_abc_seed0_model-best.pt  parent=bdsl_pose_lstm_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_pose_lstm_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_pose_lstm_sd_sn_abc_seed1_model-best.pt  parent=bdsl_pose_lstm_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_pose_lstm_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_pose_lstm_sd_sn_abc_seed2_model-best.pt  parent=bdsl_pose_lstm_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_pose_lstm_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_pose_lstm_si_sn_abc_seed0_model-best.pt  parent=bdsl_pose_lstm_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_pose_lstm_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_pose_lstm_si_sn_abc_seed1_model-best.pt  parent=bdsl_pose_lstm_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_pose_lstm_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_pose_lstm_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_pose_lstm_si_sn_abc_seed2_model-best.pt  parent=bdsl_pose_lstm_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_slgtformer_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_slgtformer_sd_sn_abc_seed0_model-best.pt  parent=bdsl_slgtformer_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_slgtformer_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_slgtformer_sd_sn_abc_seed1_model-best.pt  parent=bdsl_slgtformer_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_slgtformer_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_slgtformer_sd_sn_abc_seed2_model-best.pt  parent=bdsl_slgtformer_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_slgtformer_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_slgtformer_si_sn_abc_seed0_model-best.pt  parent=bdsl_slgtformer_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_slgtformer_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_slgtformer_si_sn_abc_seed1_model-best.pt  parent=bdsl_slgtformer_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_slgtformer_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]  best.pt y
+bdsl_slgtformer_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_slgtformer_si_sn_abc_seed2_model-best.pt  parent=bdsl_slgtformer_si_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_sd_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_sd_sn_abc_seed0_test: TEST_OK  weights=bdsl_st_gcn_vanilla_sd_sn_abc_seed0_model-best.pt  parent=bdsl_st_gcn_vanilla_sd_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_sd_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_sd_sn_abc_seed1_test: TEST_OK  weights=bdsl_st_gcn_vanilla_sd_sn_abc_seed1_model-best.pt  parent=bdsl_st_gcn_vanilla_sd_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_sd_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_sd_sn_abc_seed2_test: TEST_OK  weights=bdsl_st_gcn_vanilla_sd_sn_abc_seed2_model-best.pt  parent=bdsl_st_gcn_vanilla_sd_sn_abc_seed2 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_si_sn_abc_seed0: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_si_sn_abc_seed0_test: TEST_OK  weights=bdsl_st_gcn_vanilla_si_sn_abc_seed0_model-best.pt  parent=bdsl_st_gcn_vanilla_si_sn_abc_seed0 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_si_sn_abc_seed1: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_si_sn_abc_seed1_test: TEST_OK  weights=bdsl_st_gcn_vanilla_si_sn_abc_seed1_model-best.pt  parent=bdsl_st_gcn_vanilla_si_sn_abc_seed1 [COMPLETE 100/100]
+bdsl_st_gcn_vanilla_si_sn_abc_seed2: COMPLETE  eval 100/100  train-ep 100  ckpts [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]  best.pt y
+bdsl_st_gcn_vanilla_si_sn_abc_seed2_test: TEST_OK  weights=bdsl_st_gcn_vanilla_si_sn_abc_seed2_model-best.pt  parent=bdsl_st_gcn_vanilla_si_sn_abc_seed2 [COMPLETE 100/100]
+check rc=0
+block_gcn_lr01: 33/33 cells complete, 0 stale
+block_gcn_lr01_sn_abc: 33/33 cells complete, 0 stale

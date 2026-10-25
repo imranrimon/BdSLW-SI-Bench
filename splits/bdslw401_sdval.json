@@ -1,0 +1,63 @@
+{
+  "source": "data/bdslw401_si",
+  "bundle": "data/bdslw401_si_sdval",
+  "val_signer": "S15",
+  "rule": "val = all clips of one held-out full-coverage training signer (highest-numbered full-coverage signer); train = remaining training signers (old train+val); test unchanged",
+  "train_signers": [
+    "S01",
+    "S02",
+    "S03",
+    "S05",
+    "S06",
+    "S07",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S16",
+    "S17",
+    "S18"
+  ],
+  "val_signers": [
+    "S15"
+  ],
+  "test_signers": [
+    "S04",
+    "S08"
+  ],
+  "counts": {
+    "train": 39315,
+    "val": 3950,
+    "test": 7833
+  },
+  "per_signer": {
+    "train": {
+      "S01": 4002,
+      "S02": 3956,
+      "S03": 1606,
+      "S05": 3924,
+      "S06": 3902,
+      "S07": 1239,
+      "S09": 3962,
+      "S10": 807,
+      "S11": 3935,
+      "S12": 3984,
+      "S13": 3800,
+      "S14": 1232,
+      "S16": 1233,
+      "S17": 1238,
+      "S18": 495
+    },
+    "val": {
+      "S15": 3950
+    },
+    "test": {
+      "S04": 3853,
+      "S08": 3980
+    }
+  },
+  "num_classes": 401,
+  "builder": "preprocessing/make_w401_sdval_bundle.py"
+}

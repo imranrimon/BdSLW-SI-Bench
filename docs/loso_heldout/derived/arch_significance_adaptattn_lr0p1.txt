@@ -1,0 +1,32 @@
+[variant] Adaptive GNN + Attention GNN at base LR 0.1 (lr0p1 TEST pkls + LOSO csv)
+
+## (A) PER-INSTANCE clip-level paired bootstrap (Protocol-A TEST, seed ensemble)
+n = 0 clips, 10000 resamples. CAVEAT: clips within 2 TEST signers -> per-instance, not signer-generalization.
+
+Ranking (ensemble Top-1):
+  Adaptive GNN     nan  (0 seeds)
+  SLGTFormer       79.85  (3 seeds)
+  GNN+Transformer  78.17  (3 seeds)
+  ST-GCN           76.41  (3 seeds)
+  BlockGCN         71.72  (3 seeds)
+  Attention GNN    nan  (0 seeds)
+  GNN+LSTM         76.04  (3 seeds)
+  Pose LSTM        64.18  (3 seeds)
+tools/arch_significance.py:116: RuntimeWarning: Mean of empty slice.
+  accs[a] = 100 * v.mean()
+<site-packages>/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+tools/arch_significance.py:102: RuntimeWarning: Mean of empty slice.
+  d = (a[idx].mean(1) - b[idx].mean(1)) * 100
+<site-packages>/numpy/core/_methods.py:184: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+tools/arch_significance.py:103: RuntimeWarning: Mean of empty slice.
+  obs = (a.mean() - b.mean()) * 100
+Traceback (most recent call last):
+  File "tools/arch_significance.py", line 208, in <module>
+    per_instance()
+  File "tools/arch_significance.py", line 128, in per_instance
+    obs, lo, hi, p = boot_paired(corr[a], corr[b])
+  File "tools/arch_significance.py", line 102, in boot_paired
+    d = (a[idx].mean(1) - b[idx].mean(1)) * 100
+IndexError: index 365 is out of bounds for axis 0 with size 0

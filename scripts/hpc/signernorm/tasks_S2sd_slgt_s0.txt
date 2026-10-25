@@ -1,0 +1,1 @@
+python -u tools/run_resumable_seed.py --config config/signernorm/stage2/bdsl_slgtformer_sd_sn_abc.yaml --seed 0 --exp bdsl_slgtformer_sd_sn_abc_seed0 --test-config config/signernorm/stage2/bdsl_slgtformer_sd_sn_abc_test.yaml --test-exp bdsl_slgtformer_sd_sn_abc_seed0_test

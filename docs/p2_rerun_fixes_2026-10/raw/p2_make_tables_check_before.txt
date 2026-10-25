@@ -1,0 +1,68 @@
+
+=== paper_p2_overleaf/main.tex
+  [ok] tab_arch_a_pose (input, 8 rows)
+  [ok] tab_arch_a_rgb (input, 2 rows)
+  [ok] tab_arch_a_foundation (input, 2 rows)
+  [ok] tab_arch_a_prior_rerun (input, 6 rows)
+  [ok] tab_arch_a_prior_reported (input, 3 rows)
+  [ok] tab_arch_b_w401 (input, 4 rows)
+  [ok] tab_smg8_rows (input, 8 rows)
+  [ok] tab_eff_rows (input, 8 rows)
+  [ok] tab_suite_rows (input, 8 rows)
+  [ok] tab_bone_rows (input, 2 rows)
+  [ok] tab_losoboot_rows (input, 5 rows)
+  [ok] tab_losovar_rows (input, 4 rows)
+  [ok] tab_losofolds_rows (input, 2 rows)
+  [ok] tab_sig_a_rows (input, 7 rows)
+  [ok] tab_sig_b_rows (input, 7 rows)
+
+=== paper_p2_ieee/main.tex
+  [ok] tab_arch_a_pose (input, 8 rows)
+  [ok] tab_arch_a_rgb (input, 2 rows)
+  [ok] tab_arch_a_foundation (input, 2 rows)
+  [ok] tab_arch_a_prior_rerun (input, 6 rows)
+  [ok] tab_arch_a_prior_reported (input, 3 rows)
+  [ok] tab_arch_b_w401 (input, 4 rows)
+  [ok] tab_smg8_rows (input, 8 rows)
+  [ok] tab_eff_rows (input, 8 rows)
+  [ok] tab_suite_rows (input, 8 rows)
+  [ok] tab_bone_rows (input, 2 rows)
+  [ok] tab_losoboot_rows (input, 5 rows)
+  [ok] tab_losovar_rows (input, 4 rows)
+  [ok] tab_losofolds_rows (input, 2 rows)
+  [ok] tab_sig_a_rows (input, 7 rows)
+  [ok] tab_sig_b_rows (input, 7 rows)
+
+=== Data newer than paper -- pinned to the paper's value; remove the pin in the SPEC to update
+  tab_arch_a_pose / Adaptive GNN (CTR-GCN-style) / macrof1: paper 78.09 -> generator 77.92
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') single.macrof1
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+  tab_suite_rows / Adaptive GNN / macrof1: paper 78.09 -> generator 77.92
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') single.macrof1
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+  tab_suite_rows / Adaptive GNN / ens_top1: paper 80.00 -> generator 81.83
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') ens.top1
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+  tab_suite_rows / Adaptive GNN / mrr: paper 0.855 -> generator 0.856
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') single.mrr
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+  tab_suite_rows / Adaptive GNN / r10: paper 97.55 -> generator 97.66
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') single.r10
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+  tab_suite_rows / Adaptive GNN / nll: paper 1.253 -> generator 1.259
+      source: p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si') single.nll
+      why: Adaptive GNN suite was computed when only seeds 0/1 had TEST score dumps; the seed-2 dump (work_dir/bdsl_adaptive_gnn_si_seed2_test) landed 2026-10-22
+
+=== Pending recipes (not active; select via POSE[...]['recipe'] or --use-recipe)
+  adaptive_gnn.lr0p1.test: 77.05$\pm$0.92  [results_final.csv: bdsl_adaptive_gnn_si_lr0p1_seed{0,1,2}_test (latest row each)]
+  adaptive_gnn.lr0p1.suite: 75.66  [p2_metric_suite.metrics_for('bdsl_adaptive_gnn_si_lr0p1') single.macrof1]
+  adaptive_gnn.lr0p1.mixed: not ready -- bdsl_adaptive_gnn_sd_noclip_lr0p1_test_seed{s}: missing seed(s) [0, 1, 2] (0/3 present)
+  adaptive_gnn.lr0p1.loso: not ready -- missing docs/loso_heldout/adaptive_gnn_lr0p1.csv
+  adaptive_gnn.lr0p1.bone: not ready -- bdsl_adaptive_gnn_bone_lr0p1_test_seed{s}: missing seed(s) [0, 1, 2] (0/3 present)
+  gnn.lr0p1.test: 73.92$\pm$0.39  [results_final.csv: bdsl_gnn_si_lr0p1_seed{0,1,2}_test (latest row each)]
+  gnn.lr0p1.suite: 72.20  [p2_metric_suite.metrics_for('bdsl_gnn_si_lr0p1') single.macrof1]
+  gnn.lr0p1.mixed: not ready -- bdsl_gnn_sd_noclip_lr0p1_test_seed{s}: missing seed(s) [0, 1, 2] (0/3 present)
+  gnn.lr0p1.loso: not ready -- missing docs/loso_heldout/gnn_lr0p1.csv
+  slgtformer.mixed_noclip.mixed: not ready -- bdsl_slgtformer_sd_noclip_test_seed{s}: missing seed(s) [0, 1] (1/3 present)
+
+PASS: 0 unexplained mismatch(es); pinned cells that differ from the data: 6 data-newer, 0 rounding

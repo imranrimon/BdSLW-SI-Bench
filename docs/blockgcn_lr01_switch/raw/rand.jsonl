@@ -1,0 +1,5 @@
+{"split": 42, "val_selected_test": 98.24175824175825, "old_estimator_max_test": 98.3882783882784, "n_ckpts": 10, "max_test_at_eval_epochs": 98.3882783882784}
+{"split": 43, "val_selected_test": 98.16849816849818, "old_estimator_max_test": 98.31501831501832, "n_ckpts": 10, "max_test_at_eval_epochs": 98.31501831501832}
+{"split": 44, "val_selected_test": 98.02197802197803, "old_estimator_max_test": 98.0952380952381, "n_ckpts": 10, "max_test_at_eval_epochs": 98.0952380952381}
+{"split": 45, "val_selected_test": 98.16849816849818, "old_estimator_max_test": 98.16849816849818, "n_ckpts": 10, "max_test_at_eval_epochs": 98.16849816849818}
+{"split": 46, "val_selected_test": 98.02197802197803, "old_estimator_max_test": 98.16849816849818, "n_ckpts": 10, "max_test_at_eval_epochs": 98.16849816849818}

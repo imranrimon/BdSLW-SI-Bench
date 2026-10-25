@@ -1,0 +1,36 @@
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_static_lr01.yaml --seed 0 --exp bdsl_cue_static_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_static_lr01.yaml --seed 1 --exp bdsl_cue_static_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_static_lr01.yaml --seed 2 --exp bdsl_cue_static_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_speednorm_lr01.yaml --seed 0 --exp bdsl_cue_speednorm_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_speednorm_lr01.yaml --seed 1 --exp bdsl_cue_speednorm_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_speednorm_lr01.yaml --seed 2 --exp bdsl_cue_speednorm_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_shuffle_lr01.yaml --seed 0 --exp bdsl_cue_shuffle_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_shuffle_lr01.yaml --seed 1 --exp bdsl_cue_shuffle_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_shuffle_lr01.yaml --seed 2 --exp bdsl_cue_shuffle_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_bodyonly_lr01.yaml --seed 0 --exp bdsl_cue_bodyonly_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_bodyonly_lr01.yaml --seed 1 --exp bdsl_cue_bodyonly_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_bodyonly_lr01.yaml --seed 2 --exp bdsl_cue_bodyonly_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_handsonly_lr01.yaml --seed 0 --exp bdsl_cue_handsonly_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_handsonly_lr01.yaml --seed 1 --exp bdsl_cue_handsonly_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_handsonly_lr01.yaml --seed 2 --exp bdsl_cue_handsonly_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_rootcenter_lr01.yaml --seed 0 --exp bdsl_cue_rootcenter_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_rootcenter_lr01.yaml --seed 1 --exp bdsl_cue_rootcenter_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_cue_rootcenter_lr01.yaml --seed 2 --exp bdsl_cue_rootcenter_lr01_seed2
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions unseen --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions unseen --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions unseen --seeds 2 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_matched --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_matched --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_matched --seeds 2 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_aug --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_aug --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 2 --conditions seen_aug --seeds 2 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions unseen --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions unseen --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions unseen --seeds 2 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_matched --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_matched --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_matched --seeds 2 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_aug --seeds 0 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_aug --seeds 1 --skip-existing
+python -u tools/run_paired_smg.py --config config/bdsl_block_gcn_si_lr01.yaml --focus-signers 13 --conditions seen_aug --seeds 2 --skip-existing

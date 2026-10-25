@@ -1,0 +1,47 @@
+Experiment_name: bdsl_adaptive_gnn_rand42_lr0p1
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_rand42/train_data.npy
+  label_path: ./data/bdsl_rand42/train_label.pkl
+  debug: false
+  random_choose: true
+  random_shift: true
+  random_move: false
+  window_size: 120
+  normalization: true
+  random_mirror: false
+  random_mirror_p: 0.0
+  is_vector: false
+  lap_pe: false
+test_feeder_args:
+  data_path: ./data/bdsl_rand42/val_data.npy
+  label_path: ./data/bdsl_rand42/val_label.pkl
+  window_size: 120
+  random_choose: false
+  normalization: true
+model: model.adaptive_gnn.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: spatial
+  in_channels: 3
+weight_decay: 0.0004
+base_lr: 0.1
+step:
+- 35
+- 60
+- 80
+device:
+- 0
+batch_size: 16
+test_batch_size: 16
+num_epoch: 100
+nesterov: true
+warm_up_epoch: 5
+wandb: false
+num_worker: 0
+grad_clip_norm: 0.0
+save_interval: 5

@@ -1,0 +1,27 @@
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test01.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test01_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test02.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test02_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test04.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test04_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test05.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test05_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test06.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test06_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test08.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test08_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test09.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test09_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test11.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test11_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test12.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test12_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test13.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test13_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_adaptive_gnn_si_lr0p1_loso_test15.yaml --seed 1 --exp bdsl_adaptive_gnn_si_lr0p1_loso_test15_seed1
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_adaptive_gnn_rand43_lr0p1.yaml --seed 0 --exp bdsl_adaptive_gnn_rand43_lr0p1_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_adaptive_gnn_rand46_lr0p1.yaml --seed 0 --exp bdsl_adaptive_gnn_rand46_lr0p1_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_adaptive_gnn_sd_noclip_lr0p1.yaml --seed 2 --exp bdsl_adaptive_gnn_sd_noclip_lr0p1_seed2 --test-config config/lr0p1_switch/bdsl_adaptive_gnn_sd_noclip_lr0p1_test.yaml --test-exp bdsl_adaptive_gnn_sd_noclip_lr0p1_test_seed2
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_adaptive_gnn_bone_lr0p1.yaml --seed 2 --exp bdsl_adaptive_gnn_bone_lr0p1_seed2 --test-config config/lr0p1_switch/bdsl_adaptive_gnn_bone_lr0p1_test.yaml --test-exp bdsl_adaptive_gnn_bone_lr0p1_test_seed2
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test02.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test02_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test04.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test04_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test05.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test05_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test06.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test06_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test08.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test08_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test09.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test09_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test11.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test11_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test12.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test12_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test13.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test13_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/loso/bdsl_gnn_si_lr0p1_loso_test15.yaml --seed 0 --exp bdsl_gnn_si_lr0p1_loso_test15_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_gnn_sd_noclip_lr0p1.yaml --seed 0 --exp bdsl_gnn_sd_noclip_lr0p1_seed0 --test-config config/lr0p1_switch/bdsl_gnn_sd_noclip_lr0p1_test.yaml --test-exp bdsl_gnn_sd_noclip_lr0p1_test_seed0
+python -u tools/run_resumable_seed.py --config config/lr0p1_switch/bdsl_gnn_sd_noclip_lr0p1.yaml --seed 1 --exp bdsl_gnn_sd_noclip_lr0p1_seed1 --test-config config/lr0p1_switch/bdsl_gnn_sd_noclip_lr0p1_test.yaml --test-exp bdsl_gnn_sd_noclip_lr0p1_test_seed1

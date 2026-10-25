@@ -1,0 +1,2 @@
+python -u tools/run_resumable_seed.py --config config/p2_rerun_fixes/bdsl_slgtformer_si_loso_test08_seed0.yaml --seed 0 --exp bdsl_slgtformer_si_loso_test08_seed0
+python -u tools/run_resumable_seed.py --config config/p2_rerun_fixes/bdsl_slgtformer_si_loso_test09_seed0.yaml --seed 0 --exp bdsl_slgtformer_si_loso_test09_seed0

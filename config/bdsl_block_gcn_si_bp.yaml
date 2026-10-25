@@ -1,0 +1,86 @@
+Experiment_name: bdsl_block_gcn_si_bp
+
+# ============================================================================
+# TRACK B (best-practice recipe) — BlockGCN.
+# See docs/RECIPE_CONTROL.md and bdsl_adaptive_gnn_si_bp.yaml header for the
+# Track-A vs Track-B rationale.
+#
+# Recipe source: BlockGCN (Zhou et al., CVPR 2024) official NTU RGB+D config:
+#   SGD + nesterov momentum 0.9, base_lr 0.1, weight_decay 4e-4,
+#   step-decay x0.1 at [110,120], num_epoch 140, warm_up_epoch 5.
+#   (Paper §implementation: "SGD with Nesterov momentum 0.9, weight decay
+#    0.0004 for NTU; lr initiated at 0.1, reduced x10 at epochs 110 and 120;
+#    140 epochs total; 5-epoch warmup.") Batch 64 per the official config.
+#
+# NOTE vs Track A: BlockGCN's shared-recipe number is its weakest showing
+#   (Track-A TEST 65.23). Track A uses wd 1e-4, step [60,80], 100 ep; its
+#   author recipe uses the STRONGER wd 4e-4 and a LONGER 140-ep schedule with
+#   late decays [110,120]. RECIPE_CONTROL notes BlockGCN "benefited from
+#   tighter clipping" and is lower/noisier at the shared clip 5.0 — this
+#   Track-B run removes that shared-recipe handicap by using BlockGCN's own
+#   longer schedule + stronger wd, so it is the arch most expected to gain.
+#
+# DEVIATIONS (documented, dataset-mandated):
+#   - random_mirror OFF (BdSL hand-dominance; held constant A vs B).
+#   - No grad_clip (Track A applied a uniform clip 5.0 as a stability control;
+#     BlockGCN's author recipe has no such clip, so Track B omits it).
+# ============================================================================
+
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/bdsl_si/train_data.npy
+  label_path: data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  window_size: 120
+  random_shift: True
+  normalization: True
+  random_mirror: False       # off: BdSL hand-dominance is class-informative
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: data/bdsl_si/val_data.npy
+  label_path: data/bdsl_si/val_label.pkl
+  random_mirror: False
+  normalization: True
+  is_vector: False
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+# model
+model: model.block_gcn.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8
+
+# optim — BlockGCN best-practice
+optimizer: SGD
+weight_decay: 0.0004
+base_lr: 0.1
+step: [110, 120]
+
+# training
+device: [0]
+keep_rate: 0.9
+only_train_epoch: 1
+batch_size: 64
+test_batch_size: 64
+num_epoch: 140
+nesterov: True
+warm_up_epoch: 5
+
+wandb: False
+num_worker: 0
+save_interval: 10

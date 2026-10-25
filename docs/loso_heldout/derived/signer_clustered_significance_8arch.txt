@@ -1,0 +1,12 @@
+  GNN+LSTM         73.69
+  Pose LSTM        68.72
+  BlockGCN         65.09
+
+Adjacent-rank pairs, paired-by-signer (n=11 clusters, Holm-corrected):
+  Adaptive GNN     > ST-GCN           D=+1.59 CI[-0.09,+3.25] p=0.0340 p_holm=0.1700 n.s.
+  ST-GCN           > SLGTFormer       D=+0.12 CI[-2.08,+2.76] p=0.4887 p_holm=0.4887 n.s.
+  SLGTFormer       > GNN+Transformer  D=+1.42 CI[-0.51,+3.75] p=0.0889 p_holm=0.2320 n.s.
+  GNN+Transformer  > Attention GNN    D=+1.35 CI[-0.34,+3.06] p=0.0580 p_holm=0.2320 n.s.
+  Attention GNN    > GNN+LSTM         D=+2.06 CI[+0.21,+3.91] p=0.0145 p_holm=0.0870 n.s.
+  GNN+LSTM         > Pose LSTM        D=+4.97 CI[+3.49,+6.42] p=0.0000 p_holm=0.0000 **
+  Pose LSTM        > BlockGCN         D=+3.63 CI[-0.99,+8.25] p=0.0660 p_holm=0.2320 n.s.

@@ -1,0 +1,16 @@
+# Backbone spec for tools/decodability_probe.py (E3 signer-leakage probe).
+# Matches the classifier-recipe BlockGCN used as the signer-adversarial
+# backbone (config/bdsl_block_gcn_si_signeradv.yaml, model_args.backbone_args)
+# so a signeradv checkpoint's `backbone.` params load 1:1. Not a main.py config.
+backbone: model.block_gcn.Model
+backbone_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8

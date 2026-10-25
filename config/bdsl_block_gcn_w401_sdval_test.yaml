@@ -1,0 +1,49 @@
+# Signer-disjoint-val BdSLW401 (val = held-out signer S15; preprocessing/make_w401_sdval_bundle.py). Identical to bdsl_block_gcn_w401_test_front.yaml except data paths.
+Experiment_name: bdsl_block_gcn_w401_sdval_test
+
+# TEST-ONLY config: evaluate a trained BlockGCN checkpoint on the
+# BdSLW401 FRONT held-out TEST split (unseen-signer front view).
+# Used with:  main.py --phase test --weights <ckpt>
+#   F->F : front-trained checkpoint on this front test split
+#   L->F : lateral-trained checkpoint on this front test split (reverse viewpoint)
+# Only test_feeder_args + model/model_args are consumed in test phase.
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/bdslw401_si_sdval/test_data.npy
+  label_path: data/bdslw401_si_sdval/test_label.pkl
+  debug: False
+  normalization: True
+  is_vector: False
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+test_feeder_args:
+  data_path: data/bdslw401_si_sdval/test_data.npy
+  label_path: data/bdslw401_si_sdval/test_label.pkl
+  random_mirror: False
+  normalization: True
+  is_vector: False
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+model: model.block_gcn.Model
+model_args:
+  num_class: 401
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8
+
+device: [0]
+batch_size: 32
+test_batch_size: 32
+wandb: False
+num_worker: 0

@@ -1,0 +1,435 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": [
+    "http://mlcommons.org/croissant/1.0",
+    "http://mlcommons.org/croissant/RAI/1.0"
+  ],
+  "name": "BdSLW401-SI",
+  "description": "Signer-independent split of BdSLW401 (401 Bangla sign words, front view) released as 27-keypoint MediaPipe pose sequences (no raw video): 51098 clips. Held-out test signers S04/S08 (the source dataset's own signer-disjoint test), validation on a held-out training signer S15, train on the remaining 15 signers. Also ships the source's original seen-signer validation split and a signer-mixed split. Derived poses are released under the source data use agreement (non-commercial). Counts: {'train': 39315, 'val': 3950, 'test': 7833}.",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "url": "https://huggingface.co/datasets/__ANON_ACCOUNT__/BdSLW401-SI",
+  "version": "1.0.0",
+  "datePublished": "2026-10-22",
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "Anonymous (withheld for double-blind review)"
+  },
+  "keywords": [
+    "sign language recognition",
+    "signer-independent",
+    "Bangla Sign Language",
+    "BdSLW401",
+    "pose",
+    "skeleton",
+    "MediaPipe",
+    "large vocabulary"
+  ],
+  "inLanguage": "bn",
+  "isAccessibleForFree": true,
+  "citeAs": "Transformer-based word level Bangla sign language recognition using relative quantization encoding. Scientific Reports 16:25259 (2026). https://doi.org/10.1038/s41598-026-53835-3 Rubaiyeat, H. A., Mahmud, H., Habib, A., Hasan, M. K. (2025). BdSLW60: A word-level Bangla sign language dataset. Multimedia Tools and Applications 84(34):42399-42423. https://doi.org/10.1007/s11042-025-20792-4 Shawon, Hasan, Mahmud. A comparative analysis of video vision transformers on word-level sign language datasets. PLOS ONE 21(2):e0341909 (2026). https://doi.org/10.1371/journal.pone.0341909",
+  "sdLicense": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://www.kaggle.com/datasets/hasanssl/bdslw401",
+      "name": "BdSLW401 (front-view video clips; used under a signed data use agreement)",
+      "description": "Source dataset. Cite as: Transformer-based word level Bangla sign language recognition using relative quantization encoding. Scientific Reports 16:25259 (2026). https://doi.org/10.1038/s41598-026-53835-3"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "name": "Pose extraction",
+      "description": "MediaPipe Holistic (legacy mp.solutions.holistic API, mediapipe==0.10.9 pinned; model_complexity=1) run on every source clip; 27 keypoints kept; per-clip cache. Code: preprocessing/preprocess_bdsl.py in the anonymized code repository."
+    },
+    {
+      "@type": "prov:Activity",
+      "name": "Signer-disjoint split construction and bundling",
+      "description": "Clips assigned to splits by signer id only (see splits/*.json), then zero-padded to T=300 and bundled per split. Code: preprocessing/generate_signer_split_npy.py, preprocessing/bundle_bdslw401_pose_to_npy.py, preprocessing/make_w401_sdval_bundle.py, preprocessing/generate_loso_split_bundle.py."
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "train_data.npy",
+      "name": "train_data.npy",
+      "description": "Pose tensors of the 'train' split, shape (39315, 3, 300, 27, 1), float32 (N, C=[x, y, visibility], T, V=27 joints, M=1 person). Row i is the clip in metadata/clips.csv with split=train and pose_row=i.",
+      "contentUrl": "data/train_data.npy",
+      "encodingFormat": "application/x-npy",
+      "sha256": "fdb5df0c5dd3a1563f0dea815c9171019703fb25a7b6845c6c8b87c2927a1f6c",
+      "contentSize": "3821418128 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "train_label.pkl",
+      "name": "train_label.pkl",
+      "description": "Python pickle of a tuple (clip_ids: list[str], labels: list[int]) aligned with train_data.npy; drop-in input for the benchmark harness. Same content as metadata/clips.csv.",
+      "contentUrl": "data/train_label.pkl",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "6a3285955a8de2476413877d080d92614f7004833905813c7b7bea85dd6a3f0d",
+      "contentSize": "804241 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "val_data.npy",
+      "name": "val_data.npy",
+      "description": "Pose tensors of the 'val' split, shape (3950, 3, 300, 27, 1), float32 (N, C=[x, y, visibility], T, V=27 joints, M=1 person). Row i is the clip in metadata/clips.csv with split=val and pose_row=i.",
+      "contentUrl": "data/val_data.npy",
+      "encodingFormat": "application/x-npy",
+      "sha256": "f3c4029d216fa2b0c98b7f05314865c534f06782043841a30d271662afcfb206",
+      "contentSize": "383940128 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "val_label.pkl",
+      "name": "val_label.pkl",
+      "description": "Python pickle of a tuple (clip_ids: list[str], labels: list[int]) aligned with val_data.npy; drop-in input for the benchmark harness. Same content as metadata/clips.csv.",
+      "contentUrl": "data/val_label.pkl",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "f54da7cef4e3aac5bc6e98e07b00dd1c4a1b9b7255729dff32a29143febf49ad",
+      "contentSize": "80468 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test_data.npy",
+      "name": "test_data.npy",
+      "description": "Pose tensors of the 'test' split, shape (7833, 3, 300, 27, 1), float32 (N, C=[x, y, visibility], T, V=27 joints, M=1 person). Row i is the clip in metadata/clips.csv with split=test and pose_row=i.",
+      "contentUrl": "data/test_data.npy",
+      "encodingFormat": "application/x-npy",
+      "sha256": "5fb84eb8c2e38df4a053f53c0a3caa8300111cccf42be479db2782657d7b4d99",
+      "contentSize": "761367728 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test_label.pkl",
+      "name": "test_label.pkl",
+      "description": "Python pickle of a tuple (clip_ids: list[str], labels: list[int]) aligned with test_data.npy; drop-in input for the benchmark harness. Same content as metadata/clips.csv.",
+      "contentUrl": "data/test_label.pkl",
+      "encodingFormat": "application/octet-stream",
+      "sha256": "939c6cd1bc4764e73ff6b21b78788842fc8f6ed4ebd5d24b8b8e38bf9a875f36",
+      "contentSize": "159586 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "clips.csv",
+      "name": "clips.csv",
+      "description": "One row per clip: id, split, signer, word id, label, trial, and the location of its pose tensor.",
+      "contentUrl": "metadata/clips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "2f45ef519bb31b438dddcc849c72f4ecf285efcb01c556541ac123b403fddb5d",
+      "contentSize": "3064819 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "classes.csv",
+      "name": "classes.csv",
+      "description": "One row per sign class.",
+      "contentUrl": "metadata/classes.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b8f0fd78d927a7cfbc5537e9a78fe8d4a23e77ad44b6b885fec8af53855be919",
+      "contentSize": "6069 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "split:bdslw401_sdval.json",
+      "name": "splits/bdslw401_sdval.json",
+      "description": "Split definition (signer lists and/or clip-ID lists).",
+      "contentUrl": "splits/bdslw401_sdval.json",
+      "encodingFormat": "application/json",
+      "sha256": "597c6ffca9dd3470f0631c519473266569951305411e58d532a12c97d396dcb1",
+      "contentSize": "1121 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "split:official_seen_signer_val.json",
+      "name": "splits/official_seen_signer_val.json",
+      "description": "Split definition (signer lists and/or clip-ID lists).",
+      "contentUrl": "splits/official_seen_signer_val.json",
+      "encodingFormat": "application/json",
+      "sha256": "cf4b1cb812bdd6a210084c4b03fd0df20ecef886a360c75b50d4754669077902",
+      "contentSize": "1124696 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "split:signer_mixed/sd.json",
+      "name": "splits/signer_mixed/sd.json",
+      "description": "Split definition (signer lists and/or clip-ID lists).",
+      "contentUrl": "splits/signer_mixed/sd.json",
+      "encodingFormat": "application/json",
+      "sha256": "85326c30c3e40810861e7d9617c50dc3e59d5e4956c88add2c310a28eb78d6c8",
+      "contentSize": "1124816 B"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "classes",
+      "name": "classes",
+      "description": "Sign vocabulary (401 classes).",
+      "key": {
+        "@id": "classes/label"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "classes/label",
+          "name": "label",
+          "description": "Contiguous 0-based class index used as the training target.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "classes.csv"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "classes/word_id",
+          "name": "word_id",
+          "description": "Word id in the source dataset filenames.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "classes.csv"
+            },
+            "extract": {
+              "column": "word_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "classes/class_name",
+          "name": "class_name",
+          "description": "Romanized Bangla gloss.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "classes.csv"
+            },
+            "extract": {
+              "column": "class_name"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "clips",
+      "name": "clips",
+      "description": "One record per clip. The pose tensor of a clip is row `pose_row` of `pose_file` (an .npy FileObject in this distribution), shape (3, 300, 27, 1) float32.",
+      "key": {
+        "@id": "clips/clip_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "clips/clip_id",
+          "name": "clip_id",
+          "description": "Source clip filename (pseudonymous; encodes signer id, word id and trial).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "clip_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/split",
+          "name": "split",
+          "description": "Canonical split: train | val | test.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/signer_id",
+          "name": "signer_id",
+          "description": "Pseudonymous integer signer id from the source filenames; splits are signer-disjoint.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "signer_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/word_id",
+          "name": "word_id",
+          "description": "Source word id.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "word_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/label",
+          "name": "label",
+          "description": "Class index in [0, 400].",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "label"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "classes/label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/trial",
+          "name": "trial",
+          "description": "Repetition index within signer and word.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "trial"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/pose_file",
+          "name": "pose_file",
+          "description": "Relative path of the .npy file holding this clip's pose tensor.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "pose_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "clips/pose_row",
+          "name": "pose_row",
+          "description": "Row index into pose_file.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "clips.csv"
+            },
+            "extract": {
+              "column": "pose_row"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataCollection": "No new human-subject data were collected. Source videos were recorded and released by the original dataset authors (see prov:wasDerivedFrom); we ran MediaPipe Holistic (model_complexity=1, detection/tracking confidence 0.5) on every clip and kept 27 keypoints (7 upper-body pose landmarks: nose, shoulders, elbows, wrists; 10 per hand: wrist, thumb tip, and base+tip of index, middle, ring and little fingers).",
+  "rai:dataCollectionType": [
+    "Secondary Data Analysis",
+    "Software Collection"
+  ],
+  "rai:dataCollectionRawData": "Raw RGB video is NOT redistributed. It must be obtained from the source dataset under its own license/terms.",
+  "rai:dataCollectionMissingData": "Frames where MediaPipe misses a body part are zero-filled for that part; tensors are zero-padded to T=300 frames. A clip that fails extraction is logged and excluded, never dropped silently; no extraction failures are recorded for this release.",
+  "rai:dataPreprocessingProtocol": [
+    "Per frame: x, y (MediaPipe normalized image coordinates in [0,1]) and channel 2 = MediaPipe visibility for the 7 body joints (always 0 for hand joints).",
+    "Tensor layout (N, C=3, T=300, V=27, M=1), float32, zero-padded after the last frame.",
+    "No relabeling: label = source word id mapped to a contiguous 0-based index (metadata/classes.csv).",
+    "Splits are signer-disjoint by construction; see splits/*.json."
+  ],
+  "rai:dataAnnotationProtocol": "Labels are inherited from the source dataset (one isolated sign word per clip, from the filename word id). No new annotation was performed.",
+  "rai:dataUseCases": [
+    "Intended: signer-independent isolated sign language recognition benchmarking.",
+    "Intended: measuring the Signer-Mixing Gap and signer-identity shortcut/leakage diagnostics; low-resource and cross-lingual pose self-supervised learning research.",
+    "Validated only for: isolated word recognition on the provided signer-disjoint protocols. Not validated for continuous signing, translation, or deployment as an assistive/communication product.",
+    "Out of scope / prohibited: commercial use; re-identification of, or attempts to contact, the signers; surveillance, military, or biometric identification uses; any use barred by the source dataset terms.",
+    "Discouraged: reporting signer-mixed (random-split) accuracy as a headline number."
+  ],
+  "rai:dataLimitations": [
+    "Only 18 signers; the canonical held-out test set contains 2 signer(s), so single-split accuracies are high-variance (use the LOSO splits and report the distribution over unseen signers).",
+    "Poses are an automatic MediaPipe estimate, not ground truth; no facial landmarks (non-manual markers) are included.",
+    "Front view, single recording environment; generalization to other cameras, backgrounds, dialects or signing styles is untested."
+  ],
+  "rai:dataBiases": "18 signers; 2 held-out test signers (S04/S08) and 1 validation signer (S15), so selection rests on one person. Front view only (the lateral view described in the source paper is not in the public distribution). Several signers have partial vocabulary coverage. Signer demographics are not documented in the source release. MediaPipe hand detection is imperfect (zeros for missed hands).",
+  "rai:personalSensitiveInformation": "The data are derived from video of identifiable people (sign language users). The release contains no pixels, faces, names or demographic fields: only 27-keypoint skeleton trajectories plus an integer signer id taken from the source filenames. Body proportions and motion style are nevertheless person-specific (biometric-like). RE-IDENTIFICATION RISK: Signer identity is recoverable from the released poses. On BdSLW401, the class-conditioned signer probe on frozen supervised encoders gives L_norm = 0.63-0.72 and within-class L_norm = 0.99 under the earlier ungrouped protocol, an upper bound (paper, Sec. 'Signer decodability'). This enables linking clips to the same (pseudonymous) signer; linking to a real-world identity would additionally require reference recordings of that person. Users must not attempt it. Consent and ethics approval for the original recordings were handled by the source dataset authors (see their publications).",
+  "rai:dataSocialImpact": "Positive: more trustworthy evaluation of Bangla sign recognition, which matters for a large, under-resourced Deaf community; exposes inflated random-split claims. Risks: (i) re-identification of signers from motion (see rai:personalSensitiveInformation); (ii) over-trust in systems trained on 18 signers if deployed without community involvement; (iii) misuse for surveillance. Mitigations: non-commercial license with responsible-use terms prohibiting re-identification/surveillance, no raw video, documentation of limitations.",
+  "rai:hasSyntheticData": false,
+  "rai:dataReleaseMaintenancePlan": "Versioned (semantic version + SHA-256 per file). Errata are fixed by a new version; earlier versions remain identifiable by checksum. Source datasets remain owned by their authors; derived artifacts will be withdrawn if the source owners revoke permission."
+}

@@ -1,0 +1,13 @@
+# Backbone spec for tools/decodability_probe.py (L_norm signer-leakage probe).
+# CTR-GCN (adaptive_gnn) on BdSLW401-SI (401 classes) -- the STRONG W401 model
+# (86.98 held-out TEST); L_norm at 401-class scale on a representative backbone (#2).
+# Mirrors config/bdsl_ctr_gcn_w401.yaml model_args. Not a main.py config.
+backbone: model.adaptive_gnn.Model
+backbone_args:
+  num_class: 401
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3

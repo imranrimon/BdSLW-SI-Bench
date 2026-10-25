@@ -1,0 +1,26 @@
+# Runtime dependencies (pip). Mirrors environment.yml.
+# Install the PyTorch build for your platform first, e.g.
+#   CPU:      pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cpu
+#   CUDA 11.8 pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu118
+torch>=2.0,<2.5
+torchvision
+torch_geometric>=2.3
+numpy>=1.23,<2
+scipy
+pandas
+matplotlib
+scikit-learn
+seaborn
+statsmodels
+pyyaml
+tqdm
+timm>=0.9
+einops
+opencv-python-headless
+thop
+
+# Optional
+#   pose extraction:  pip install --only-binary=:all: mediapipe==0.10.9
+#   VideoMAE row:     pip install transformers
+#   release tooling:  pip install mlcroissant pypdf
+#   experiment logs:  pip install wandb

@@ -1,0 +1,64 @@
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n800_lr01.yaml --seed 0 --exp bdsl_grid_s2_n800_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n800_lr01.yaml --seed 1 --exp bdsl_grid_s2_n800_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n800_lr01.yaml --seed 2 --exp bdsl_grid_s2_n800_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n1500_lr01.yaml --seed 0 --exp bdsl_grid_s2_n1500_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n1500_lr01.yaml --seed 1 --exp bdsl_grid_s2_n1500_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s2_n1500_lr01.yaml --seed 2 --exp bdsl_grid_s2_n1500_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n800_lr01.yaml --seed 0 --exp bdsl_grid_s4_n800_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n800_lr01.yaml --seed 1 --exp bdsl_grid_s4_n800_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n800_lr01.yaml --seed 2 --exp bdsl_grid_s4_n800_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n1500_lr01.yaml --seed 0 --exp bdsl_grid_s4_n1500_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n1500_lr01.yaml --seed 1 --exp bdsl_grid_s4_n1500_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s4_n1500_lr01.yaml --seed 2 --exp bdsl_grid_s4_n1500_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n800_lr01.yaml --seed 0 --exp bdsl_grid_s6_n800_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n800_lr01.yaml --seed 1 --exp bdsl_grid_s6_n800_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n800_lr01.yaml --seed 2 --exp bdsl_grid_s6_n800_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n1500_lr01.yaml --seed 0 --exp bdsl_grid_s6_n1500_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n1500_lr01.yaml --seed 1 --exp bdsl_grid_s6_n1500_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s6_n1500_lr01.yaml --seed 2 --exp bdsl_grid_s6_n1500_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n800_lr01.yaml --seed 0 --exp bdsl_grid_s8_n800_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n800_lr01.yaml --seed 1 --exp bdsl_grid_s8_n800_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n800_lr01.yaml --seed 2 --exp bdsl_grid_s8_n800_lr01_seed2
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n1500_lr01.yaml --seed 0 --exp bdsl_grid_s8_n1500_lr01_seed0
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n1500_lr01.yaml --seed 1 --exp bdsl_grid_s8_n1500_lr01_seed1
+python -u tools/run_resumable_seed.py --config config/lr01_switch/bdsl_grid_s8_n1500_lr01.yaml --seed 2 --exp bdsl_grid_s8_n1500_lr01_seed2
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 2 --draw 0 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 2 --draw 1 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 2 --draw 2 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 2 --draw 3 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 2 --draw 4 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 4 --draw 0 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 4 --draw 1 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 4 --draw 2 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 4 --draw 3 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 4 --draw 4 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 6 --draw 0 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 6 --draw 1 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 6 --draw 2 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 6 --draw 3 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 6 --draw 4 --seed 0 --skip-existing
+python -u tools/run_diversity_grid.py --config config/bdsl_block_gcn_si_lr01.yaml --k 8 --draw 0 --seed 0 --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 0 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 0 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 0 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 1 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 1 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 1 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 3 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 3 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 3 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 5 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 5 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 2 --k 5 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 0 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 0 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 0 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 1 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 1 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 1 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 3 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 3 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 3 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 5 --seed 0 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 5 --seed 1 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing
+python -u tools/run_personalization.py --config config/bdsl_block_gcn_si_lr01.yaml --signer 13 --k 5 --seed 2 --init-weights work_dir/bdsl_block_gcn_si_lr01_scratch_seed0/bdsl_block_gcn_si_lr01_scratch_seed0_model-best.pt --skip-existing

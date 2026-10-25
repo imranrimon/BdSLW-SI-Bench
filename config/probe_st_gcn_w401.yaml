@@ -1,0 +1,12 @@
+# Backbone spec for tools/decodability_probe.py (L_norm signer-leakage probe).
+# ST-GCN (st_gcn_vanilla) on BdSLW401 (401 classes). Mirrors config/bdsl_st_gcn_w401.yaml
+# model_args. Not a main.py config. Added for the signer-disjoint-val (S15) rerun, 2026-10-07.
+backbone: model.st_gcn_vanilla.Model
+backbone_args:
+  num_class: 401
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: spatial
+  in_channels: 3

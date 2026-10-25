@@ -1,0 +1,87 @@
+Experiment_name: bdsl_slgtformer_si_bp
+
+# ============================================================================
+# TRACK B (best-practice recipe) — SLGTFormer (twin_attention).
+# See docs/RECIPE_CONTROL.md and bdsl_adaptive_gnn_si_bp.yaml header for the
+# Track-A vs Track-B rationale.
+#
+# Recipe source: SLGTFormer author repo (github.com/neilsong/SLGTformer),
+#   config/WLASL/train/train_joint.yaml:
+#     SGD + nesterov, base_lr 0.1, weight_decay 1e-4, step [150,200],
+#     num_epoch 250, warm_up_epoch 20, batch_size 24.
+#   This is the flagship arch's OWN published training regime — a much longer
+#   250-epoch schedule with a long 20-epoch warmup and higher base_lr 0.1,
+#   vs Track A's 100 ep / base_lr 0.01 / warmup 20 shared recipe.
+#
+# DEVIATIONS (documented, dataset-mandated):
+#   - random_mirror OFF. The WLASL author recipe DOES mirror (+rotate/scale/
+#     jitter/shift), but on BdSLW60 mirroring corrupts labels (hand-dominance
+#     is class-informative — README.md). Held constant across Track A and B so
+#     the comparison isolates the optimization recipe, not the augmentation.
+#   - LR schedule is step-decay+warmup (matches the author config exactly:
+#     step [150,200] over 250 ep). No cosine needed.
+# ============================================================================
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/bdsl_si/train_data.npy
+  label_path: data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  window_size: 120
+  random_shift: True
+  normalization: True
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: data/bdsl_si/val_data.npy
+  label_path: data/bdsl_si/val_label.pkl
+  random_mirror: False
+  normalization: True
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+model: model.twin_attention.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  groups: 16
+  block_size: 41
+  graph_args:
+    labeling_mode: 'spatial'
+  use_grpe: True
+  inner_dim: 64
+  window_size: 120
+  s_num_heads: 4
+  t_num_heads: 4
+  t_depths: [2, 2, 2, 2]
+  wss: [5, 5, 5, 5]
+  sr_ratios: [8, 4, 2, 1]
+  depth: 4
+  s_pos_emb: False
+  drop_layers: 2
+
+# optim — SLGTFormer best-practice (author train_joint.yaml)
+optimizer: SGD
+weight_decay: 0.0001
+base_lr: 0.1
+step: [150, 200]
+
+device: [0]
+keep_rate: 0.9
+only_train_epoch: 1
+batch_size: 24
+test_batch_size: 24
+num_epoch: 250
+nesterov: True
+warm_up_epoch: 20
+
+wandb: False
+num_worker: 0
+save_interval: 10

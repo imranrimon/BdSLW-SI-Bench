@@ -1,0 +1,9 @@
+{"lam": 0.1, "seed": 0, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl01_seed0", "top1": 50.69597069597069, "leak_acc": 82.82221619091445, "cc": 0.8036824707533079, "wc": 0.972}
+{"lam": 0.1, "seed": 2, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl01_seed2", "top1": 43.36996336996337, "leak_acc": 81.0595156878691, "cc": 0.7835373221470753, "wc": 0.97}
+{"lam": 0.5, "seed": 0, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl05_seed0", "top1": 43.80952380952381, "leak_acc": 85.25742871835675, "cc": 0.8315134710669343, "wc": 0.979}
+{"lam": 0.5, "seed": 2, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl05_seed2", "top1": 48.64468864468864, "leak_acc": 83.1518680417675, "cc": 0.807449920477343, "wc": 0.972}
+{"lam": 1.0, "seed": 0, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl10_seed0", "top1": 45.27472527472528, "leak_acc": 85.31317500021908, "cc": 0.8321505714310752, "wc": 0.977}
+{"lam": 1.0, "seed": 2, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl10_seed2", "top1": 48.64468864468864, "leak_acc": 85.42597499245248, "cc": 0.833439714199457, "wc": 0.977}
+{"lam": 0.1, "seed": 1, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl01_seed1", "top1": 46.227106227106226, "leak_acc": 81.24606939949963, "cc": 0.7856693645657101, "wc": 0.978}
+{"lam": 0.5, "seed": 1, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl05_seed1", "top1": 40.586080586080584, "leak_acc": 84.98721257986439, "cc": 0.8284252866270216, "wc": 0.976}
+{"lam": 1.0, "seed": 1, "exp": "bdsl_block_gcn_si_signeradv_lr01_gl10_seed1", "top1": 44.1025641025641, "leak_acc": 86.79233587219152, "cc": 0.8490552671107602, "wc": 0.981}

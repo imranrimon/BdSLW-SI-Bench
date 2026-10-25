@@ -1,0 +1,16 @@
+# Backbone spec for tools/decodability_probe.py (L_norm signer-leakage probe).
+# BlockGCN on BdSLW401-SI (401 classes) -- shows the class-conditioned signer
+# decodability diagnostic holds at 401-class scale (#2). Mirrors
+# config/bdsl_block_gcn_w401.yaml model_args. Not a main.py config.
+backbone: model.block_gcn.Model
+backbone_args:
+  num_class: 401
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8

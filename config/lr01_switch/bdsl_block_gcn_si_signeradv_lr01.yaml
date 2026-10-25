@@ -1,0 +1,58 @@
+Experiment_name: bdsl_block_gcn_si_signeradv_lr01
+model: model.signer_adv.Model
+model_args:
+  backbone: model.block_gcn.Model
+  backbone_args:
+    num_class: 60
+    num_point: 27
+    num_person: 1
+    graph: graph.sign_27.Graph
+    graph_args:
+      labeling_mode: spatial
+    in_channels: 3
+    num_blocks:
+    - 2
+    - 2
+    - 2
+    - 2
+    stage_channels:
+    - 64
+    - 128
+    - 256
+    - 256
+    max_distance: 8
+  num_class: 60
+  feat_dim: 256
+  grl_lambda: 1.0
+train_feeder_args:
+  data_path: data/bdsl_si/train_data.npy
+  label_path: data/bdsl_si/train_label.pkl
+  debug: false
+  random_choose: true
+  window_size: 120
+  random_shift: true
+  normalization: true
+  random_mirror: false
+  random_mirror_p: 0.0
+  is_vector: false
+  lap_pe: false
+test_feeder_args:
+  data_path: data/bdsl_si/val_data.npy
+  label_path: data/bdsl_si/val_label.pkl
+  window_size: 120
+  random_choose: false
+  normalization: true
+  is_vector: false
+  lap_pe: false
+weight_decay: 0.0001
+base_lr: 0.01
+step:
+- 60
+- 80
+num_epoch: 100
+warm_up_epoch: 5
+batch_size: 32
+test_batch_size: 32
+grad_clip_norm: 0.0
+eval_interval: 5
+num_worker: 0

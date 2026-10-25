@@ -1,0 +1,148 @@
+# inputs: adaptive_gnn=adaptive_gnn_lr0p1.csv, gnn=gnn_lr0p1.csv, block_gcn=block_gcn_lr01.csv, gnn_transformer=gnn_transformer_clip5.csv, st_gcn_vanilla=st_gcn_vanilla.csv, slgtformer=slgtformer.csv, gnn_lstm=gnn_lstm.csv, pose_lstm=pose_lstm.csv (docs/loso_heldout/)
+######## archs: all 8
+LOSO coverage (arch: #signers x #cells):
+  bdsl_adaptive_gnn_si                       11 signers, 33 cells
+  bdsl_block_gcn_si                          11 signers, 33 cells
+  bdsl_gnn_lstm_si                           11 signers, 33 cells
+  bdsl_gnn_si                                11 signers, 33 cells
+  bdsl_gnn_transformer_si                    11 signers, 33 cells
+  bdsl_pose_lstm_si                          11 signers, 33 cells
+  bdsl_slgtformer_si                         11 signers, 33 cells
+  bdsl_st_gcn_vanilla_si                     11 signers, 33 cells
+
+Decomposing on archs (full-coverage default): ['bdsl_adaptive_gnn_si', 'bdsl_gnn_si', 'bdsl_block_gcn_si', 'bdsl_gnn_transformer_si', 'bdsl_st_gcn_vanilla_si', 'bdsl_slgtformer_si', 'bdsl_gnn_lstm_si', 'bdsl_pose_lstm_si']
+Balanced grid: 8 archs x 11 signers (signers=[1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15])
+Grand LOSO mean: 76.28%
+
+--- variance components (SD in accuracy pp) ---
+  sigma_signer  (held-out signer) =  15.25 pp   (var=0.02327)
+  sigma_model   (architecture)    =   3.63 pp   (var=0.00132)
+  sigma_interact(arch x signer)   =   1.90 pp   (var=0.00036)
+  sigma_seed    (init noise)       =   2.19 pp   (var=0.00048)
+
+sigma_signer / sigma_seed  =   7.0x   (held-out signer vs random seed)
+sigma_signer / sigma_model =   4.2x   (held-out signer vs model choice)
+
+--- arch-controlled view (signer vs seed WITHIN each model) ---
+  arch                                       n_sig LOSO mean SD_signer SD_seed
+  bdsl_adaptive_gnn_si                          11     80.13     15.57    1.50
+  bdsl_block_gcn_si                             11     74.37     15.32    3.01
+  bdsl_gnn_lstm_si                              11     73.62     15.89    4.09
+  bdsl_gnn_si                                   11     77.56     15.44    0.95
+  bdsl_gnn_transformer_si                       11     77.10     15.51    1.68
+  bdsl_pose_lstm_si                             11     68.72     14.95    1.87
+  bdsl_slgtformer_si                            11     80.10     15.14    1.25
+  bdsl_st_gcn_vanilla_si                        11     78.65     15.14    1.18
+  (SD_signer = held-out-signer spread within one model = the LOSO headline SD; SD_seed = init noise)
+
+Per-signer LOSO accuracy (mean over archs & seeds):
+  U01:  44.8%
+  U12:  52.6%
+  U13:  63.4%
+  U02:  75.3%
+  U04:  75.9%
+  U15:  84.6%
+  U11:  86.3%
+  U06:  86.6%
+  U08:  87.5%
+  U09:  89.6%
+  U05:  92.4%
+
+######## archs: --archs bdsl_block_gcn_si bdsl_adaptive_gnn_si bdsl_st_gcn_vanilla_si bdsl_slgtformer_si
+LOSO coverage (arch: #signers x #cells):
+  bdsl_adaptive_gnn_si                       11 signers, 33 cells
+  bdsl_block_gcn_si                          11 signers, 33 cells
+  bdsl_gnn_lstm_si                           11 signers, 33 cells
+  bdsl_gnn_si                                11 signers, 33 cells
+  bdsl_gnn_transformer_si                    11 signers, 33 cells
+  bdsl_pose_lstm_si                          11 signers, 33 cells
+  bdsl_slgtformer_si                         11 signers, 33 cells
+  bdsl_st_gcn_vanilla_si                     11 signers, 33 cells
+
+Decomposing on archs (full-coverage default): ['bdsl_block_gcn_si', 'bdsl_adaptive_gnn_si', 'bdsl_st_gcn_vanilla_si', 'bdsl_slgtformer_si']
+Balanced grid: 4 archs x 11 signers (signers=[1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15])
+Grand LOSO mean: 78.31%
+
+--- variance components (SD in accuracy pp) ---
+  sigma_signer  (held-out signer) =  15.21 pp   (var=0.02315)
+  sigma_model   (architecture)    =   2.36 pp   (var=0.00055)
+  sigma_interact(arch x signer)   =   1.55 pp   (var=0.00024)
+  sigma_seed    (init noise)       =   1.89 pp   (var=0.00036)
+
+sigma_signer / sigma_seed  =   8.1x   (held-out signer vs random seed)
+sigma_signer / sigma_model =   6.5x   (held-out signer vs model choice)
+
+--- arch-controlled view (signer vs seed WITHIN each model) ---
+  arch                                       n_sig LOSO mean SD_signer SD_seed
+  bdsl_adaptive_gnn_si                          11     80.13     15.57    1.50
+  bdsl_block_gcn_si                             11     74.37     15.32    3.01
+  bdsl_gnn_lstm_si                              11     73.62     15.89    4.09
+  bdsl_gnn_si                                   11     77.56     15.44    0.95
+  bdsl_gnn_transformer_si                       11     77.10     15.51    1.68
+  bdsl_pose_lstm_si                             11     68.72     14.95    1.87
+  bdsl_slgtformer_si                            11     80.10     15.14    1.25
+  bdsl_st_gcn_vanilla_si                        11     78.65     15.14    1.18
+  (SD_signer = held-out-signer spread within one model = the LOSO headline SD; SD_seed = init noise)
+
+Per-signer LOSO accuracy (mean over archs & seeds):
+  U01:  45.1%
+  U12:  56.1%
+  U13:  67.6%
+  U02:  76.6%
+  U04:  77.1%
+  U15:  87.3%
+  U11:  87.5%
+  U06:  88.5%
+  U08:  89.9%
+  U09:  91.9%
+  U05:  93.8%
+
+######## archs: --archs bdsl_block_gcn_si bdsl_adaptive_gnn_si
+LOSO coverage (arch: #signers x #cells):
+  bdsl_adaptive_gnn_si                       11 signers, 33 cells
+  bdsl_block_gcn_si                          11 signers, 33 cells
+  bdsl_gnn_lstm_si                           11 signers, 33 cells
+  bdsl_gnn_si                                11 signers, 33 cells
+  bdsl_gnn_transformer_si                    11 signers, 33 cells
+  bdsl_pose_lstm_si                          11 signers, 33 cells
+  bdsl_slgtformer_si                         11 signers, 33 cells
+  bdsl_st_gcn_vanilla_si                     11 signers, 33 cells
+
+Decomposing on archs (full-coverage default): ['bdsl_block_gcn_si', 'bdsl_adaptive_gnn_si']
+Balanced grid: 2 archs x 11 signers (signers=[1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15])
+Grand LOSO mean: 77.25%
+
+--- variance components (SD in accuracy pp) ---
+  sigma_signer  (held-out signer) =  15.40 pp   (var=0.02370)
+  sigma_model   (architecture)    =   2.88 pp   (var=0.00083)
+  sigma_interact(arch x signer)   =   1.21 pp   (var=0.00015)
+  sigma_seed    (init noise)       =   2.38 pp   (var=0.00057)
+
+sigma_signer / sigma_seed  =   6.5x   (held-out signer vs random seed)
+sigma_signer / sigma_model =   5.3x   (held-out signer vs model choice)
+
+--- arch-controlled view (signer vs seed WITHIN each model) ---
+  arch                                       n_sig LOSO mean SD_signer SD_seed
+  bdsl_adaptive_gnn_si                          11     80.13     15.57    1.50
+  bdsl_block_gcn_si                             11     74.37     15.32    3.01
+  bdsl_gnn_lstm_si                              11     73.62     15.89    4.09
+  bdsl_gnn_si                                   11     77.56     15.44    0.95
+  bdsl_gnn_transformer_si                       11     77.10     15.51    1.68
+  bdsl_pose_lstm_si                             11     68.72     14.95    1.87
+  bdsl_slgtformer_si                            11     80.10     15.14    1.25
+  bdsl_st_gcn_vanilla_si                        11     78.65     15.14    1.18
+  (SD_signer = held-out-signer spread within one model = the LOSO headline SD; SD_seed = init noise)
+
+Per-signer LOSO accuracy (mean over archs & seeds):
+  U01:  44.0%
+  U12:  55.0%
+  U13:  65.6%
+  U04:  74.4%
+  U02:  76.4%
+  U15:  86.0%
+  U11:  87.5%
+  U06:  88.4%
+  U08:  88.7%
+  U09:  90.8%
+  U05:  93.0%
+

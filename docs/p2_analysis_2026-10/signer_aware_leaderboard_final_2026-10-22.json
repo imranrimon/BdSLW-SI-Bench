@@ -1,0 +1,1489 @@
+{
+ "signers": [
+  "U01",
+  "U02",
+  "U04",
+  "U05",
+  "U06",
+  "U08",
+  "U09",
+  "U11",
+  "U12",
+  "U13",
+  "U15"
+ ],
+ "n_boot": 10000,
+ "files": {
+  "Adaptive GNN": "docs/loso_heldout/adaptive_gnn_lr0p1.csv",
+  "ST-GCN": "docs/loso_heldout/st_gcn_vanilla.csv",
+  "SLGTFormer": "docs/loso_heldout/slgtformer.csv",
+  "GNN+Transformer (clip5)": "docs/loso_heldout/gnn_transformer_clip5.csv",
+  "Attention GNN": "docs/loso_heldout/gnn_lr0p1.csv",
+  "BlockGCN (lr0.01)": "docs/loso_heldout/block_gcn_lr01.csv",
+  "GNN+LSTM": "docs/loso_heldout/gnn_lstm.csv",
+  "Pose LSTM": "docs/loso_heldout/pose_lstm.csv"
+ },
+ "table": {
+  "Adaptive GNN": {
+   "per_signer_seedmean": {
+    "U01": 45.4333,
+    "U02": 78.45,
+    "U04": 79.5433,
+    "U05": 94.6667,
+    "U06": 92.1467,
+    "U08": 90.87,
+    "U09": 93.6,
+    "U11": 89.6233,
+    "U12": 58.9333,
+    "U13": 67.5767,
+    "U15": 90.5867
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/adaptive_gnn_lr0p1.csv",
+   "mean": 80.13,
+   "mean_ci_stratified": [
+    79.62121212121212,
+    80.64000757575758
+   ],
+   "mean_ci_signer_clustered": [
+    70.23149242424243,
+    88.69158333333334
+   ],
+   "median_signer": 89.62333333333333,
+   "median_signer_ci_stratified": [
+    87.42,
+    90.68666666666667
+   ],
+   "median_signer_ci_signer_clustered": [
+    67.57666666666667,
+    92.14666666666666
+   ],
+   "iqm_runs": 85.2229411764706,
+   "iqm_runs_ci_stratified": [
+    84.46763235294118,
+    85.92239705882353
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    70.7258382352941,
+    91.64060294117647
+   ],
+   "iqm_signer_means": 84.11380952380952,
+   "iqm_signer_means_ci_stratified": [
+    83.41333333333333,
+    84.83904761904762
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    70.81794047619047,
+    91.5269880952381
+   ],
+   "worst_signer": 45.43333333333334,
+   "worst_signer_ci_stratified": [
+    43.18,
+    46.97
+   ],
+   "worst_signer_ci_signer_clustered": [
+    43.18,
+    76.75
+   ],
+   "p10_runs": 58.264,
+   "p10_runs_ci_stratified": [
+    58.02,
+    59.54
+   ],
+   "p10_runs_ci_signer_clustered": [
+    43.774,
+    79.91
+   ],
+   "p10_signer_means": 58.93333333333334,
+   "p10_signer_means_ci_stratified": [
+    58.02,
+    59.54
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    44.443333333333335,
+    80.14999999999999
+   ],
+   "best_signer": 94.66666666666667,
+   "best_signer_ci_stratified": [
+    93.55,
+    96.33
+   ],
+   "best_signer_ci_signer_clustered": [
+    91.78000000000002,
+    96.33
+   ]
+  },
+  "ST-GCN": {
+   "per_signer_seedmean": {
+    "U01": 44.0,
+    "U02": 76.5233,
+    "U04": 81.6333,
+    "U05": 94.4433,
+    "U06": 86.79,
+    "U08": 89.6167,
+    "U09": 93.1433,
+    "U11": 86.3833,
+    "U12": 59.0333,
+    "U13": 66.5067,
+    "U15": 87.0233
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/st_gcn_vanilla.csv",
+   "mean": 78.64515151515151,
+   "mean_ci_stratified": [
+    78.24453787878787,
+    79.0460681818182
+   ],
+   "mean_ci_signer_clustered": [
+    69.04865151515152,
+    86.92469696969698
+   ],
+   "median_signer": 86.38333333333333,
+   "median_signer_ci_stratified": [
+    84.29,
+    87.43
+   ],
+   "median_signer_ci_signer_clustered": [
+    66.50666666666666,
+    89.61666666666667
+   ],
+   "iqm_runs": 83.10941176470588,
+   "iqm_runs_ci_stratified": [
+    82.41294117647058,
+    83.73177941176469
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    69.86933823529412,
+    89.26714705882353
+   ],
+   "iqm_signer_means": 82.06809523809524,
+   "iqm_signer_means_ci_stratified": [
+    81.50476190476192,
+    82.64428571428572
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    69.81117857142857,
+    89.10476190476189
+   ],
+   "worst_signer": 44.0,
+   "worst_signer_ci_stratified": [
+    42.97,
+    45.13
+   ],
+   "worst_signer_ci_signer_clustered": [
+    42.97,
+    75.89666666666666
+   ],
+   "p10_runs": 58.35,
+   "p10_runs_ci_stratified": [
+    58.32,
+    60.31
+   ],
+   "p10_runs_ci_signer_clustered": [
+    43.156,
+    80.78399999999999
+   ],
+   "p10_signer_means": 59.03333333333333,
+   "p10_signer_means_ci_stratified": [
+    58.32,
+    60.31
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    43.59,
+    81.63333333333334
+   ],
+   "best_signer": 94.44333333333333,
+   "best_signer_ci_stratified": [
+    93.5,
+    95.33
+   ],
+   "best_signer_ci_signer_clustered": [
+    88.09999999999998,
+    95.33
+   ]
+  },
+  "SLGTFormer": {
+   "per_signer_seedmean": {
+    "U01": 48.3067,
+    "U02": 77.06,
+    "U04": 78.0767,
+    "U05": 94.89,
+    "U06": 90.59,
+    "U08": 92.6967,
+    "U09": 92.89,
+    "U11": 88.8033,
+    "U12": 55.3167,
+    "U13": 72.5133,
+    "U15": 89.9733
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/slgtformer.csv",
+   "mean": 80.10151515151514,
+   "mean_ci_stratified": [
+    79.68180303030303,
+    80.52879545454545
+   ],
+   "mean_ci_signer_clustered": [
+    70.54802272727274,
+    88.47
+   ],
+   "median_signer": 88.80333333333334,
+   "median_signer_ci_stratified": [
+    86.77,
+    90.18666666666667
+   ],
+   "median_signer_ci_signer_clustered": [
+    72.51333333333334,
+    92.59333333333332
+   ],
+   "iqm_runs": 84.67294117647059,
+   "iqm_runs_ci_stratified": [
+    84.00764705882352,
+    85.32061764705881
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    70.65064705882354,
+    91.45829411764706
+   ],
+   "iqm_signer_means": 84.24476190476189,
+   "iqm_signer_means_ci_stratified": [
+    83.66808333333333,
+    84.80954761904762
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    70.51421428571429,
+    91.26433333333333
+   ],
+   "worst_signer": 48.30666666666667,
+   "worst_signer_ci_stratified": [
+    46.15,
+    49.74
+   ],
+   "worst_signer_ci_signer_clustered": [
+    46.15,
+    76.19333333333333
+   ],
+   "p10_runs": 53.86,
+   "p10_runs_ci_stratified": [
+    53.28,
+    56.49
+   ],
+   "p10_runs_ci_signer_clustered": [
+    46.726,
+    77.28
+   ],
+   "p10_signer_means": 55.31666666666667,
+   "p10_signer_means_ci_stratified": [
+    53.28,
+    56.49
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    48.07,
+    78.07666666666667
+   ],
+   "best_signer": 94.89,
+   "best_signer_ci_stratified": [
+    94.5,
+    95.17
+   ],
+   "best_signer_ci_signer_clustered": [
+    91.40666666666665,
+    95.17
+   ]
+  },
+  "GNN+Transformer (clip5)": {
+   "per_signer_seedmean": {
+    "U01": 47.4533,
+    "U02": 74.2833,
+    "U04": 79.8533,
+    "U05": 93.9433,
+    "U06": 90.02,
+    "U08": 88.4733,
+    "U09": 89.0233,
+    "U11": 85.6467,
+    "U12": 52.62,
+    "U13": 60.55,
+    "U15": 86.2067
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/gnn_transformer_clip5.csv",
+   "mean": 77.09757575757577,
+   "mean_ci_stratified": [
+    76.50270454545455,
+    77.64485606060607
+   ],
+   "mean_ci_signer_clustered": [
+    67.57392424242423,
+    85.71249242424241
+   ],
+   "median_signer": 85.64666666666666,
+   "median_signer_ci_stratified": [
+    83.38,
+    86.50999999999999
+   ],
+   "median_signer_ci_signer_clustered": [
+    60.550000000000004,
+    89.05
+   ],
+   "iqm_runs": 81.80588235294118,
+   "iqm_runs_ci_stratified": [
+    80.98408823529411,
+    82.47117647058823
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    66.1683382352941,
+    88.45951470588234
+   ],
+   "iqm_signer_means": 80.57666666666667,
+   "iqm_signer_means_ci_stratified": [
+    79.67090476190475,
+    81.17953571428572
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    66.70167857142857,
+    88.2562738095238
+   ],
+   "worst_signer": 47.45333333333334,
+   "worst_signer_ci_stratified": [
+    46.77,
+    48.21
+   ],
+   "worst_signer_ci_signer_clustered": [
+    46.77,
+    73.92666666666666
+   ],
+   "p10_runs": 52.302,
+   "p10_runs_ci_stratified": [
+    52.21,
+    52.98
+   ],
+   "p10_runs_ci_signer_clustered": [
+    46.892,
+    78.58800000000001
+   ],
+   "p10_signer_means": 52.62,
+   "p10_signer_means_ci_stratified": [
+    52.21,
+    52.98
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    47.17666666666667,
+    80.16666666666667
+   ],
+   "best_signer": 93.94333333333333,
+   "best_signer_ci_stratified": [
+    92.5,
+    96.0
+   ],
+   "best_signer_ci_signer_clustered": [
+    88.66183333333335,
+    96.0
+   ]
+  },
+  "Attention GNN": {
+   "per_signer_seedmean": {
+    "U01": 46.2567,
+    "U02": 77.3733,
+    "U04": 79.0667,
+    "U05": 93.22,
+    "U06": 87.4833,
+    "U08": 89.8767,
+    "U09": 91.97,
+    "U11": 86.3367,
+    "U12": 54.3,
+    "U13": 61.6233,
+    "U15": 85.65
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/gnn_lr0p1.csv",
+   "mean": 77.55969696969696,
+   "mean_ci_stratified": [
+    77.23636363636363,
+    77.88606818181819
+   ],
+   "mean_ci_signer_clustered": [
+    67.87817424242424,
+    86.124
+   ],
+   "median_signer": 85.65000000000002,
+   "median_signer_ci_stratified": [
+    84.43,
+    86.31
+   ],
+   "median_signer_ci_signer_clustered": [
+    61.623333333333335,
+    89.87666666666667
+   ],
+   "iqm_runs": 82.41235294117648,
+   "iqm_runs_ci_stratified": [
+    81.88235294117646,
+    82.84117647058824
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    67.26523529411764,
+    88.85133823529411
+   ],
+   "iqm_signer_means": 81.05857142857144,
+   "iqm_signer_means_ci_stratified": [
+    80.63046428571428,
+    81.50095238095238
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    67.5365357142857,
+    88.67110714285714
+   ],
+   "worst_signer": 46.25666666666667,
+   "worst_signer_ci_stratified": [
+    45.13,
+    46.97
+   ],
+   "worst_signer_ci_signer_clustered": [
+    45.13,
+    77.10666666666667
+   ],
+   "p10_runs": 53.068,
+   "p10_runs_ci_stratified": [
+    52.67,
+    55.57
+   ],
+   "p10_runs_ci_signer_clustered": [
+    45.438,
+    77.82
+   ],
+   "p10_signer_means": 54.300000000000004,
+   "p10_signer_means_ci_stratified": [
+    52.669999999999995,
+    55.57
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    46.156666666666666,
+    79.06666666666668
+   ],
+   "best_signer": 93.21999999999998,
+   "best_signer_ci_stratified": [
+    92.5,
+    93.83
+   ],
+   "best_signer_ci_signer_clustered": [
+    88.3,
+    93.83
+   ]
+  },
+  "BlockGCN (lr0.01)": {
+   "per_signer_seedmean": {
+    "U01": 42.6333,
+    "U02": 74.28,
+    "U04": 69.23,
+    "U05": 91.2767,
+    "U06": 84.58,
+    "U08": 86.5433,
+    "U09": 87.9533,
+    "U11": 85.3,
+    "U12": 51.0933,
+    "U13": 63.7133,
+    "U15": 81.4233
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/block_gcn_lr01.csv",
+   "mean": 74.3660606060606,
+   "mean_ci_stratified": [
+    73.3157424242424,
+    75.38515909090908
+   ],
+   "mean_ci_signer_clustered": [
+    64.72152272727276,
+    82.9831212121212
+   ],
+   "median_signer": 81.42333333333333,
+   "median_signer_ci_stratified": [
+    78.47,
+    84.07000000000001
+   ],
+   "median_signer_ci_signer_clustered": [
+    63.71333333333333,
+    86.54333333333334
+   ],
+   "iqm_runs": 78.32764705882354,
+   "iqm_runs_ci_stratified": [
+    76.56702941176472,
+    79.84120588235295
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    64.11820588235295,
+    85.97417647058823
+   ],
+   "iqm_signer_means": 77.86714285714285,
+   "iqm_signer_means_ci_stratified": [
+    76.25379761904762,
+    79.2529642857143
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    64.32941666666666,
+    85.71485714285714
+   ],
+   "worst_signer": 42.63333333333333,
+   "worst_signer_ci_stratified": [
+    41.54,
+    44.51
+   ],
+   "worst_signer_ci_signer_clustered": [
+    41.54,
+    65.75333333333333
+   ],
+   "p10_runs": 49.952,
+   "p10_runs_ci_stratified": [
+    49.92,
+    53.28
+   ],
+   "p10_runs_ci_signer_clustered": [
+    41.602,
+    74.41
+   ],
+   "p10_signer_means": 51.093333333333334,
+   "p10_signer_means_ci_stratified": [
+    49.919999999999995,
+    53.28
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    41.74666666666667,
+    74.99666666666667
+   ],
+   "best_signer": 91.27666666666666,
+   "best_signer_ci_stratified": [
+    90.67,
+    91.83
+   ],
+   "best_signer_ci_signer_clustered": [
+    86.29666666666667,
+    91.83
+   ]
+  },
+  "GNN+LSTM": {
+   "per_signer_seedmean": {
+    "U01": 44.3767,
+    "U02": 75.8967,
+    "U04": 73.7333,
+    "U05": 92.5567,
+    "U06": 84.4167,
+    "U08": 83.4633,
+    "U09": 85.2133,
+    "U11": 87.0733,
+    "U12": 45.75,
+    "U13": 58.5633,
+    "U15": 78.78
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/gnn_lstm.csv",
+   "mean": 73.62030303030303,
+   "mean_ci_stratified": [
+    72.16362121212121,
+    74.95031060606061
+   ],
+   "mean_ci_signer_clustered": [
+    63.72847727272727,
+    82.6452803030303
+   ],
+   "median_signer": 78.78,
+   "median_signer_ci_stratified": [
+    74.09666666666668,
+    83.74666666666667
+   ],
+   "median_signer_ci_signer_clustered": [
+    58.94,
+    85.36666666666666
+   ],
+   "iqm_runs": 77.80058823529411,
+   "iqm_runs_ci_stratified": [
+    75.32629411764707,
+    80.00883823529412
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    62.38410294117647,
+    85.39002941176469
+   ],
+   "iqm_signer_means": 77.15238095238097,
+   "iqm_signer_means_ci_stratified": [
+    74.97094047619046,
+    78.83432142857141
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    62.64604761904762,
+    84.87867857142857
+   ],
+   "worst_signer": 44.376666666666665,
+   "worst_signer_ci_stratified": [
+    41.95,
+    45.67666666666667
+   ],
+   "worst_signer_ci_signer_clustered": [
+    41.95,
+    71.06666666666666
+   ],
+   "p10_runs": 45.902,
+   "p10_runs_ci_stratified": [
+    42.65,
+    49.16
+   ],
+   "p10_runs_ci_signer_clustered": [
+    41.956,
+    73.25
+   ],
+   "p10_signer_means": 45.75,
+   "p10_signer_means_ci_stratified": [
+    43.35666666666666,
+    49.16
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    43.25,
+    76.35000000000001
+   ],
+   "best_signer": 92.55666666666667,
+   "best_signer_ci_stratified": [
+    91.67,
+    93.67
+   ],
+   "best_signer_ci_signer_clustered": [
+    84.71666666666667,
+    93.67
+   ]
+  },
+  "Pose LSTM": {
+   "per_signer_seedmean": {
+    "U01": 39.83,
+    "U02": 68.3233,
+    "U04": 66.1433,
+    "U05": 84.28,
+    "U06": 77.0533,
+    "U08": 78.14,
+    "U09": 83.08,
+    "U11": 81.54,
+    "U12": 44.0167,
+    "U13": 56.0933,
+    "U15": 77.4033
+   },
+   "worst_signer_id": "U01",
+   "collapsed_runs_lt10pct": 0,
+   "source": "docs/loso_heldout/pose_lstm.csv",
+   "mean": 68.71848484848483,
+   "mean_ci_stratified": [
+    68.08422727272726,
+    69.35787878787879
+   ],
+   "mean_ci_signer_clustered": [
+    59.30651515151515,
+    77.17351515151516
+   ],
+   "median_signer": 77.05333333333333,
+   "median_signer_ci_stratified": [
+    74.33,
+    77.95333333333333
+   ],
+   "median_signer_ci_signer_clustered": [
+    56.093333333333334,
+    81.54
+   ],
+   "iqm_runs": 72.56235294117648,
+   "iqm_runs_ci_stratified": [
+    71.95411764705882,
+    73.44707352941175
+   ],
+   "iqm_runs_ci_signer_clustered": [
+    58.468823529411765,
+    79.91774999999998
+   ],
+   "iqm_signer_means": 72.0995238095238,
+   "iqm_signer_means_ci_stratified": [
+    71.31855952380951,
+    72.77953571428571
+   ],
+   "iqm_signer_means_ci_signer_clustered": [
+    58.694511904761896,
+    79.78622619047619
+   ],
+   "worst_signer": 39.83,
+   "worst_signer_ci_stratified": [
+    37.54,
+    41.23
+   ],
+   "worst_signer_ci_signer_clustered": [
+    37.54,
+    65.51666666666667
+   ],
+   "p10_runs": 41.919999999999995,
+   "p10_runs_ci_stratified": [
+    41.37,
+    46.56
+   ],
+   "p10_runs_ci_signer_clustered": [
+    38.176,
+    67.95599999999999
+   ],
+   "p10_signer_means": 44.01666666666667,
+   "p10_signer_means_ci_stratified": [
+    41.37,
+    46.56
+   ],
+   "p10_signer_means_ci_signer_clustered": [
+    38.77,
+    68.46
+   ],
+   "best_signer": 84.28000000000002,
+   "best_signer_ci_stratified": [
+    83.83666666666666,
+    86.74
+   ],
+   "best_signer_ci_signer_clustered": [
+    79.55,
+    86.74
+   ]
+  }
+ },
+ "rankings": {
+  "mean": [
+   "Adaptive GNN",
+   "SLGTFormer",
+   "ST-GCN",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "median_signer": [
+   "Adaptive GNN",
+   "SLGTFormer",
+   "ST-GCN",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "iqm_runs": [
+   "Adaptive GNN",
+   "SLGTFormer",
+   "ST-GCN",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "iqm_signer_means": [
+   "SLGTFormer",
+   "Adaptive GNN",
+   "ST-GCN",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "worst_signer": [
+   "SLGTFormer",
+   "GNN+Transformer (clip5)",
+   "Attention GNN",
+   "Adaptive GNN",
+   "GNN+LSTM",
+   "ST-GCN",
+   "BlockGCN (lr0.01)",
+   "Pose LSTM"
+  ],
+  "p10_runs": [
+   "ST-GCN",
+   "Adaptive GNN",
+   "SLGTFormer",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "p10_signer_means": [
+   "ST-GCN",
+   "Adaptive GNN",
+   "SLGTFormer",
+   "Attention GNN",
+   "GNN+Transformer (clip5)",
+   "BlockGCN (lr0.01)",
+   "GNN+LSTM",
+   "Pose LSTM"
+  ],
+  "best_signer": [
+   "SLGTFormer",
+   "Adaptive GNN",
+   "ST-GCN",
+   "GNN+Transformer (clip5)",
+   "Attention GNN",
+   "GNN+LSTM",
+   "BlockGCN (lr0.01)",
+   "Pose LSTM"
+  ]
+ },
+ "prob_improvement": {
+  "Adaptive GNN > SLGTFormer": {
+   "poi": 0.5656565656565656,
+   "ci_stratified": [
+    0.41906565656565653,
+    0.6565656565656565
+   ],
+   "ci_signer_clustered": [
+    0.3333333333333333,
+    0.7476010101010093
+   ]
+  },
+  "Adaptive GNN > ST-GCN": {
+   "poi": 0.6818181818181818,
+   "ci_stratified": [
+    0.5757575757575757,
+    0.8080808080808081
+   ],
+   "ci_signer_clustered": [
+    0.4848484848484849,
+    0.8787878787878789
+   ]
+  },
+  "Adaptive GNN > Attention GNN": {
+   "poi": 0.7929292929292928,
+   "ci_stratified": [
+    0.6818181818181818,
+    0.9090909090909091
+   ],
+   "ci_signer_clustered": [
+    0.5959595959595959,
+    0.9494949494949495
+   ]
+  },
+  "Adaptive GNN > GNN+Transformer (clip5)": {
+   "poi": 0.8383838383838383,
+   "ci_stratified": [
+    0.7777777777777778,
+    0.9292929292929292
+   ],
+   "ci_signer_clustered": [
+    0.6565656565656566,
+    1.0
+   ]
+  },
+  "Adaptive GNN > BlockGCN (lr0.01)": {
+   "poi": 0.9545454545454546,
+   "ci_stratified": [
+    0.888888888888889,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    0.8787878787878788,
+    1.0
+   ]
+  },
+  "Adaptive GNN > GNN+LSTM": {
+   "poi": 0.9090909090909091,
+   "ci_stratified": [
+    0.7878787878787878,
+    0.9797979797979799
+   ],
+   "ci_signer_clustered": [
+    0.7171717171717172,
+    0.98989898989899
+   ]
+  },
+  "Adaptive GNN > Pose LSTM": {
+   "poi": 1.0,
+   "ci_stratified": [
+    1.0,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    1.0,
+    1.0
+   ]
+  },
+  "SLGTFormer > ST-GCN": {
+   "poi": 0.702020202020202,
+   "ci_stratified": [
+    0.5959595959595959,
+    0.8080808080808081
+   ],
+   "ci_signer_clustered": [
+    0.469570707070707,
+    0.898989898989899
+   ]
+  },
+  "SLGTFormer > Attention GNN": {
+   "poi": 0.8333333333333333,
+   "ci_stratified": [
+    0.7222222222222222,
+    0.9040404040404041
+   ],
+   "ci_signer_clustered": [
+    0.6515151515151515,
+    0.9595959595959596
+   ]
+  },
+  "SLGTFormer > GNN+Transformer (clip5)": {
+   "poi": 0.8282828282828283,
+   "ci_stratified": [
+    0.7373737373737373,
+    0.9393939393939393
+   ],
+   "ci_signer_clustered": [
+    0.6666666666666665,
+    0.9696969696969698
+   ]
+  },
+  "SLGTFormer > BlockGCN (lr0.01)": {
+   "poi": 0.9646464646464646,
+   "ci_stratified": [
+    0.898989898989899,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    0.868560606060606,
+    1.0
+   ]
+  },
+  "SLGTFormer > GNN+LSTM": {
+   "poi": 0.888888888888889,
+   "ci_stratified": [
+    0.8080808080808081,
+    0.9696969696969696
+   ],
+   "ci_signer_clustered": [
+    0.7373737373737373,
+    1.0
+   ]
+  },
+  "SLGTFormer > Pose LSTM": {
+   "poi": 1.0,
+   "ci_stratified": [
+    1.0,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    1.0,
+    1.0
+   ]
+  },
+  "ST-GCN > Attention GNN": {
+   "poi": 0.5959595959595959,
+   "ci_stratified": [
+    0.5050505050505051,
+    0.707070707070707
+   ],
+   "ci_signer_clustered": [
+    0.35858585858585856,
+    0.8282828282828283
+   ]
+  },
+  "ST-GCN > GNN+Transformer (clip5)": {
+   "poi": 0.696969696969697,
+   "ci_stratified": [
+    0.6060606060606061,
+    0.7777777777777778
+   ],
+   "ci_signer_clustered": [
+    0.4444444444444444,
+    0.9090909090909091
+   ]
+  },
+  "ST-GCN > BlockGCN (lr0.01)": {
+   "poi": 0.8636363636363636,
+   "ci_stratified": [
+    0.7777777777777778,
+    0.9445707070707065
+   ],
+   "ci_signer_clustered": [
+    0.712121212121212,
+    0.9696969696969698
+   ]
+  },
+  "ST-GCN > GNN+LSTM": {
+   "poi": 0.7777777777777778,
+   "ci_stratified": [
+    0.6666666666666666,
+    0.8686868686868686
+   ],
+   "ci_signer_clustered": [
+    0.5755050505050504,
+    0.9393939393939394
+   ]
+  },
+  "ST-GCN > Pose LSTM": {
+   "poi": 1.0,
+   "ci_stratified": [
+    1.0,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    1.0,
+    1.0
+   ]
+  },
+  "Attention GNN > GNN+Transformer (clip5)": {
+   "poi": 0.5606060606060607,
+   "ci_stratified": [
+    0.45454545454545453,
+    0.6667929292929288
+   ],
+   "ci_signer_clustered": [
+    0.3434343434343434,
+    0.7878787878787878
+   ]
+  },
+  "Attention GNN > BlockGCN (lr0.01)": {
+   "poi": 0.8434343434343433,
+   "ci_stratified": [
+    0.7525252525252525,
+    0.9090909090909091
+   ],
+   "ci_signer_clustered": [
+    0.6463383838383837,
+    0.9797979797979799
+   ]
+  },
+  "Attention GNN > GNN+LSTM": {
+   "poi": 0.7979797979797979,
+   "ci_stratified": [
+    0.6868686868686869,
+    0.9090909090909091
+   ],
+   "ci_signer_clustered": [
+    0.6262626262626262,
+    0.9393939393939394
+   ]
+  },
+  "Attention GNN > Pose LSTM": {
+   "poi": 1.0,
+   "ci_stratified": [
+    1.0,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    1.0,
+    1.0
+   ]
+  },
+  "GNN+Transformer (clip5) > BlockGCN (lr0.01)": {
+   "poi": 0.7474747474747475,
+   "ci_stratified": [
+    0.6363636363636364,
+    0.8484848484848484
+   ],
+   "ci_signer_clustered": [
+    0.5454545454545454,
+    0.9191919191919191
+   ]
+  },
+  "GNN+Transformer (clip5) > GNN+LSTM": {
+   "poi": 0.7878787878787878,
+   "ci_stratified": [
+    0.6767676767676767,
+    0.888888888888889
+   ],
+   "ci_signer_clustered": [
+    0.606060606060606,
+    0.9393939393939393
+   ]
+  },
+  "GNN+Transformer (clip5) > Pose LSTM": {
+   "poi": 0.9797979797979799,
+   "ci_stratified": [
+    0.9696969696969698,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    0.9545454545454546,
+    1.0
+   ]
+  },
+  "BlockGCN (lr0.01) > GNN+LSTM": {
+   "poi": 0.5,
+   "ci_stratified": [
+    0.3939393939393939,
+    0.6212121212121212
+   ],
+   "ci_signer_clustered": [
+    0.2727272727272727,
+    0.7272727272727273
+   ]
+  },
+  "BlockGCN (lr0.01) > Pose LSTM": {
+   "poi": 0.9343434343434343,
+   "ci_stratified": [
+    0.888888888888889,
+    1.0
+   ],
+   "ci_signer_clustered": [
+    0.8484848484848485,
+    1.0
+   ]
+  },
+  "GNN+LSTM > Pose LSTM": {
+   "poi": 0.8383838383838383,
+   "ci_stratified": [
+    0.7272727272727273,
+    0.9393939393939394
+   ],
+   "ci_signer_clustered": [
+    0.6969696969696969,
+    0.9595959595959596
+   ]
+  }
+ },
+ "mixed_models": {
+  "M1_signer_seed": {
+   "formula": "acc ~ C(arch) + (1|signer) + (1|seed)",
+   "converged": true,
+   "group_var": null,
+   "vc_var": {
+    "seed": 0.00028710368497394484,
+    "signer": 250.80207690718527
+   },
+   "resid_var": 9.025916452156611,
+   "arch_marginal": {
+    "Adaptive GNN": {
+     "est": 80.13000000007237,
+     "se": 4.803519244341751,
+     "ci95": [
+      70.71510228116254,
+      89.5448977189822
+     ]
+    },
+    "ST-GCN": {
+     "est": 78.64515151522389,
+     "se": 4.803519244341734,
+     "ci95": [
+      69.23025379631409,
+      88.06004923413369
+     ]
+    },
+    "SLGTFormer": {
+     "est": 80.10151515158753,
+     "se": 4.803519244341731,
+     "ci95": [
+      70.68661743267774,
+      89.51641287049733
+     ]
+    },
+    "GNN+Transformer (clip5)": {
+     "est": 77.09757575764813,
+     "se": 4.803519244341727,
+     "ci95": [
+      67.68267803873835,
+      86.51247347655791
+     ]
+    },
+    "Attention GNN": {
+     "est": 77.55969696976935,
+     "se": 4.803519244341728,
+     "ci95": [
+      68.14479925085956,
+      86.97459468867913
+     ]
+    },
+    "BlockGCN (lr0.01)": {
+     "est": 74.36606060613298,
+     "se": 4.803519244341732,
+     "ci95": [
+      64.95116288722318,
+      83.78095832504277
+     ]
+    },
+    "GNN+LSTM": {
+     "est": 73.62030303037541,
+     "se": 4.803519244341734,
+     "ci95": [
+      64.20540531146561,
+      83.03520074928521
+     ]
+    },
+    "Pose LSTM": {
+     "est": 68.71848484855722,
+     "se": 4.803519244341737,
+     "ci95": [
+      59.30358712964742,
+      78.13338256746702
+     ]
+    }
+   },
+   "ranking": [
+    "Adaptive GNN",
+    "SLGTFormer",
+    "ST-GCN",
+    "Attention GNN",
+    "GNN+Transformer (clip5)",
+    "BlockGCN (lr0.01)",
+    "GNN+LSTM",
+    "Pose LSTM"
+   ],
+   "adjacent": [
+    {
+     "a": "Adaptive GNN",
+     "b": "SLGTFormer",
+     "diff": 0.028484848484843107,
+     "se": 0.7396115463705561,
+     "ci95": [
+      -1.421153782401447,
+      1.478123479371133
+     ],
+     "p_one_sided": 0.4846392314668645,
+     "p_holm": 0.5320917535825105
+    },
+    {
+     "a": "SLGTFormer",
+     "b": "ST-GCN",
+     "diff": 1.4563636363636376,
+     "se": 0.7396115463705548,
+     "ci95": [
+      0.006725005477350221,
+      2.9060022672499253
+     ],
+     "p_one_sided": 0.024471228183384208,
+     "p_holm": 0.12235614091692104
+    },
+    {
+     "a": "ST-GCN",
+     "b": "Attention GNN",
+     "diff": 1.0854545454545443,
+     "se": 0.7396115463705547,
+     "ci95": [
+      -0.36418408543174285,
+      2.5350931763408315
+     ],
+     "p_one_sided": 0.07110633641357356,
+     "p_holm": 0.2844253456542942
+    },
+    {
+     "a": "Attention GNN",
+     "b": "GNN+Transformer (clip5)",
+     "diff": 0.46212121212121415,
+     "se": 0.7396115463705548,
+     "ci95": [
+      -0.9875174187650733,
+      1.9117598430075016
+     ],
+     "p_one_sided": 0.26604587679125524,
+     "p_holm": 0.5320917535825105
+    },
+    {
+     "a": "GNN+Transformer (clip5)",
+     "b": "BlockGCN (lr0.01)",
+     "diff": 2.7315151515151537,
+     "se": 0.7396115463705548,
+     "ci95": [
+      1.2818765206288663,
+      4.1811537824014415
+     ],
+     "p_one_sided": 0.00011073558686269802,
+     "p_holm": 0.0006644135211761881
+    },
+    {
+     "a": "BlockGCN (lr0.01)",
+     "b": "GNN+LSTM",
+     "diff": 0.7457575757575743,
+     "se": 0.7396115463705546,
+     "ci95": [
+      -0.7038810551287127,
+      2.1953962066438613
+     ],
+     "p_one_sided": 0.15665287814530982,
+     "p_holm": 0.46995863443592945
+    },
+    {
+     "a": "GNN+LSTM",
+     "b": "Pose LSTM",
+     "diff": 4.90181818181818,
+     "se": 0.7396115463705547,
+     "ci95": [
+      3.452179550931892,
+      6.351456812704467
+     ],
+     "p_one_sided": 1.706434993309358e-11,
+     "p_holm": 1.1945044953165507e-10
+    }
+   ]
+  },
+  "M2_signer_signerXarch": {
+   "formula": "acc ~ C(arch) + (1|signer) + (1|signer:arch)",
+   "converged": true,
+   "group_var": 255.4082951114036,
+   "vc_var": {
+    "signer_arch": 2.171822109734462
+   },
+   "resid_var": 7.165124427508305,
+   "arch_marginal": {
+    "Adaptive GNN": {
+     "est": 80.12999999999785,
+     "se": 4.8614297563041795,
+     "ci95": [
+      70.60159767764166,
+      89.65840232235404
+     ]
+    },
+    "ST-GCN": {
+     "est": 78.64515151514935,
+     "se": 4.861429756304181,
+     "ci95": [
+      69.11674919279315,
+      88.17355383750555
+     ]
+    },
+    "SLGTFormer": {
+     "est": 80.101515151513,
+     "se": 4.861429756304184,
+     "ci95": [
+      70.5731128291568,
+      89.6299174738692
+     ]
+    },
+    "GNN+Transformer (clip5)": {
+     "est": 77.09757575757362,
+     "se": 4.861429756304184,
+     "ci95": [
+      67.56917343521742,
+      86.62597807992982
+     ]
+    },
+    "Attention GNN": {
+     "est": 77.55969696969484,
+     "se": 4.861429756304185,
+     "ci95": [
+      68.03129464733864,
+      87.08809929205104
+     ]
+    },
+    "BlockGCN (lr0.01)": {
+     "est": 74.36606060605847,
+     "se": 4.861429756304185,
+     "ci95": [
+      64.83765828370227,
+      83.89446292841467
+     ]
+    },
+    "GNN+LSTM": {
+     "est": 73.62030303030089,
+     "se": 4.861429756304184,
+     "ci95": [
+      64.09190070794469,
+      83.14870535265709
+     ]
+    },
+    "Pose LSTM": {
+     "est": 68.71848484848269,
+     "se": 4.861429756304184,
+     "ci95": [
+      59.19008252612649,
+      78.24688717083889
+     ]
+    }
+   },
+   "ranking": [
+    "Adaptive GNN",
+    "SLGTFormer",
+    "ST-GCN",
+    "Attention GNN",
+    "GNN+Transformer (clip5)",
+    "BlockGCN (lr0.01)",
+    "GNN+LSTM",
+    "Pose LSTM"
+   ],
+   "adjacent": [
+    {
+     "a": "Adaptive GNN",
+     "b": "SLGTFormer",
+     "diff": 0.028484848484851888,
+     "se": 0.9105639530137247,
+     "ci95": [
+      -1.7562204994220485,
+      1.8131901963917523
+     ],
+     "p_one_sided": 0.4875220656373479,
+     "p_holm": 0.619174264800515
+    },
+    {
+     "a": "SLGTFormer",
+     "b": "ST-GCN",
+     "diff": 1.4563636363636443,
+     "se": 0.9105639530137248,
+     "ci95": [
+      -0.3283417115432563,
+      3.241068984270545
+     ],
+     "p_one_sided": 0.05486494338489556,
+     "p_holm": 0.2743247169244778
+    },
+    {
+     "a": "ST-GCN",
+     "b": "Attention GNN",
+     "diff": 1.0854545454545137,
+     "se": 0.910563953013725,
+     "ci95": [
+      -0.6992508024523871,
+      2.8701598933614143
+     ],
+     "p_one_sided": 0.11661720651030882,
+     "p_holm": 0.4664688260412353
+    },
+    {
+     "a": "Attention GNN",
+     "b": "GNN+Transformer (clip5)",
+     "diff": 0.4621212121212199,
+     "se": 0.9105639530137251,
+     "ci95": [
+      -1.3225841357856811,
+      2.246826560028121
+     ],
+     "p_one_sided": 0.305898164035149,
+     "p_holm": 0.619174264800515
+    },
+    {
+     "a": "GNN+Transformer (clip5)",
+     "b": "BlockGCN (lr0.01)",
+     "diff": 2.731515151515155,
+     "se": 0.9105639530137251,
+     "ci95": [
+      0.946809803608254,
+      4.516220499422056
+     ],
+     "p_one_sided": 0.0013507583434998471,
+     "p_holm": 0.008104550060999083
+    },
+    {
+     "a": "BlockGCN (lr0.01)",
+     "b": "GNN+LSTM",
+     "diff": 0.745757575757577,
+     "se": 0.9105639530137252,
+     "ci95": [
+      -1.0389477721493243,
+      2.5304629236644782
+     ],
+     "p_one_sided": 0.20639142160017165,
+     "p_holm": 0.619174264800515
+    },
+    {
+     "a": "GNN+LSTM",
+     "b": "Pose LSTM",
+     "diff": 4.901818181818206,
+     "se": 0.9105639530137251,
+     "ci95": [
+      3.117112833911305,
+      6.6865235297251076
+     ],
+     "p_one_sided": 3.657087999098252e-08,
+     "p_holm": 2.5599615993687763e-07
+    }
+   ]
+  }
+ },
+ "notes": [
+  "GNN+Transformer main row = grad-clip-5.0 LOSO re-run (paper convention, tools/arch_significance.py LOSO_FILE); unclipped run is a sensitivity row.",
+  "PoI CIs use 2000 resamples (each PoI resample is 11 x 9 comparisons)."
+ ]
+}

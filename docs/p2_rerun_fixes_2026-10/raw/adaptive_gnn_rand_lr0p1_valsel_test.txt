@@ -1,0 +1,5 @@
+rand42 bdsl_adaptive_gnn_rand42_lr0p1_seed0 model-best.pt -> own TEST:   ck = torch.load(a.weights, map_location="cpu") 1365 top1=98.83  n=1365  data=data/bdsl_rand42/test_data.npy 
+rand43 bdsl_adaptive_gnn_rand43_lr0p1_seed0 model-best.pt -> own TEST:   ck = torch.load(a.weights, map_location="cpu") 1365 top1=99.12  n=1365  data=data/bdsl_rand43/test_data.npy 
+rand44 bdsl_adaptive_gnn_rand44_lr0p1_seed0 model-best.pt -> own TEST:   ck = torch.load(a.weights, map_location="cpu") 1365 top1=98.53  n=1365  data=data/bdsl_rand44/test_data.npy 
+rand45 bdsl_adaptive_gnn_rand45_lr0p1_seed0 model-best.pt -> own TEST:   ck = torch.load(a.weights, map_location="cpu") 1365 top1=99.12  n=1365  data=data/bdsl_rand45/test_data.npy 
+rand46 bdsl_adaptive_gnn_rand46_lr0p1_seed0 model-best.pt -> own TEST:   ck = torch.load(a.weights, map_location="cpu") 1365 top1=98.75  n=1365  data=data/bdsl_rand46/test_data.npy 

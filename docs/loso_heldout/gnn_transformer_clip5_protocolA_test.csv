@@ -1,0 +1,4 @@
+seed,test_acc,checkpoint
+0,76.56,work_dir/bdsl_gnn_transformer_si_clip5_seed0/bdsl_gnn_transformer_si_clip5_seed0_model-best.pt
+1,73.77,work_dir/bdsl_gnn_transformer_si_clip5_seed1/bdsl_gnn_transformer_si_clip5_seed1_model-best.pt
+2,76.41,work_dir/bdsl_gnn_transformer_si_clip5_seed2/bdsl_gnn_transformer_si_clip5_seed2_model-best.pt

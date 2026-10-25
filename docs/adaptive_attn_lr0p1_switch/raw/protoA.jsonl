@@ -1,0 +1,6 @@
+{"arch": "adaptive_gnn", "seed": 0, "ckpt": "work_dir/bdsl_adaptive_gnn_si_lr0p1_seed0/bdsl_adaptive_gnn_si_lr0p1_seed0_model-best.pt", "best_val_epoch": 74, "test_top1_recheck": 77.72893772893772}
+{"arch": "adaptive_gnn", "seed": 1, "ckpt": "work_dir/bdsl_adaptive_gnn_si_lr0p1_seed1/bdsl_adaptive_gnn_si_lr0p1_seed1_model-best.pt", "best_val_epoch": 89, "test_top1_recheck": 77.65567765567765}
+{"arch": "adaptive_gnn", "seed": 2, "ckpt": "work_dir/bdsl_adaptive_gnn_si_lr0p1_seed2/bdsl_adaptive_gnn_si_lr0p1_seed2_model-best.pt", "best_val_epoch": 44, "test_top1_recheck": 75.75091575091575}
+{"arch": "gnn", "seed": 0, "ckpt": "work_dir/bdsl_gnn_si_lr0p1_seed0/bdsl_gnn_si_lr0p1_seed0_model-best.pt", "best_val_epoch": 74, "test_top1_recheck": 73.99267399267399}
+{"arch": "gnn", "seed": 1, "ckpt": "work_dir/bdsl_gnn_si_lr0p1_seed1/bdsl_gnn_si_lr0p1_seed1_model-best.pt", "best_val_epoch": 79, "test_top1_recheck": 74.35897435897436}
+{"arch": "gnn", "seed": 2, "ckpt": "work_dir/bdsl_gnn_si_lr0p1_seed2/bdsl_gnn_si_lr0p1_seed2_model-best.pt", "best_val_epoch": 84, "test_top1_recheck": 73.4065934065934}

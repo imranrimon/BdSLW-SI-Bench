@@ -1,0 +1,70 @@
+Experiment_name: aslcitizen_si
+
+# ASL Citizen (Desai et al., NeurIPS D&B 2023), OFFICIAL participant-disjoint split.
+# External-language SI validation (Tier-C / paper section 4.6). Bundles built by:
+#   python preprocessing/generate_aslcitizen_split_npy.py \
+#       --dataset-root data/aslcitizen_download --output-dir data/aslcitizen_si \
+#       --cache-dir data/aslcitizen_cache --splits train val test --jobs 32
+# Participants: train=35 / val=6 / test=11 (disjoint by design).
+# Clips: train=40154 / val=10304 / test=32941 ; 2731 signs.
+# Same OpenHands 27-keypoint MediaPipe skeleton as BdSLW60 (matches ASL Citizen's own ST-GCN baseline).
+# Standard metric is dictionary-retrieval Recall@1/@5/@10 (R@1 == Top-1) + MRR/DCG.
+
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: data/aslcitizen_si/train_data.npy
+  label_path: data/aslcitizen_si/train_label.pkl
+  debug: False
+  random_choose: True
+  window_size: 120
+  random_shift: True
+  normalization: True
+  random_mirror: False       # off: signer hand-dominance is class-informative
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: data/aslcitizen_si/val_data.npy     # val for in-training selection; test held out for --phase test
+  label_path: data/aslcitizen_si/val_label.pkl
+  random_mirror: False
+  normalization: True
+  is_vector: False
+  lap_pe: False
+  window_size: 120
+  random_choose: False
+
+# model
+model: model.block_gcn.Model
+model_args:
+  num_class: 2731
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+  num_blocks: [2, 2, 2, 2]
+  stage_channels: [64, 128, 256, 256]
+  max_distance: 8
+
+# optim
+weight_decay: 0.0001
+base_lr: 0.1
+step: [60, 80]
+
+# training
+device: [0]
+keep_rate: 0.9
+only_train_epoch: 1
+batch_size: 64
+test_batch_size: 64
+num_epoch: 100
+nesterov: True
+warm_up_epoch: 5
+optimizer: SGD
+
+wandb: False
+num_worker: 8
+save_interval: 10

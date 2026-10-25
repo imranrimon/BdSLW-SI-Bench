@@ -1,0 +1,89 @@
+base_lr: 0.01
+batch_size: 16
+device:
+- 0
+eval_interval: 5
+feeder: feeders.feeder.Feeder
+grad_clip_norm: 0.0
+groups: 8
+keep_rate: 0.9
+log_interval: 100
+model: model.twin_attention.Model
+model_args:
+  block_size: 41
+  depth: 4
+  drop_layers: 2
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: spatial
+  groups: 16
+  inner_dim: 64
+  num_class: 60
+  num_person: 1
+  num_point: 27
+  s_num_heads: 4
+  s_pos_emb: false
+  sr_ratios:
+  - 8
+  - 4
+  - 2
+  - 1
+  t_depths:
+  - 2
+  - 2
+  - 2
+  - 2
+  t_num_heads: 4
+  use_grpe: true
+  window_size: 120
+  wss:
+  - 5
+  - 5
+  - 5
+  - 5
+nesterov: true
+num_epoch: 100
+num_worker: 0
+only_train_epoch: 1
+only_train_part: true
+optimizer: SGD
+print_log: true
+results_csv: results_final.csv
+save_interval: 10
+save_score: false
+show_topk:
+- 1
+- 5
+step:
+- 60
+- 80
+subset_seed: 42
+test_batch_size: 16
+test_feeder_args:
+  data_path: data/bdsl_si_loso/test_U09_val_U01/val_data.npy
+  label_path: data/bdsl_si_loso/test_U09_val_U01/val_label.pkl
+  lap_pe: false
+  normalization: true
+  random_choose: false
+  random_mirror: false
+  window_size: 120
+timestamp_run: false
+train_feeder_args:
+  data_path: data/bdsl_si_loso/test_U09_val_U01/train_data.npy
+  debug: false
+  is_vector: false
+  label_path: data/bdsl_si_loso/test_U09_val_U01/train_label.pkl
+  lap_pe: false
+  normalization: true
+  random_choose: true
+  random_mirror: false
+  random_mirror_p: 0.0
+  random_shift: true
+  window_size: 120
+train_fraction: 1.0
+wandb: false
+wandb_entity: irvl
+wandb_name: test
+wandb_project: SLGTformer First Run
+warm_up_epoch: 20
+weight_decay: 0.0001

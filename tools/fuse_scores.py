@@ -1,0 +1,125 @@
+"""Joint + bone two-stream score fusion from two run directories' best score dumps."""
+
+import os
+import argparse
+import pickle
+import numpy as np
+import yaml
+
+def load_label_path_from_config(work_dir):
+    config_path = os.path.join(work_dir, "config.yaml")
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Run config not found: {config_path}")
+
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f) or {}
+
+    label_path = (config.get("test_feeder_args") or {}).get("label_path")
+    if not label_path:
+        raise ValueError(f"No test_feeder_args.label_path found in {config_path}")
+    if not os.path.exists(label_path):
+        raise FileNotFoundError(f"Label file from {config_path} not found: {label_path}")
+    return label_path
+
+
+def fuse_scores(work_dir_joint, work_dir_bone, alpha=1.0, out_file="fused_results.pkl"):
+    print("Fusing scores from:")
+    print(f"  Joint: {work_dir_joint}")
+    print(f"  Bone:  {work_dir_bone}")
+    
+    # helper to find best pkl
+    def get_best_pkl(work_dir):
+        eval_dir = os.path.join(work_dir, "eval_results")
+        if not os.path.exists(eval_dir):
+            return None
+        import glob
+        pkls = glob.glob(os.path.join(eval_dir, "*.pkl"))
+        best_pkl = None
+        for p in pkls:
+            if "best_acc.pkl" in p:
+                return p
+        # if no best_acc, find one with highest accuracy in name "epoch_E_ACC.pkl"
+        best_acc = -1
+        for p in pkls:
+            try:
+                # epoch_50_0.85.pkl
+                parts = os.path.basename(p).replace('.pkl','').split('_')
+                acc = float(parts[-1])
+                if acc > best_acc:
+                    best_acc = acc
+                    best_pkl = p
+            except:
+                pass
+        return best_pkl
+
+    joint_pkl = get_best_pkl(work_dir_joint)
+    bone_pkl = get_best_pkl(work_dir_bone)
+    
+    if not joint_pkl or not bone_pkl:
+        print("Could not find result .pkl files in one or both directories.")
+        return
+
+    print(f"Loading Joint: {joint_pkl}")
+    with open(joint_pkl, 'rb') as f:
+        r1 = pickle.load(f)
+        
+    print(f"Loading Bone: {bone_pkl}")
+    with open(bone_pkl, 'rb') as f:
+        r2 = pickle.load(f)
+
+    # Intersection of keys
+    right_num = 0
+    total_num = 0
+    
+    label_path = load_label_path_from_config(work_dir_joint)
+    print(f"Loading labels from: {label_path}")
+    with open(label_path, 'rb') as f:
+        sample_name, label = pickle.load(f)
+    
+    match_dict = dict(zip(sample_name, label))
+    
+    fused_score_dict = {}
+
+    for k in r1.keys():
+        if k in r2:
+            s1 = r1[k]
+            s2 = r2[k]
+            
+            # FUSION
+            score = s1 + alpha * s2
+            
+            fused_score_dict[k] = score
+            
+            pred = np.argmax(score)
+            if k in match_dict:
+                gt = match_dict[k]
+                total_num += 1
+                if pred == gt:
+                    right_num += 1
+    
+    if total_num == 0:
+        print("No overlapping samples with labels were found.")
+        return
+
+    acc = right_num / total_num
+    print("--------------------------------------------------")
+    print(f"Joint + Bone Fusion Accuracy: {acc*100:.2f}%")
+    print("--------------------------------------------------")
+    
+    # Visualization?
+    # We can save this fused dict as a pseudo-result and run visualize_results on it?
+    # Or just return.
+    
+    with open(out_file, 'wb') as f:
+        pickle.dump(fused_score_dict, f)
+    print(f"Saved fused scores to {out_file}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--joint_dir', required=True)
+    parser.add_argument('--bone_dir', required=True)
+    parser.add_argument('--alpha', type=float, default=1.0)
+    parser.add_argument('--out_file', default='fused_results.pkl')
+    args = parser.parse_args()
+    
+    fuse_scores(args.joint_dir, args.bone_dir, args.alpha, args.out_file)

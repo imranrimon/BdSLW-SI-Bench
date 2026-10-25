@@ -1,0 +1,20 @@
+## SIGNER-CLUSTERED LOSO bootstrap on HELD-OUT-signer accuracy (docs/loso_heldout), n=11 folds, 10000 resamples
+  Adaptive GNN     80.23
+  ST-GCN           78.65
+  SLGTFormer       78.52
+  Attention GNN    75.74
+  GNN+LSTM         73.69
+  Pose LSTM        68.72
+  BlockGCN         61.87
+Adjacent pairs (Holm):
+  Adaptive GNN     > ST-GCN           D=+1.59 CI[-0.13,+3.31] p=0.0355 p_holm=0.1065 n.s.
+  ST-GCN           > SLGTFormer       D=+0.12 CI[-2.09,+2.72] p=0.4772 p_holm=0.4772 n.s.
+  SLGTFormer       > Attention GNN    D=+2.78 CI[+0.60,+4.87] p=0.0063 p_holm=0.0315 *
+  Attention GNN    > GNN+LSTM         D=+2.06 CI[+0.23,+3.88] p=0.0128 p_holm=0.0512 n.s.
+  GNN+LSTM         > Pose LSTM        D=+4.97 CI[+3.49,+6.44] p=0.0000 p_holm=0.0000 ***
+  Pose LSTM        > BlockGCN         D=+6.84 CI[-0.60,+16.51] p=0.0415 p_holm=0.1065 n.s.
+  check adaptive_gnn>slgtformer: D=+1.71 CI[+0.41,+3.24] p=0.0040
+  check slgtformer>st_gcn_vanilla: D=-0.12 CI[-2.72,+2.10] p=0.4740
+  check st_gcn_vanilla>slgtformer: D=+0.12 CI[-2.10,+2.69] p=0.4893
+  check st_gcn_vanilla>block_gcn: D=+16.77 CI[+9.16,+26.60] p=0.0000
+  check adaptive_gnn>st_gcn_vanilla: D=+1.59 CI[-0.13,+3.31] p=0.0354

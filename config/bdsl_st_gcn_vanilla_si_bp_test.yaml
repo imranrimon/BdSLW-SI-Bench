@@ -1,0 +1,53 @@
+Experiment_name: bdsl_st_gcn_vanilla_si_bp
+
+# TRACK B held-out-TEST eval config for ST-GCN.
+# Identical to bdsl_st_gcn_vanilla_si_bp.yaml but test_feeder_args points at the
+# held-out TEST signers (2,13). Used with: main.py --phase test --weights <best>.
+
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ./data/bdsl_si/train_data.npy
+  label_path: ./data/bdsl_si/train_label.pkl
+  debug: False
+  random_choose: True
+  random_shift: True
+  random_move: False
+  window_size: 120
+  normalization: True
+  random_mirror: False
+  random_mirror_p: 0.0
+  is_vector: False
+  lap_pe: False
+
+test_feeder_args:
+  data_path: ./data/bdsl_si/test_data.npy
+  label_path: ./data/bdsl_si/test_label.pkl
+  window_size: 120
+  random_choose: False
+  normalization: True
+
+model: model.st_gcn_vanilla.Model
+model_args:
+  num_class: 60
+  num_point: 27
+  num_person: 1
+  graph: graph.sign_27.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  in_channels: 3
+
+optimizer: SGD
+weight_decay: 0.0001
+base_lr: 0.1
+step: [40, 60]
+
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 80
+nesterov: True
+warm_up_epoch: 0
+
+wandb: False
+num_worker: 0
+save_interval: 5

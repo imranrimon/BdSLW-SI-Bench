@@ -1,0 +1,1813 @@
+{
+ "sources": {
+  "acc": {
+   "Adaptive GNN": "docs/loso_heldout/adaptive_gnn.csv",
+   "ST-GCN": "docs/loso_heldout/st_gcn_vanilla.csv",
+   "SLGTFormer": "docs/loso_heldout/slgtformer.csv",
+   "GNN+Transformer": "docs/loso_heldout/gnn_transformer_clip5.csv",
+   "Attention GNN": "docs/loso_heldout/gnn.csv",
+   "BlockGCN": "docs/loso_heldout/block_gcn_lr01.csv",
+   "GNN+LSTM": "docs/loso_heldout/gnn_lstm.csv",
+   "Pose LSTM": "docs/loso_heldout/pose_lstm.csv"
+  },
+  "covariates": "docs/p2_analysis_2026-10/signer_covariates.json",
+  "per_clip": "docs/p2_analysis_2026-10/signer_covariates_per_clip.csv"
+ },
+ "per_signer_accuracy": {
+  "U01": {
+   "Adaptive GNN": 49.64,
+   "ST-GCN": 44.0,
+   "SLGTFormer": 48.24,
+   "GNN+Transformer": 47.453,
+   "Attention GNN": 41.74,
+   "BlockGCN": 42.633,
+   "GNN+LSTM": 45.13,
+   "Pose LSTM": 39.83,
+   "mean_8arch": 44.833,
+   "sd_across_arch": 3.418
+  },
+  "U12": {
+   "Adaptive GNN": 56.693,
+   "ST-GCN": 59.033,
+   "SLGTFormer": 48.957,
+   "GNN+Transformer": 52.62,
+   "Attention GNN": 53.03,
+   "BlockGCN": 51.093,
+   "GNN+LSTM": 45.75,
+   "Pose LSTM": 44.017,
+   "mean_8arch": 51.399,
+   "sd_across_arch": 5.112
+  },
+  "U13": {
+   "Adaptive GNN": 72.247,
+   "ST-GCN": 66.507,
+   "SLGTFormer": 71.603,
+   "GNN+Transformer": 60.55,
+   "Attention GNN": 63.607,
+   "BlockGCN": 63.713,
+   "GNN+LSTM": 58.563,
+   "Pose LSTM": 56.093,
+   "mean_8arch": 64.11,
+   "sd_across_arch": 5.809
+  },
+  "U02": {
+   "Adaptive GNN": 80.51,
+   "ST-GCN": 76.523,
+   "SLGTFormer": 77.06,
+   "GNN+Transformer": 74.283,
+   "Attention GNN": 75.223,
+   "BlockGCN": 74.28,
+   "GNN+LSTM": 75.897,
+   "Pose LSTM": 68.323,
+   "mean_8arch": 75.262,
+   "sd_across_arch": 3.44
+  },
+  "U04": {
+   "Adaptive GNN": 79.437,
+   "ST-GCN": 81.633,
+   "SLGTFormer": 78.077,
+   "GNN+Transformer": 79.853,
+   "Attention GNN": 76.14,
+   "BlockGCN": 69.23,
+   "GNN+LSTM": 73.733,
+   "Pose LSTM": 66.143,
+   "mean_8arch": 75.531,
+   "sd_across_arch": 5.465
+  },
+  "U15": {
+   "Adaptive GNN": 89.923,
+   "ST-GCN": 87.023,
+   "SLGTFormer": 89.263,
+   "GNN+Transformer": 86.207,
+   "Attention GNN": 82.09,
+   "BlockGCN": 81.423,
+   "GNN+LSTM": 78.78,
+   "Pose LSTM": 77.403,
+   "mean_8arch": 84.014,
+   "sd_across_arch": 4.749
+  },
+  "U11": {
+   "Adaptive GNN": 88.07,
+   "ST-GCN": 86.383,
+   "SLGTFormer": 84.523,
+   "GNN+Transformer": 85.647,
+   "Attention GNN": 85.863,
+   "BlockGCN": 85.3,
+   "GNN+LSTM": 87.073,
+   "Pose LSTM": 81.54,
+   "mean_8arch": 85.55,
+   "sd_across_arch": 1.952
+  },
+  "U06": {
+   "Adaptive GNN": 90.8,
+   "ST-GCN": 86.79,
+   "SLGTFormer": 89.323,
+   "GNN+Transformer": 90.02,
+   "Attention GNN": 84.497,
+   "BlockGCN": 84.58,
+   "GNN+LSTM": 84.417,
+   "Pose LSTM": 77.053,
+   "mean_8arch": 85.935,
+   "sd_across_arch": 4.435
+  },
+  "U08": {
+   "Adaptive GNN": 89.357,
+   "ST-GCN": 89.617,
+   "SLGTFormer": 91.393,
+   "GNN+Transformer": 88.473,
+   "Attention GNN": 86.643,
+   "BlockGCN": 86.543,
+   "GNN+LSTM": 83.463,
+   "Pose LSTM": 78.14,
+   "mean_8arch": 86.704,
+   "sd_across_arch": 4.218
+  },
+  "U09": {
+   "Adaptive GNN": 91.513,
+   "ST-GCN": 93.143,
+   "SLGTFormer": 90.4,
+   "GNN+Transformer": 89.023,
+   "Attention GNN": 90.903,
+   "BlockGCN": 87.953,
+   "GNN+LSTM": 85.213,
+   "Pose LSTM": 83.08,
+   "mean_8arch": 88.904,
+   "sd_across_arch": 3.369
+  },
+  "U05": {
+   "Adaptive GNN": 94.387,
+   "ST-GCN": 94.443,
+   "SLGTFormer": 94.89,
+   "GNN+Transformer": 93.943,
+   "Attention GNN": 93.447,
+   "BlockGCN": 91.277,
+   "GNN+LSTM": 92.557,
+   "Pose LSTM": 84.28,
+   "mean_8arch": 92.403,
+   "sd_across_arch": 3.485
+  }
+ },
+ "kendall_w_arch_rank_across_signers": 0.7079889807162535,
+ "signer_covariates": {
+  "U01": {
+   "left_hand_frac_tag": 0.6707692307692308,
+   "left_hand_frac_tracked": 0.6194871794871795,
+   "left_dom_index": 0.5465747322826541,
+   "both_missing": 0.11943283485934938,
+   "sighand_missing": 0.16219458912541865,
+   "wrist_lowvis": 0.17049623024042607,
+   "speed_all": 0.03082840612881283,
+   "T": 37.93538461538461,
+   "shoulder_width": 0.2794497081886345,
+   "arm_len_norm": 1.5876220040392082,
+   "hand_size_norm": 0.2800775209769429,
+   "aspect_4x3_frac": 0.0,
+   "mmd_fold_train": 0.09770104744559842
+  },
+  "U02": {
+   "left_hand_frac_tag": 0.21370967741935484,
+   "left_hand_frac_tracked": 0.2903225806451613,
+   "left_dom_index": 0.4912140248031188,
+   "both_missing": 0.07198104673088092,
+   "sighand_missing": 0.11983921913494525,
+   "wrist_lowvis": 0.1934793289994717,
+   "speed_all": 0.02594880166850231,
+   "T": 48.19758064516129,
+   "shoulder_width": 0.2719576889528035,
+   "arm_len_norm": 1.5025631461094318,
+   "hand_size_norm": 0.2902259258188319,
+   "aspect_4x3_frac": 0.0,
+   "mmd_fold_train": 0.005778766590252249
+  },
+  "U04": {
+   "left_hand_frac_tag": 0.16483516483516483,
+   "left_hand_frac_tracked": 0.315541601255887,
+   "left_dom_index": 0.415454113239388,
+   "both_missing": 0.33878717418267024,
+   "sighand_missing": 0.4238871987592499,
+   "wrist_lowvis": 0.027718535877329722,
+   "speed_all": 0.022483467220539625,
+   "T": 42.588697017268444,
+   "shoulder_width": 0.2784202757003803,
+   "arm_len_norm": 1.4305382417723351,
+   "hand_size_norm": 0.2747857867234325,
+   "aspect_4x3_frac": 0.9419152276295133,
+   "mmd_fold_train": 0.030929356071883275
+  },
+  "U05": {
+   "left_hand_frac_tag": 0.04833333333333333,
+   "left_hand_frac_tracked": 0.16166666666666665,
+   "left_dom_index": 0.39329376581042924,
+   "both_missing": 0.12469499521041474,
+   "sighand_missing": 0.17725998395614936,
+   "wrist_lowvis": 0.07752283626231272,
+   "speed_all": 0.023496995883099923,
+   "T": 48.038333333333334,
+   "shoulder_width": 0.2466831152002814,
+   "arm_len_norm": 1.5086783943325608,
+   "hand_size_norm": 0.2733943200604913,
+   "aspect_4x3_frac": 0.23333333333333334,
+   "mmd_fold_train": 0.012196255742457862
+  },
+  "U06": {
+   "left_hand_frac_tag": 0.03803680981595092,
+   "left_hand_frac_tracked": 0.2331288343558282,
+   "left_dom_index": 0.35744265807729547,
+   "both_missing": 0.13963747614962901,
+   "sighand_missing": 0.20410557565498658,
+   "wrist_lowvis": 0.014407453831218468,
+   "speed_all": 0.028041679668117395,
+   "T": 38.52147239263804,
+   "shoulder_width": 0.2510204335235589,
+   "arm_len_norm": 1.5186308196921077,
+   "hand_size_norm": 0.28845912872004087,
+   "aspect_4x3_frac": 0.298159509202454,
+   "mmd_fold_train": 0.012736944837976516
+  },
+  "U08": {
+   "left_hand_frac_tag": 0.04381846635367762,
+   "left_hand_frac_tracked": 0.13302034428794993,
+   "left_dom_index": 0.4199773234925157,
+   "both_missing": 0.055414102247841594,
+   "sighand_missing": 0.09064640859750574,
+   "wrist_lowvis": 0.02945099280936514,
+   "speed_all": 0.02645190790832358,
+   "T": 46.11267605633803,
+   "shoulder_width": 0.23533538835026427,
+   "arm_len_norm": 1.5755119327585227,
+   "hand_size_norm": 0.28773659039780547,
+   "aspect_4x3_frac": 0.03286384976525822,
+   "mmd_fold_train": 0.05052175666574843
+  },
+  "U09": {
+   "left_hand_frac_tag": 0.01524390243902439,
+   "left_hand_frac_tracked": 0.25,
+   "left_dom_index": 0.47002311121485335,
+   "both_missing": 0.16342978424149235,
+   "sighand_missing": 0.22373062992009257,
+   "wrist_lowvis": 0.03514929032817711,
+   "speed_all": 0.020893235673240734,
+   "T": 46.88262195121951,
+   "shoulder_width": 0.23730176070673048,
+   "arm_len_norm": 1.5120932648063405,
+   "hand_size_norm": 0.24784588093369778,
+   "aspect_4x3_frac": 0.0,
+   "mmd_fold_train": 0.010574327607501433
+  },
+  "U11": {
+   "left_hand_frac_tag": 0.11932555123216602,
+   "left_hand_frac_tracked": 0.25551232166018156,
+   "left_dom_index": 0.42449168448587754,
+   "both_missing": 0.09313355092827921,
+   "sighand_missing": 0.12954337180652056,
+   "wrist_lowvis": 0.04322600248704587,
+   "speed_all": 0.023484266436469236,
+   "T": 39.65239948119326,
+   "shoulder_width": 0.253513549908963,
+   "arm_len_norm": 1.5604986853565568,
+   "hand_size_norm": 0.272148204497552,
+   "aspect_4x3_frac": 0.20103761348897536,
+   "mmd_fold_train": 0.008790271827152774
+  },
+  "U12": {
+   "left_hand_frac_tag": 0.05801526717557252,
+   "left_hand_frac_tracked": 0.19389312977099238,
+   "left_dom_index": 0.5360600977398259,
+   "both_missing": 0.566158384133741,
+   "sighand_missing": 0.6521405410041422,
+   "wrist_lowvis": 0.1333761224164362,
+   "speed_all": 0.02161939079573951,
+   "T": 50.36030534351145,
+   "shoulder_width": 0.27619146150851054,
+   "arm_len_norm": 1.5276682969191888,
+   "hand_size_norm": 0.2956634870012154,
+   "aspect_4x3_frac": 0.7969465648854962,
+   "mmd_fold_train": 0.017599230582253968
+  },
+  "U13": {
+   "left_hand_frac_tag": 0.2995169082125604,
+   "left_hand_frac_tracked": 0.357487922705314,
+   "left_dom_index": 0.4473737823655596,
+   "both_missing": 0.08328545768306791,
+   "sighand_missing": 0.14435479086905328,
+   "wrist_lowvis": 0.1124178893127974,
+   "speed_all": 0.023847038822539458,
+   "T": 47.64573268921095,
+   "shoulder_width": 0.30607391056168903,
+   "arm_len_norm": 1.6597083506127293,
+   "hand_size_norm": 0.2921737135346569,
+   "aspect_4x3_frac": 0.7278582930756844,
+   "mmd_fold_train": 0.015284681192316785
+  },
+  "U15": {
+   "left_hand_frac_tag": 0.03358778625954199,
+   "left_hand_frac_tracked": 0.15725190839694655,
+   "left_dom_index": 0.41105889358687864,
+   "both_missing": 0.18044998488441893,
+   "sighand_missing": 0.24197188276963336,
+   "wrist_lowvis": 0.1389918658222154,
+   "speed_all": 0.020563469059828282,
+   "T": 43.36641221374046,
+   "shoulder_width": 0.3092919328863147,
+   "arm_len_norm": 1.5153813262607896,
+   "hand_size_norm": 0.2778084400951456,
+   "aspect_4x3_frac": 1.0,
+   "mmd_fold_train": 0.014837302934555808
+  }
+ },
+ "spearman": [
+  {
+   "covariate": "left_hand_frac_tag",
+   "desc": "fraction of clips tagged _L (filename hand tag)",
+   "rho": -0.7363636363636363,
+   "p_perm": 0.01282,
+   "loo_min": -0.7939393939393938,
+   "loo_max": -0.6484848484848483,
+   "loo_drop_for_min": "U15",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.08333,
+   "p_holm": 0.15384
+  },
+  {
+   "covariate": "left_hand_frac_tracked",
+   "desc": "fraction of clips where MediaPipe tracks the LEFT hand in more frames than the right",
+   "rho": -0.6090909090909091,
+   "p_perm": 0.05245,
+   "loo_min": -0.7818181818181817,
+   "loo_max": -0.4787878787878787,
+   "loo_drop_for_min": "U12",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.13255666666666666,
+   "p_holm": 0.4804
+  },
+  {
+   "covariate": "left_dom_index",
+   "desc": "body-wrist motion share of the left wrist (0.5 = balanced)",
+   "rho": -0.6636363636363638,
+   "p_perm": 0.03036,
+   "loo_min": -0.8303030303030302,
+   "loo_max": -0.5515151515151515,
+   "loo_drop_for_min": "U09",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.13156,
+   "p_holm": 0.33396000000000003
+  },
+  {
+   "covariate": "both_missing",
+   "desc": "fraction of frames with NO hand detected",
+   "rho": -0.08181818181818183,
+   "p_perm": 0.81753,
+   "loo_min": -0.2121212121212121,
+   "loo_max": 0.1515151515151515,
+   "loo_drop_for_min": "U01",
+   "loo_drop_for_max": "U12",
+   "q_bh": 0.8856574999999999,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "sighand_missing",
+   "desc": "fraction of frames where the tagged signing hand is undetected",
+   "rho": -0.11818181818181818,
+   "p_perm": 0.73446,
+   "loo_min": -0.2606060606060606,
+   "loo_max": 0.10303030303030303,
+   "loo_drop_for_min": "U01",
+   "loo_drop_for_max": "U12",
+   "q_bh": 0.8679981818181819,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "wrist_lowvis",
+   "desc": "fraction of wrist detections with visibility < 0.5",
+   "rho": -0.5909090909090909,
+   "p_perm": 0.06118,
+   "loo_min": -0.6969696969696969,
+   "loo_max": -0.49090909090909085,
+   "loo_drop_for_min": "U04",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.13255666666666666,
+   "p_holm": 0.48944
+  },
+  {
+   "covariate": "speed_all",
+   "desc": "mean joint speed (shoulder widths / frame, 30 fps)",
+   "rho": -0.16363636363636366,
+   "p_perm": 0.63431,
+   "loo_min": -0.28484848484848485,
+   "loo_max": 0.11515151515151514,
+   "loo_drop_for_min": "U12",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.8679981818181819,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "T",
+   "desc": "clip length (frames, 30 fps)",
+   "rho": 0.009090909090909092,
+   "p_perm": 0.98895,
+   "loo_min": -0.32121212121212117,
+   "loo_max": 0.22424242424242422,
+   "loo_drop_for_min": "U01",
+   "loo_drop_for_max": "U12",
+   "q_bh": 0.9889499999999999,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "shoulder_width",
+   "desc": "shoulder width (fraction of frame width; camera framing)",
+   "rho": -0.7636363636363637,
+   "p_perm": 0.00816,
+   "loo_min": -0.8666666666666665,
+   "loo_max": -0.6848484848484848,
+   "loo_drop_for_min": "U15",
+   "loo_drop_for_max": "U06",
+   "q_bh": 0.08333,
+   "p_holm": 0.10608000000000001
+  },
+  {
+   "covariate": "arm_len_norm",
+   "desc": "upper+fore-arm length / shoulder width",
+   "rho": -0.3454545454545455,
+   "p_perm": 0.2981,
+   "loo_min": -0.4787878787878787,
+   "loo_max": -0.1515151515151515,
+   "loo_drop_for_min": "U02",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.48441249999999997,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "hand_size_norm",
+   "desc": "wrist-to-middle-MCP / shoulder width",
+   "rho": -0.6181818181818182,
+   "p_perm": 0.04804,
+   "loo_min": -0.7454545454545454,
+   "loo_max": -0.5151515151515151,
+   "loo_drop_for_min": "U01",
+   "loo_drop_for_max": "U09",
+   "q_bh": 0.13255666666666666,
+   "p_holm": 0.4804
+  },
+  {
+   "covariate": "aspect_4x3_frac",
+   "desc": "fraction of clips recorded at 4:3 (960x720/640x480) vs 16:9",
+   "rho": -0.13762047064079508,
+   "p_perm": 0.69134,
+   "loo_min": -0.44377104688644714,
+   "loo_max": 0.0,
+   "loo_drop_for_min": "U01",
+   "loo_drop_for_max": "U09",
+   "q_bh": 0.8679981818181819,
+   "p_holm": 1.0
+  },
+  {
+   "covariate": "mmd_fold_train",
+   "desc": "pose-motion MMD(held-out signer, that fold's 9 train signers)",
+   "rho": -0.4090909090909091,
+   "p_perm": 0.21258,
+   "loo_min": -0.6,
+   "loo_max": -0.2121212121212121,
+   "loo_drop_for_min": "U02",
+   "loo_drop_for_max": "U01",
+   "q_bh": 0.39479142857142857,
+   "p_holm": 1.0
+  }
+ ],
+ "mixed_models": [
+  {
+   "covariate": "left_hand_frac_tag",
+   "Ma_beta_per_sd": -11.74295141525367,
+   "Ma_se": 1.2277471875837644,
+   "Ma_p": 1.1260012625912302e-21,
+   "Mb_beta_per_sd": -11.742951415256453,
+   "Mb_se": 3.56501608402052,
+   "Mb_p": 0.0009879335411461213,
+   "Mb_signer_var": 126.42199616531073,
+   "Ma_p_holm": 1.3512015151094762e-20,
+   "Mb_p_holm": 0.011855202493753455
+  },
+  {
+   "covariate": "left_hand_frac_tracked",
+   "Ma_beta_per_sd": -11.085360122957319,
+   "Ma_se": 1.305434567806638,
+   "Ma_p": 2.0363423193114444e-17,
+   "Mb_beta_per_sd": -11.0853601229576,
+   "Mb_se": 3.7917748204340853,
+   "Mb_p": 0.0034608901912483894,
+   "Mb_signer_var": 143.1041617588727,
+   "Ma_p_holm": 2.2399765512425887e-16,
+   "Mb_p_holm": 0.038069792103732285
+  },
+  {
+   "covariate": "left_dom_index",
+   "Ma_beta_per_sd": -12.861882538836149,
+   "Ma_se": 1.065968425068992,
+   "Ma_p": 1.5987889975647055e-33,
+   "Mb_beta_per_sd": -12.861882538832122,
+   "Mb_se": 3.1065911138986313,
+   "Mb_p": 3.470158050172334e-05,
+   "Mb_signer_var": 95.83768624426128,
+   "Ma_p_holm": 2.078425696834117e-32,
+   "Mb_p_holm": 0.00045112054652240345
+  },
+  {
+   "covariate": "both_missing",
+   "Ma_beta_per_sd": -6.734559898075589,
+   "Ma_se": 1.611462614604448,
+   "Ma_p": 2.9258795199479632e-05,
+   "Mb_beta_per_sd": -6.7345598980740435,
+   "Mb_se": 4.79495939190402,
+   "Mb_p": 0.16016756456426506,
+   "Mb_signer_var": 229.24495467108022,
+   "Ma_p_holm": 0.00017555277119687778,
+   "Mb_p_holm": 0.9610053873855904
+  },
+  {
+   "covariate": "sighand_missing",
+   "Ma_beta_per_sd": -6.548095833742786,
+   "Ma_se": 1.620307524209051,
+   "Ma_p": 5.316311558046117e-05,
+   "Mb_beta_per_sd": -6.548095833745029,
+   "Mb_se": 4.823571821411214,
+   "Mb_p": 0.17461600254909648,
+   "Mb_signer_var": 231.99705003465084,
+   "Ma_p_holm": 0.00026581557790230585,
+   "Mb_p_holm": 0.9610053873855904
+  },
+  {
+   "covariate": "wrist_lowvis",
+   "Ma_beta_per_sd": -9.823650977147345,
+   "Ma_se": 1.4168362492558941,
+   "Ma_p": 4.1051939679669175e-12,
+   "Mb_beta_per_sd": -9.823650977144743,
+   "Mb_se": 4.160408137336938,
+   "Mb_p": 0.01821477864918859,
+   "Mb_signer_var": 172.4185566805784,
+   "Ma_p_holm": 4.1051939679669175e-11,
+   "Mb_p_holm": 0.1821477864918859
+  },
+  {
+   "covariate": "speed_all",
+   "Ma_beta_per_sd": -5.244842932500083,
+   "Ma_se": 1.6741735171898124,
+   "Ma_p": 0.001731501510430874,
+   "Mb_beta_per_sd": -5.244842932492459,
+   "Mb_se": 4.997464975389054,
+   "Mb_p": 0.2939477385175644,
+   "Mb_signer_var": 249.07516028196167,
+   "Ma_p_holm": 0.005194504531292622,
+   "Mb_p_holm": 1.0
+  },
+  {
+   "covariate": "T",
+   "Ma_beta_per_sd": 0.288509909633034,
+   "Ma_se": 1.7663027818347925,
+   "Ma_p": 0.8702498439557717,
+   "Mb_beta_per_sd": 0.2885099096339777,
+   "Mb_se": 5.293596177531879,
+   "Mb_p": 0.9565354664145551,
+   "Mb_signer_var": 279.5502030666536,
+   "Ma_p_holm": 0.8702498439557717,
+   "Mb_p_holm": 1.0
+  },
+  {
+   "covariate": "shoulder_width",
+   "Ma_beta_per_sd": -8.239697146753576,
+   "Ma_se": 1.5286840327958866,
+   "Ma_p": 7.043455111634743e-08,
+   "Mb_beta_per_sd": -8.239697146757496,
+   "Mb_se": 4.526446808897206,
+   "Mb_p": 0.0687064041704833,
+   "Mb_signer_var": 204.2158050607568,
+   "Ma_p_holm": 5.634764089307795e-07,
+   "Mb_p_holm": 0.5496512333638665
+  },
+  {
+   "covariate": "arm_len_norm",
+   "Ma_beta_per_sd": -5.513739609612178,
+   "Ma_se": 1.6641644575687906,
+   "Ma_p": 0.0009222906696365125,
+   "Mb_beta_per_sd": -5.51373960960581,
+   "Mb_se": 4.9651981233600635,
+   "Mb_p": 0.2667934216414054,
+   "Mb_signer_var": 245.86052257378537,
+   "Ma_p_holm": 0.00368916267854605,
+   "Mb_p_holm": 1.0
+  },
+  {
+   "covariate": "hand_size_norm",
+   "Ma_beta_per_sd": -7.351570306790751,
+   "Ma_se": 1.580042339844894,
+   "Ma_p": 3.2750879318670726e-06,
+   "Mb_beta_per_sd": -7.3515703067962015,
+   "Mb_se": 4.693466367673053,
+   "Mb_p": 0.11726873244180233,
+   "Mb_signer_var": 219.61486417332455,
+   "Ma_p_holm": 2.2925615523069507e-05,
+   "Mb_p_holm": 0.8208811270926163
+  },
+  {
+   "covariate": "aspect_4x3_frac",
+   "Ma_beta_per_sd": -2.768738257146308,
+   "Ma_se": 1.7413078334242174,
+   "Ma_p": 0.11182719345537324,
+   "Mb_beta_per_sd": -2.768738257147532,
+   "Mb_se": 5.213402119835769,
+   "Mb_p": 0.59536272362773,
+   "Mb_signer_var": 271.12421486648,
+   "Ma_p_holm": 0.2236543869107465,
+   "Mb_p_holm": 1.0
+  },
+  {
+   "covariate": "mmd_fold_train",
+   "Ma_beta_per_sd": -8.974123303247861,
+   "Ma_se": 1.4802795899567065,
+   "Ma_p": 1.3406219478800253e-09,
+   "Mb_beta_per_sd": -8.974123303246571,
+   "Mb_se": 4.368447852761088,
+   "Mb_p": 0.03994620244072915,
+   "Mb_signer_var": 190.16196426837757,
+   "Ma_p_holm": 1.2065597530920227e-08,
+   "Mb_p_holm": 0.35951582196656234
+  }
+ ],
+ "two_predictor_model": {
+  "formula": "acc ~ z(left_hand_frac_tag) + z(both_missing) + (1|arch) + (1|signer)",
+  "params": {
+   "left_hand_frac_tag_z": {
+    "beta": -13.611231977001582,
+    "se": 1.940056315476562,
+    "p": 2.284811151299269e-12
+   },
+   "both_missing_z": {
+    "beta": -9.430956587783031,
+    "se": 1.9400563154765507,
+    "p": 1.1669002523512572e-06
+   }
+  },
+  "signer_var_null": 251.65004092620129,
+  "signer_var_model": 35.489714453867464,
+  "signer_var_explained_frac": 0.858971950398867,
+  "ols_signer_means": {
+   "n": 11,
+   "df_resid": 8.0,
+   "r2": 0.8853276026792956,
+   "r2_adj": 0.8566595033491194,
+   "beta": {
+    "const": 75.87689393939392,
+    "left_hand_frac_tag_z": -13.61123197700184,
+    "both_missing_z": -9.430956587783426
+   },
+   "p": {
+    "const": 1.171233785085631e-10,
+    "left_hand_frac_tag_z": 0.0001108740850774352,
+    "both_missing_z": 0.0012539985400354602
+   },
+   "loo_r2_range": [
+    0.8133035422329588,
+    0.9516646768478635
+   ]
+  },
+  "note": "POST HOC: both predictors were chosen after inspecting the covariate table (U01 = mostly left-tagged, U12 = hand-dropout outlier); MixedLM Wald p-values treat 11 signers as large-sample."
+ },
+ "clip_level": {
+  "dump_files": [
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test01_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test02_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test04_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test05_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test06_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test08_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test09_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test11_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test12_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test13_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/adaptive_gnn_test15_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test01_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test02_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test04_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test05_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test06_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test08_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test09_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test11_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test12_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test13_seed0.pkl",
+   "work_dir/p2_analysis_tmp/loso_dumps/block_gcn_lr01_test15_seed0.pkl"
+  ],
+  "n_clip_preds": 15536,
+  "archs": [
+   "adaptive_gnn",
+   "block_gcn_lr01"
+  ],
+  "folds": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   8,
+   9,
+   11,
+   12,
+   13,
+   15
+  ],
+  "by_arch": {
+   "pooled": {
+    "n_clip_preds": 15536,
+    "folds": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     8,
+     9,
+     11,
+     12,
+     13,
+     15
+    ],
+    "archs": [
+     "adaptive_gnn",
+     "block_gcn_lr01"
+    ],
+    "overall_acc": 76.03630278063852,
+    "acc_by_tag": {
+     "U01": {
+      "L": {
+       "acc": 30.504587155963304,
+       "n": 1308
+      },
+      "R": {
+       "acc": 79.90654205607477,
+       "n": 642
+      }
+     },
+     "U02": {
+      "L": {
+       "acc": 45.911949685534594,
+       "n": 318
+      },
+      "R": {
+       "acc": 84.78632478632478,
+       "n": 1170
+      }
+     },
+     "U04": {
+      "L": {
+       "acc": 49.523809523809526,
+       "n": 210
+      },
+      "R": {
+       "acc": 72.93233082706767,
+       "n": 1064
+      }
+     },
+     "U05": {
+      "L": {
+       "acc": 93.10344827586206,
+       "n": 58
+      },
+      "R": {
+       "acc": 93.16987740805604,
+       "n": 1142
+      }
+     },
+     "U06": {
+      "L": {
+       "acc": 100.0,
+       "n": 62
+      },
+      "R": {
+       "acc": 88.2015306122449,
+       "n": 1568
+      }
+     },
+     "U08": {
+      "L": {
+       "acc": 98.21428571428571,
+       "n": 56
+      },
+      "R": {
+       "acc": 89.11620294599018,
+       "n": 1222
+      }
+     },
+     "U09": {
+      "L": {
+       "acc": 0.0,
+       "n": 20
+      },
+      "R": {
+       "acc": 89.08668730650155,
+       "n": 1292
+      }
+     },
+     "U11": {
+      "L": {
+       "acc": 55.434782608695656,
+       "n": 184
+      },
+      "R": {
+       "acc": 94.40353460972017,
+       "n": 1358
+      }
+     },
+     "U12": {
+      "L": {
+       "acc": 60.526315789473685,
+       "n": 76
+      },
+      "R": {
+       "acc": 53.24149108589952,
+       "n": 1234
+      }
+     },
+     "U13": {
+      "L": {
+       "acc": 47.043010752688176,
+       "n": 372
+      },
+      "R": {
+       "acc": 75.05747126436782,
+       "n": 870
+      }
+     },
+     "U15": {
+      "L": {
+       "acc": 68.18181818181817,
+       "n": 44
+      },
+      "R": {
+       "acc": 85.30805687203792,
+       "n": 1266
+      }
+     }
+    },
+    "acc_by_tracked_hand": {
+     "U01": {
+      "R": {
+       "acc": 64.01617250673854,
+       "n": 742
+      },
+      "L": {
+       "acc": 36.175496688741724,
+       "n": 1208
+      }
+     },
+     "U02": {
+      "R": {
+       "acc": 84.56439393939394,
+       "n": 1056
+      },
+      "L": {
+       "acc": 56.71296296296296,
+       "n": 432
+      }
+     },
+     "U04": {
+      "R": {
+       "acc": 73.62385321100918,
+       "n": 872
+      },
+      "L": {
+       "acc": 59.20398009950249,
+       "n": 402
+      }
+     },
+     "U05": {
+      "R": {
+       "acc": 92.94234592445328,
+       "n": 1006
+      },
+      "L": {
+       "acc": 94.3298969072165,
+       "n": 194
+      }
+     },
+     "U06": {
+      "R": {
+       "acc": 86.88,
+       "n": 1250
+      },
+      "L": {
+       "acc": 94.47368421052632,
+       "n": 380
+      }
+     },
+     "U08": {
+      "R": {
+       "acc": 91.06498194945848,
+       "n": 1108
+      },
+      "L": {
+       "acc": 79.41176470588235,
+       "n": 170
+      }
+     },
+     "U09": {
+      "R": {
+       "acc": 89.83739837398373,
+       "n": 984
+      },
+      "L": {
+       "acc": 81.40243902439023,
+       "n": 328
+      }
+     },
+     "U11": {
+      "R": {
+       "acc": 95.29616724738676,
+       "n": 1148
+      },
+      "L": {
+       "acc": 73.60406091370558,
+       "n": 394
+      }
+     },
+     "U12": {
+      "R": {
+       "acc": 52.1780303030303,
+       "n": 1056
+      },
+      "L": {
+       "acc": 59.84251968503938,
+       "n": 254
+      }
+     },
+     "U13": {
+      "R": {
+       "acc": 67.29323308270678,
+       "n": 798
+      },
+      "L": {
+       "acc": 65.54054054054053,
+       "n": 444
+      }
+     },
+     "U15": {
+      "R": {
+       "acc": 83.2427536231884,
+       "n": 1104
+      },
+      "L": {
+       "acc": 92.71844660194175,
+       "n": 206
+      }
+     }
+    },
+    "glm_within_signer": {
+     "tag_only": {
+      "left_tag": {
+       "log_odds": -1.8509402761606406,
+       "se_cluster": 0.34901809916494686,
+       "odds_ratio": 0.15708938944099915,
+       "ci95_or": [
+        0.07926047086095658,
+        0.31134153010819077
+       ],
+       "p": 1.1374102373404163e-07
+      }
+     },
+     "tracked_only": {
+      "track_left": {
+       "log_odds": -0.7620831757015945,
+       "se_cluster": 0.2614289429255157,
+       "odds_ratio": 0.4666932097159697,
+       "ci95_or": [
+        0.27957521869267515,
+        0.7790481324255529
+       ],
+       "p": 0.003556109202362491
+      }
+     },
+     "full": {
+      "left_tag": {
+       "log_odds": -1.9632922208779102,
+       "se_cluster": 0.2796602815858359,
+       "odds_ratio": 0.14039544641220203,
+       "ci95_or": [
+        0.08115240306848168,
+        0.2428872174820031
+       ],
+       "p": 2.2143120065872864e-12
+      },
+      "both_missing_z": {
+       "log_odds": -0.8179040754761355,
+       "se_cluster": 0.1126237036310429,
+       "odds_ratio": 0.4413557340739965,
+       "ci95_or": [
+        0.3539333945311358,
+        0.5503715868858485
+       ],
+       "p": 3.8063913509743416e-13
+      },
+      "speed_all_z": {
+       "log_odds": -0.1432881070369784,
+       "se_cluster": 0.08027337642324514,
+       "odds_ratio": 0.866504386918205,
+       "ci95_or": [
+        0.7403561499655675,
+        1.0141468434933831
+       ],
+       "p": 0.07426105395324008
+      },
+      "logT_z": {
+       "log_odds": 0.14549806636108986,
+       "se_cluster": 0.06011840244232261,
+       "odds_ratio": 1.1566154981032957,
+       "ci95_or": [
+        1.0280522551243836,
+        1.3012562384690063
+       ],
+       "p": 0.015512321466970357
+      }
+     }
+    },
+    "glm_note": "Binomial GLM with signer and class fixed effects; SEs clustered by signer (11 clusters -> cluster-robust SEs are themselves noisy). Clip covariates z-scored over all clips.",
+    "L_minus_R_signers_n30": [
+     [
+      "U01",
+      -49.40195490011146,
+      1308,
+      642
+     ],
+     [
+      "U02",
+      -38.87437510079019,
+      318,
+      1170
+     ],
+     [
+      "U04",
+      -23.408521303258148,
+      210,
+      1064
+     ],
+     [
+      "U05",
+      -0.06642913219397428,
+      58,
+      1142
+     ],
+     [
+      "U06",
+      11.798469387755105,
+      62,
+      1568
+     ],
+     [
+      "U08",
+      9.098082768295527,
+      56,
+      1222
+     ],
+     [
+      "U11",
+      -38.96875200102451,
+      184,
+      1358
+     ],
+     [
+      "U12",
+      7.2848247035741664,
+      76,
+      1234
+     ],
+     [
+      "U13",
+      -28.014460511679644,
+      372,
+      870
+     ],
+     [
+      "U15",
+      -17.12623869021975,
+      44,
+      1266
+     ]
+    ]
+   },
+   "adaptive_gnn": {
+    "n_clip_preds": 7768,
+    "folds": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     8,
+     9,
+     11,
+     12,
+     13,
+     15
+    ],
+    "archs": [
+     "adaptive_gnn"
+    ],
+    "overall_acc": 79.69876416065912,
+    "acc_by_tag": {
+     "U01": {
+      "L": {
+       "acc": 35.321100917431195,
+       "n": 654
+      },
+      "R": {
+       "acc": 85.98130841121495,
+       "n": 321
+      }
+     },
+     "U02": {
+      "L": {
+       "acc": 45.911949685534594,
+       "n": 159
+      },
+      "R": {
+       "acc": 90.76923076923077,
+       "n": 585
+      }
+     },
+     "U04": {
+      "L": {
+       "acc": 52.38095238095239,
+       "n": 105
+      },
+      "R": {
+       "acc": 82.14285714285714,
+       "n": 532
+      }
+     },
+     "U05": {
+      "L": {
+       "acc": 93.10344827586206,
+       "n": 29
+      },
+      "R": {
+       "acc": 94.57092819614711,
+       "n": 571
+      }
+     },
+     "U06": {
+      "L": {
+       "acc": 100.0,
+       "n": 31
+      },
+      "R": {
+       "acc": 90.81632653061224,
+       "n": 784
+      }
+     },
+     "U08": {
+      "L": {
+       "acc": 100.0,
+       "n": 28
+      },
+      "R": {
+       "acc": 90.50736497545007,
+       "n": 611
+      }
+     },
+     "U09": {
+      "L": {
+       "acc": 0.0,
+       "n": 10
+      },
+      "R": {
+       "acc": 92.87925696594426,
+       "n": 646
+      }
+     },
+     "U11": {
+      "L": {
+       "acc": 45.65217391304348,
+       "n": 92
+      },
+      "R": {
+       "acc": 94.55081001472753,
+       "n": 679
+      }
+     },
+     "U12": {
+      "L": {
+       "acc": 68.42105263157895,
+       "n": 38
+      },
+      "R": {
+       "acc": 56.56401944894651,
+       "n": 617
+      }
+     },
+     "U13": {
+      "L": {
+       "acc": 48.38709677419355,
+       "n": 186
+      },
+      "R": {
+       "acc": 82.29885057471265,
+       "n": 435
+      }
+     },
+     "U15": {
+      "L": {
+       "acc": 72.72727272727273,
+       "n": 22
+      },
+      "R": {
+       "acc": 90.67930489731437,
+       "n": 633
+      }
+     }
+    },
+    "acc_by_tracked_hand": {
+     "U01": {
+      "R": {
+       "acc": 66.84636118598382,
+       "n": 371
+      },
+      "L": {
+       "acc": 42.88079470198676,
+       "n": 604
+      }
+     },
+     "U02": {
+      "R": {
+       "acc": 90.15151515151516,
+       "n": 528
+      },
+      "L": {
+       "acc": 59.25925925925925,
+       "n": 216
+      }
+     },
+     "U04": {
+      "R": {
+       "acc": 82.56880733944955,
+       "n": 436
+      },
+      "L": {
+       "acc": 65.67164179104478,
+       "n": 201
+      }
+     },
+     "U05": {
+      "R": {
+       "acc": 93.83697813121272,
+       "n": 503
+      },
+      "L": {
+       "acc": 97.9381443298969,
+       "n": 97
+      }
+     },
+     "U06": {
+      "R": {
+       "acc": 89.44,
+       "n": 625
+      },
+      "L": {
+       "acc": 96.84210526315789,
+       "n": 190
+      }
+     },
+     "U08": {
+      "R": {
+       "acc": 92.59927797833934,
+       "n": 554
+      },
+      "L": {
+       "acc": 80.0,
+       "n": 85
+      }
+     },
+     "U09": {
+      "R": {
+       "acc": 93.08943089430895,
+       "n": 492
+      },
+      "L": {
+       "acc": 86.58536585365853,
+       "n": 164
+      }
+     },
+     "U11": {
+      "R": {
+       "acc": 94.5993031358885,
+       "n": 574
+      },
+      "L": {
+       "acc": 71.57360406091371,
+       "n": 197
+      }
+     },
+     "U12": {
+      "R": {
+       "acc": 56.81818181818182,
+       "n": 528
+      },
+      "L": {
+       "acc": 59.055118110236215,
+       "n": 127
+      }
+     },
+     "U13": {
+      "R": {
+       "acc": 74.43609022556392,
+       "n": 399
+      },
+      "L": {
+       "acc": 68.01801801801803,
+       "n": 222
+      }
+     },
+     "U15": {
+      "R": {
+       "acc": 88.76811594202898,
+       "n": 552
+      },
+      "L": {
+       "acc": 97.0873786407767,
+       "n": 103
+      }
+     }
+    },
+    "glm_within_signer": {
+     "tag_only": {
+      "left_tag": {
+       "log_odds": -2.3960286791186753,
+       "se_cluster": 0.5187143582776623,
+       "odds_ratio": 0.091078939713646,
+       "ci95_or": [
+        0.03295181878115435,
+        0.25174250060231007
+       ],
+       "p": 3.8528212501232174e-06
+      }
+     },
+     "tracked_only": {
+      "track_left": {
+       "log_odds": -0.8892701314637598,
+       "se_cluster": 0.30509318409457287,
+       "odds_ratio": 0.4109555868719401,
+       "ci95_or": [
+        0.2259926567963851,
+        0.7473008051470552
+       ],
+       "p": 0.0035597441993623666
+      }
+     },
+     "full": {
+      "left_tag": {
+       "log_odds": -2.5908673472787465,
+       "se_cluster": 0.4151488771919181,
+       "odds_ratio": 0.07495499986801268,
+       "ci95_or": [
+        0.03322146264973627,
+        0.16911513091547706
+       ],
+       "p": 4.352967878365747e-10
+      },
+      "both_missing_z": {
+       "log_odds": -0.8746617783111663,
+       "se_cluster": 0.1553865837024767,
+       "odds_ratio": 0.41700303530074134,
+       "ci95_or": [
+        0.3075186686971964,
+        0.5654665851238341
+       ],
+       "p": 1.8132030486903813e-08
+      },
+      "speed_all_z": {
+       "log_odds": -0.15838048935835566,
+       "se_cluster": 0.12357584668665085,
+       "odds_ratio": 0.8535249630118054,
+       "ci95_or": [
+        0.6699252440518624,
+        1.0874420227518793
+       ],
+       "p": 0.1999668565204239
+      },
+      "logT_z": {
+       "log_odds": 0.07407130560403828,
+       "se_cluster": 0.10262004451636175,
+       "odds_ratio": 1.0768835905934897,
+       "ci95_or": [
+        0.8806773236079778,
+        1.3168026887969952
+       ],
+       "p": 0.4704165058841575
+      }
+     }
+    },
+    "glm_note": "Binomial GLM with signer and class fixed effects; SEs clustered by signer (11 clusters -> cluster-robust SEs are themselves noisy). Clip covariates z-scored over all clips.",
+    "L_minus_R_signers_n30": [
+     [
+      "U01",
+      -50.66020749378376,
+      654,
+      321
+     ],
+     [
+      "U02",
+      -44.85728108369618,
+      159,
+      585
+     ],
+     [
+      "U04",
+      -29.761904761904752,
+      105,
+      532
+     ],
+     [
+      "U06",
+      9.183673469387756,
+      31,
+      784
+     ],
+     [
+      "U11",
+      -48.898636101684055,
+      92,
+      679
+     ],
+     [
+      "U12",
+      11.857033182632435,
+      38,
+      617
+     ],
+     [
+      "U13",
+      -33.911753800519094,
+      186,
+      435
+     ]
+    ]
+   },
+   "block_gcn_lr01": {
+    "n_clip_preds": 7768,
+    "folds": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     8,
+     9,
+     11,
+     12,
+     13,
+     15
+    ],
+    "archs": [
+     "block_gcn_lr01"
+    ],
+    "overall_acc": 72.37384140061792,
+    "acc_by_tag": {
+     "U01": {
+      "L": {
+       "acc": 25.688073394495415,
+       "n": 654
+      },
+      "R": {
+       "acc": 73.83177570093457,
+       "n": 321
+      }
+     },
+     "U02": {
+      "L": {
+       "acc": 45.911949685534594,
+       "n": 159
+      },
+      "R": {
+       "acc": 78.80341880341881,
+       "n": 585
+      }
+     },
+     "U04": {
+      "L": {
+       "acc": 46.666666666666664,
+       "n": 105
+      },
+      "R": {
+       "acc": 63.721804511278194,
+       "n": 532
+      }
+     },
+     "U05": {
+      "L": {
+       "acc": 93.10344827586206,
+       "n": 29
+      },
+      "R": {
+       "acc": 91.76882661996497,
+       "n": 571
+      }
+     },
+     "U06": {
+      "L": {
+       "acc": 100.0,
+       "n": 31
+      },
+      "R": {
+       "acc": 85.58673469387756,
+       "n": 784
+      }
+     },
+     "U08": {
+      "L": {
+       "acc": 96.42857142857143,
+       "n": 28
+      },
+      "R": {
+       "acc": 87.72504091653029,
+       "n": 611
+      }
+     },
+     "U09": {
+      "L": {
+       "acc": 0.0,
+       "n": 10
+      },
+      "R": {
+       "acc": 85.29411764705883,
+       "n": 646
+      }
+     },
+     "U11": {
+      "L": {
+       "acc": 65.21739130434783,
+       "n": 92
+      },
+      "R": {
+       "acc": 94.2562592047128,
+       "n": 679
+      }
+     },
+     "U12": {
+      "L": {
+       "acc": 52.63157894736842,
+       "n": 38
+      },
+      "R": {
+       "acc": 49.91896272285251,
+       "n": 617
+      }
+     },
+     "U13": {
+      "L": {
+       "acc": 45.69892473118279,
+       "n": 186
+      },
+      "R": {
+       "acc": 67.81609195402298,
+       "n": 435
+      }
+     },
+     "U15": {
+      "L": {
+       "acc": 63.63636363636363,
+       "n": 22
+      },
+      "R": {
+       "acc": 79.93680884676145,
+       "n": 633
+      }
+     }
+    },
+    "acc_by_tracked_hand": {
+     "U01": {
+      "R": {
+       "acc": 61.18598382749326,
+       "n": 371
+      },
+      "L": {
+       "acc": 29.47019867549669,
+       "n": 604
+      }
+     },
+     "U02": {
+      "R": {
+       "acc": 78.97727272727273,
+       "n": 528
+      },
+      "L": {
+       "acc": 54.166666666666664,
+       "n": 216
+      }
+     },
+     "U04": {
+      "R": {
+       "acc": 64.6788990825688,
+       "n": 436
+      },
+      "L": {
+       "acc": 52.736318407960205,
+       "n": 201
+      }
+     },
+     "U05": {
+      "R": {
+       "acc": 92.04771371769384,
+       "n": 503
+      },
+      "L": {
+       "acc": 90.72164948453609,
+       "n": 97
+      }
+     },
+     "U06": {
+      "R": {
+       "acc": 84.32,
+       "n": 625
+      },
+      "L": {
+       "acc": 92.10526315789474,
+       "n": 190
+      }
+     },
+     "U08": {
+      "R": {
+       "acc": 89.53068592057761,
+       "n": 554
+      },
+      "L": {
+       "acc": 78.82352941176471,
+       "n": 85
+      }
+     },
+     "U09": {
+      "R": {
+       "acc": 86.58536585365853,
+       "n": 492
+      },
+      "L": {
+       "acc": 76.21951219512195,
+       "n": 164
+      }
+     },
+     "U11": {
+      "R": {
+       "acc": 95.99303135888502,
+       "n": 574
+      },
+      "L": {
+       "acc": 75.63451776649747,
+       "n": 197
+      }
+     },
+     "U12": {
+      "R": {
+       "acc": 47.53787878787879,
+       "n": 528
+      },
+      "L": {
+       "acc": 60.629921259842526,
+       "n": 127
+      }
+     },
+     "U13": {
+      "R": {
+       "acc": 60.150375939849624,
+       "n": 399
+      },
+      "L": {
+       "acc": 63.06306306306306,
+       "n": 222
+      }
+     },
+     "U15": {
+      "R": {
+       "acc": 77.71739130434783,
+       "n": 552
+      },
+      "L": {
+       "acc": 88.3495145631068,
+       "n": 103
+      }
+     }
+    },
+    "glm_within_signer": {
+     "tag_only": {
+      "left_tag": {
+       "log_odds": -1.5105361145888754,
+       "se_cluster": 0.3126381194456819,
+       "odds_ratio": 0.22079157663853965,
+       "ci95_or": [
+        0.11963536003418847,
+        0.40747919595511756
+       ],
+       "p": 1.3545370523168626e-06
+      }
+     },
+     "tracked_only": {
+      "track_left": {
+       "log_odds": -0.6794544541953377,
+       "se_cluster": 0.27525326061794786,
+       "odds_ratio": 0.5068934505437883,
+       "ci95_or": [
+        0.2955400716684982,
+        0.8693946941056233
+       ],
+       "p": 0.013569197324543158
+      }
+     },
+     "full": {
+      "left_tag": {
+       "log_odds": -1.6015478989109089,
+       "se_cluster": 0.2606628171403481,
+       "odds_ratio": 0.20158424434071,
+       "ci95_or": [
+        0.12094165732849839,
+        0.3359984348158892
+       ],
+       "p": 8.039974009767334e-10
+      },
+      "both_missing_z": {
+       "log_odds": -0.8332479726126911,
+       "se_cluster": 0.10119264413612619,
+       "odds_ratio": 0.43463530770673087,
+       "ci95_or": [
+        0.3564413548731175,
+        0.5299829779083018
+       ],
+       "p": 1.8064958828505954e-16
+      },
+      "speed_all_z": {
+       "log_odds": -0.12279302376141848,
+       "se_cluster": 0.08213673355137707,
+       "odds_ratio": 0.8844467030694766,
+       "ci95_or": [
+        0.7529315024497448,
+        1.0389337782060444
+       ],
+       "p": 0.13491886800469352
+      },
+      "logT_z": {
+       "log_odds": 0.21309520158047984,
+       "se_cluster": 0.08209727451264959,
+       "odds_ratio": 1.237502457825658,
+       "ci95_or": [
+        1.053570154135447,
+        1.4535456676648284
+       ],
+       "p": 0.009441415411423088
+      }
+     }
+    },
+    "glm_note": "Binomial GLM with signer and class fixed effects; SEs clustered by signer (11 clusters -> cluster-robust SEs are themselves noisy). Clip covariates z-scored over all clips.",
+    "L_minus_R_signers_n30": [
+     [
+      "U01",
+      -48.14370230643915,
+      654,
+      321
+     ],
+     [
+      "U02",
+      -32.89146911788421,
+      159,
+      585
+     ],
+     [
+      "U04",
+      -17.05513784461153,
+      105,
+      532
+     ],
+     [
+      "U06",
+      14.41326530612244,
+      31,
+      784
+     ],
+     [
+      "U11",
+      -29.038867900364977,
+      92,
+      679
+     ],
+     [
+      "U12",
+      2.712616224515905,
+      38,
+      617
+     ],
+     [
+      "U13",
+      -22.117167222840187,
+      186,
+      435
+     ]
+    ]
+   }
+  }
+ },
+ "caveats": [
+  "n=11 signers: every signer-level association is exploratory and underpowered (|rho| must exceed ~0.62 for p<0.05 even before multiplicity correction).",
+  "Ma treats the 8 architecture means of a signer as independent observations of a signer-level covariate (pseudo-replication) -> its SE is anti-conservative; Mb adds a signer random intercept."
+ ]
+}
