@@ -27,7 +27,10 @@ import shutil
 import random
 import inspect
 
-import wandb
+try:  # optional experiment tracking; only needed when a config enables `wandb`
+    import wandb
+except ImportError:  # pragma: no cover - depends on the environment
+    wandb = None
 
 DEFAULT_WORK_DIR = './work_dir/temp'
 RESULT_COLUMNS = ['Timestamp', 'Experiment', 'Epoch', 'Top1_Acc',
@@ -238,6 +241,9 @@ class Processor():
         self.lr = self.arg.base_lr
         self.best_acc = 0
 
+        if self.arg.wandb and wandb is None:
+            print('[warn] wandb is not installed; disabling experiment tracking (pip install wandb to enable).')
+            self.arg.wandb = False
         if self.arg.wandb:
             wandb.init(name=self.arg.wandb_name, entity=self.arg.wandb_entity, project=self.arg.wandb_project, config=self.arg)
 
